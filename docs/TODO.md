@@ -20,10 +20,12 @@
 - [ ] 安裝相容的 `flash-attn` 並在 CUDA GPU 上量測速度、顯存與輸出品質；目前 CPU-only 環境未驗證。
 
 ### 2. 模型尺寸優化：模型量化 (Quantization)
-- [ ] 評估 Qwen ASR/TTS loader 支援的 INT8/INT4 量化方式，量測顯存、速度與輸出品質後再決定整合方案。
+- [ ] 評估 Qwen ASR/TTS loader 支援的 INT8/INT4 量化方式，量測顯存、速度與輸出品質後再決定整合方案。此環境缺少 Qwen/bitsandbytes 且沒有 CUDA，尚無可驗證的量化路徑。
 
 ### 3. 硬體級加速：TensorRT / ONNX 轉換
-- [ ] 評估目前 Qwen ASR/TTS pipeline 是否支援 TensorRT/ONNX 匯出，並以實測確認收益及品質影響。
+- [ ] Qwen3-ASR 可評估社群 ONNX 匯出工具，但需另建推論 adapter 並比較準確度與效能；目前官方 pipeline 沒有直接匯出整合。
+- [ ] Qwen3-TTS tokenizer 有 ONNX 元件，不等同完整語音生成流程可匯出；先確認端到端支援再投入 TensorRT。
+- [ ] 本機為 CPU-only PyTorch，TensorRT/CUDA 效能尚無法量測；不預設固定倍數收益。
 
 ---
 

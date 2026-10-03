@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - 新增 `--attention-backend` 選項，可為 Qwen ASR/TTS 選擇 SDPA 或 Flash Attention 2；預設使用 SDPA。
+- 記錄 Qwen 量化及 TensorRT/ONNX 的環境限制與可行性評估方向。
 - 建立 `PRD.md`：定義語音互動助理的核心規格，包含 ASR/TTS 多執行緒、VAD 停頓偵測及記憶體管理邏輯。
 
 ### Changed
