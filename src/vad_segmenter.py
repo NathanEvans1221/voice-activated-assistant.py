@@ -244,39 +244,37 @@ class VADSegmenter:
         else:
             is_speech = self._silero_vad(audio)
 
-        # Step 2: 更新狀態和緩衝區
+        completed = []
+        # Bound the complete waveform, including pauses, using integer samples.
+        max_samples = max(1, int(self.config.max_utterance_s * self.config.sample_rate))
         with self._buffer_lock:
-            if is_speech:
-                # ========== 語音區塊 ==========
+            offset = 0
+            while offset < len(audio):
                 if not self._is_speaking:
-                    # 新的語句開始
+                    if not is_speech:
+                        break
                     self._is_speaking = True
                     self._utterance_start_time = current_time
-                    self._buffer = []  # 清空緩衝區
-                    print("[VAD] Speech detected, recording...")
+                buffered = sum(len(frame) for frame in self._buffer)
+                count = min(len(audio) - offset, max_samples - buffered)
+                chunk = audio[offset:offset + count]
+                self._buffer.append(chunk.copy())
+                offset += count
+                if is_speech:
+                    self._speech_duration += count / self.config.sample_rate
+                    self._silence_duration = 0.0
+                else:
+                    self._silence_duration += count / self.config.sample_rate
+                if (buffered + count >= max_samples or
+                        self._silence_duration >= self.config.min_silence_duration):
+                    utterance = self._finalize_utterance()
+                    if utterance is not None:
+                        completed.append(utterance)
 
-                # 加入緩衝區
-                self._buffer.append(audio.copy())
-
-                # 更新說話持續時間
-                self._speech_duration += len(audio) / self.config.sample_rate
-
-                # 重設靜音計時
-                self._silence_duration = 0.0
-
-            else:
-                # ========== 靜音區塊 ==========
-                if self._is_speaking:
-                    # 正在說話中遇到靜音，累積靜音時間
-                    self._silence_duration += len(audio) / self.config.sample_rate
-
-                    # 檢查是否應該結束語句 (使用時間閾值而非機率閾值)
-                    if self._silence_duration >= self.config.min_silence_duration:
-                        print(
-                            f"[VAD] Silence for {self._silence_duration:.1f}s - finalizing..."
-                        )
-                        # 觸發語句完成處理
-                        self._finalize_utterance()
+        # Callbacks may reset the VAD or submit work; never hold its lock here.
+        for utterance in completed:
+            if self.on_utterance:
+                self.on_utterance(utterance)
 
         return is_speech
 
@@ -394,15 +392,10 @@ class VADSegmenter:
             return
 
         # 計算語句持續時間
-        duration_ms = int(self._speech_duration * 1000)
+        duration_ms = round(self._speech_duration * 1000)
 
         # 過濾：檢查最小長度
         if duration_ms < self.config.min_utterance_ms:
-            self._reset_state()
-            return
-
-        # 過濾：檢查最大長度
-        if self._speech_duration > self.config.max_utterance_s:
             self._reset_state()
             return
 
@@ -417,12 +410,8 @@ class VADSegmenter:
             duration_ms=duration_ms,
         )
 
-        # 呼叫回調
-        if self.on_utterance:
-            self.on_utterance(utterance)
-
-        # 重設狀態
         self._reset_state()
+        return utterance
 
     def _reset_state(self):
         """
