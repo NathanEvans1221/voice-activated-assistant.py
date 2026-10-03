@@ -71,20 +71,17 @@ flowchart TD
 ### 1. 安裝依賴
 
 ```powershell
-# 使用 uv（推薦）
-uv sync
-
-# 或使用 pip
-pip install -r requirements.txt
-```
-
-核心依賴不包含模型套件。ASR 與 TTS 套件固定不同 Transformers 版本，請擇一安裝；uv 已設定兩個 extras 互斥。
-
-```powershell
+# 使用 uv（推薦，ASR 與 TTS 引擎擇一）
 uv sync --extra asr  # Qwen3-ASR
 # 或
 uv sync --extra tts  # Qwen3-TTS
+
+# 使用 pip 時，requirements.txt 僅安裝核心依賴；模型套件擇一安裝
+pip install -r requirements.txt
+pip install qwen-asr  # 或改為 pip install qwen-tts
 ```
+
+Qwen ASR/TTS 目前固定了不同 Transformers 版本，請勿同時安裝兩個模型套件。
 
 ### 2. 準備 ASR 模型
 
