@@ -98,6 +98,7 @@ class OrchestratorConfig:
     asr_model_path: str = "models/Qwen3-ASR-0.6B"
     tts_model_path: str = "models/Qwen3-TTS-12Hz-0.6B-CustomVoice"
     device: str = "auto"  # "auto", "cpu", or "cuda"
+    attention_backend: str = "sdpa"
     tts_voice: str = "vivian"
 
 
@@ -174,7 +175,8 @@ class Orchestrator:
         self._asr = ASRWorker(
             model_path=self.config.asr_model_path, 
             on_result=self._on_asr_result,
-            device=self.config.device
+            device=self.config.device,
+            attention_backend=self.config.attention_backend,
         )
 
         # RuleEngine: 規則引擎，載入 rules.json 檔案
@@ -186,6 +188,7 @@ class Orchestrator:
             on_complete=self._on_tts_complete,
             device=self.config.audio_device,
             device_type=self.config.device,
+            attention_backend=self.config.attention_backend,
             default_voice=self.config.tts_voice
         )
 

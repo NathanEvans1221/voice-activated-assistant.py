@@ -114,6 +114,7 @@ python src/main.py --rules config/rules.json --device 0
 # 指定運算裝置 (CPU 或 GPU)
 python src/main.py --device-type cuda  # 強制 GPU
 python src/main.py --device-type cpu   # 強制 CPU
+python src/main.py --attention-backend flash_attention_2  # 需相容 CUDA、PyTorch 與 flash-attn 安裝
 
 # 切換語音人聲 (預設 vivian)
 python src/main.py --voice random      # 啟動時隨機抽取一個聲音

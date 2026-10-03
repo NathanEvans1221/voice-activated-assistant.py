@@ -103,7 +103,8 @@ class ASRWorker:
         self,
         model_path: str = "models/Qwen3-ASR-0.6B",
         on_result: Optional[Callable[[ASRResult], None]] = None,
-        device: str = "auto"
+        device: str = "auto",
+        attention_backend: str = "sdpa",
     ):
         """
         建構函式 - 建立 ASRWorker 實例
@@ -129,6 +130,7 @@ class ASRWorker:
         self.model_path = model_path
         self.on_result = on_result
         self.device_type = device
+        self.attention_backend = attention_backend
 
         # 建立任務佇列，容量無上限
         # 說明：使用 queue.Queue 實現執行緒安全的任務傳遞
@@ -166,7 +168,7 @@ class ASRWorker:
                 self.model_path,
                 dtype=torch_dtype,
                 device_map=device,
-                attn_implementation="sdpa",
+                attn_implementation=self.attention_backend,
                 trust_remote_code=True
             )
 

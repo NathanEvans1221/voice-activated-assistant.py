@@ -16,22 +16,14 @@
 ## 🛠️ 核心優化任務清單
 
 ### 1. 演算法級加速：Flash Attention
-- [ ] **目標**：安裝並啟用 Flash Attention。
-- [ ] **說明**：日誌提示 `Please install flash-attn for faster inference`。這是一種優化後的記憶體高效注意力演算法。
-- [ ] **預期效果**：顯著降低顯存佔用，並在 TTS 生成長句子時提升速度。
-- [ ] **挑戰**：在 Windows 環境下需要配置開發者工具 (MSVC/CUDA Toolkit) 進行編譯。
+- [x] 提供 `--attention-backend`，可選擇 SDPA 或 Flash Attention 2，並傳入 Qwen ASR/TTS loader；預設使用 SDPA。
+- [ ] 安裝相容的 `flash-attn` 並在 CUDA GPU 上量測速度、顯存與輸出品質；目前 CPU-only 環境未驗證。
 
 ### 2. 模型尺寸優化：模型量化 (Quantization)
-- [ ] **目標**：將模型從 `bfloat16` 轉換為 `INT8` 或 `INT4`。
-- [ ] **說明**：透過 `bitsandbytes` 或 `AutoGPTQ` 技術，減少模型參數的位元寬度。
-- [ ] **預期效果**：減少 50%~75% 的顯存佔用，並讓運算速度提升 1.5 倍以上。
-- [ ] **副作用**：可能會輕微影響語音辨識的精準度或語音合成的音質，需進行權衡測評。
+- [ ] 評估 Qwen ASR/TTS loader 支援的 INT8/INT4 量化方式，量測顯存、速度與輸出品質後再決定整合方案。
 
 ### 3. 硬體級加速：TensorRT / ONNX 轉換
-- [ ] **目標**：將 PyTorch 模型導出為 NVIDIA 專用的 **TensorRT** 格式。
-- [ ] **說明**：TensorRT 是 NVIDIA 針對自家顯卡（如 RTX 3070）提供的深度學習推理優化引擎。
-- [ ] **預期效果**：相比原生 PyTorch，推理速度通常能提升 **2倍** 以上。
-- [ ] **任務**：研究 `torch-tensorrt` 或專用的轉換工具。
+- [ ] 評估目前 Qwen ASR/TTS pipeline 是否支援 TensorRT/ONNX 匯出，並以實測確認收益及品質影響。
 
 ---
 

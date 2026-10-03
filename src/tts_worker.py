@@ -103,6 +103,7 @@ class TTSWorker:
         on_complete: Optional[Callable[[TTSResult], None]] = None,
         device: Optional[int] = None,
         device_type: str = "auto",
+        attention_backend: str = "sdpa",
         default_voice: str = "vivian"
     ):
         """
@@ -130,6 +131,7 @@ class TTSWorker:
         self.on_complete = on_complete
         self.device = device
         self.device_type = device_type
+        self.attention_backend = attention_backend
         self.default_voice = default_voice
 
         # 建立任務佇列
@@ -206,13 +208,13 @@ class TTSWorker:
             print(f"[TTS] 準備載入 Qwen3-TTS 模型 (DType: {torch_dtype}, 裝置: {device})...", flush=True)
 
             # 載入 Qwen3-TTS 模型
-            self._engine = Qwen3TTSModel.from_pretrained(
-                self.model_path, 
-                device_map=device,
-                dtype=torch_dtype,
-                attn_implementation="sdpa",
-                trust_remote_code=True
-            )
+            model_kwargs = {
+                "device_map": device,
+                "dtype": torch_dtype,
+                "attn_implementation": self.attention_backend,
+                "trust_remote_code": True,
+            }
+            self._engine = Qwen3TTSModel.from_pretrained(self.model_path, **model_kwargs)
             
             # 強制檢查設備屬性
             actual_device = next(self._engine.model.parameters()).device

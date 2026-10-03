@@ -1,9 +1,9 @@
 # TODO.md - Voice Activated Assistant
 
 ## 專案概述
-- **目標**: 建立 Python 語音助理，使用 Faster-Whisper + TTS
+- **目標**: 建立 Python 語音助理，使用 Qwen3-ASR / Qwen3-TTS，並保留系統 TTS 備援
 - **平台**: Windows 11 + Python (GPU/CPU)
-- **技術堆疊**: uv, Silero VAD, Faster-Whisper, pyttsx3/espeak-ng
+- **技術堆疊**: uv, Silero VAD, Qwen3-ASR / Qwen3-TTS, pyttsx3/espeak-ng
 
 ---
 
@@ -46,9 +46,9 @@
 ### 3.1 ASR Worker
 - [x] 3.1.1 實作 asr_worker.py - 框架結構
 - [x] 3.1.2 實作多執行緒處理
-- [x] 3.1.3 實作 Faster-Whisper 模型載入與推論
-- [x] 3.1.4 使用 Faster-Whisper base 模型 (140MB)
-- [ ] 3.1.5 Qwen3-ASR 模型整合 (網路問題，暫時使用 fallback)
+- [x] 3.1.3 實作 Qwen3-ASR 模型載入與推論
+- [x] 3.1.4 使用本機 Qwen3-ASR 模型路徑 (預設 0.6B)
+- [x] 3.1.5 Qwen3-ASR 模型整合
 
 ### 3.2 Utterance 處理
 - [x] 3.2.1 實作 utterance 合併策略 (gap < 0.4s)
@@ -76,7 +76,7 @@
 - [x] 5.1.1 實作 tts_worker.py - 框架結構
 - [x] 5.1.2 實作 pyttsx3/espeak-ng 輸出 (跨平台)
 - [x] 5.1.3 實作 TTS voice 設定 (中文)
-- [ ] 5.1.4 Qwen3-TTS 模型整合 (進階)
+- [x] 5.1.4 Qwen3-TTS 模型整合 (載入失敗時使用系統 TTS 備援)
 
 ### 5.2 Queue 機制
 - [x] 5.2.1 實作 TTS queue (排隊播放)
@@ -129,4 +129,4 @@
 3. ✅ TTS 期間 ASR 暫停 (狀態機互斥)
 4. ✅ 記憶體釋放 (不落盤)
 5. ✅ 多執行緒穩定
-6. ✅ ASR 語音辨識 (Faster-Whisper base)
+6. ✅ ASR 語音辨識 (Qwen3-ASR)

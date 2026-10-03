@@ -100,6 +100,13 @@ def parse_args():
         help="Device to run models on (auto, cpu, cuda)"
     )
     parser.add_argument(
+        "--attention-backend",
+        type=str,
+        default="sdpa",
+        choices=["sdpa", "flash_attention_2"],
+        help="Attention implementation for Qwen TTS (flash_attention_2 requires a compatible CUDA setup)"
+    )
+    parser.add_argument(
         "--voice",
         type=str,
         default="vivian",
@@ -193,6 +200,7 @@ def main():
         # 若有 --test 參數或 --mock-mode，則啟用模擬模式
         mock_mode=args.mock_mode or args.test is not None,
         device=args.device_type,
+        attention_backend=args.attention_backend,
         tts_voice=args.voice,
         silence_threshold=args.silence_threshold,
         silence_duration=args.silence_duration,
