@@ -70,6 +70,8 @@ flowchart TD
 
 ### 1. 安裝依賴
 
+啟動時讀取 `config/config.yaml`，或用 `--config 路徑` 指定檔案。設定優先序為 CLI 明確參數 > YAML > 程式預設值；檔案中的相對路徑以工作目錄為基準。附帶 YAML 的停頓時間為 1.5 秒，可用 `--silence-duration 0.8` 覆寫。錯誤設定會在模型啟動前終止。
+
 ```powershell
 # 使用 uv（推薦，ASR 與 TTS 引擎擇一）
 uv sync --extra asr  # Qwen3-ASR

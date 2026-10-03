@@ -18,10 +18,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.orchestrator import Orchestrator, OrchestratorConfig
 from src.logging_config import setup_logging
+from src.config import load_defaults, validate_options
 from src.audio_input import AudioInput, AudioConfig
 
 
-def parse_args():
+def parse_args(argv=None):
     """
     解析命令列參數
     
@@ -136,7 +137,24 @@ def parse_args():
         help="Minimum utterance duration in milliseconds to be considered speech."
     )
     
-    return parser.parse_args()
+    bootstrap = argparse.ArgumentParser(add_help=False)
+    bootstrap.add_argument("--config", default="config/config.yaml")
+    config_args, _ = bootstrap.parse_known_args(argv)
+    parser.set_defaults(sample_rate=16000, frame_duration_ms=30, channels=1,
+                        max_utterance_s=15, resume_grace_s=0.2, log_level="INFO",
+                        asr_model_path="models/Qwen3-ASR-0.6B",
+                        tts_model_path="models/Qwen3-TTS-12Hz-0.6B-CustomVoice")
+    try:
+        parser.set_defaults(**load_defaults(config_args.config))
+        args = parser.parse_args(argv)
+        validate_options(args)
+        for action in parser._actions:
+            if action.choices and getattr(args, action.dest) not in action.choices:
+                raise ValueError(f"{action.dest} 必須為 {action.choices}")
+    except ValueError as exc:
+        parser.error(str(exc))
+    args.debug = args.debug or args.log_level == "DEBUG"
+    return args
 
 
 def main():
@@ -194,6 +212,12 @@ def main():
     # Step 4: 建立 Orchestrator 協調器組態
     # 說明：將命令列參數轉換為 OrchestratorConfig 資料類別
     config = OrchestratorConfig(
+        sample_rate=args.sample_rate,
+        frame_duration_ms=args.frame_duration_ms,
+        max_utterance_s=args.max_utterance_s,
+        resume_grace_s=args.resume_grace_s,
+        asr_model_path=args.asr_model_path,
+        tts_model_path=args.tts_model_path,
         rules_path=args.rules,          # 規則檔案路徑
         debug=args.debug,               # 除錯模式
         audio_device=args.device,       # 音訊裝置索引

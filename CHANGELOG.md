@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 接通 `--config` YAML 載入，CLI 明確參數優先；新增設定檔結構與數值驗證及回歸測試。
 - 將 Qwen ASR/TTS 設為互斥的 uv extras，避免其固定 Transformers 版本衝突。
 - 限定 pytest 從 `tests/` 收集測試，避免執行模型探索腳本。
 - 新增 `--attention-backend` 選項，可為 Qwen ASR/TTS 選擇 SDPA 或 Flash Attention 2；預設使用 SDPA。

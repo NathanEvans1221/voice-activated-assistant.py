@@ -29,7 +29,7 @@
 ### 技術變更
 - **ASR**：目前程式載入 Qwen3-ASR，不再以 Faster-Whisper 為執行引擎
 - **TTS**：目前程式優先載入 Qwen3-TTS，失敗時退回系統 TTS
-- **VAD 停頓**：程式預設 0.8 秒，CLI 可調整；目前 --config 尚未接入 YAML 載入
+- **VAD 停頓**：程式預設 0.8 秒，附帶 YAML 設為 1.5 秒；CLI 可覆寫 YAML。
 
 ---
 
