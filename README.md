@@ -15,7 +15,7 @@
 - **🚀 極速本地推論**：使用 Qwen3-ASR 與 Qwen3-TTS，支援串流輸出，具備極低首包延遲。
 - **🗣️ 純淨自然發音**：內建 OpenCC 簡繁轉換機制，避免 TTS 模型朗讀繁體中文時產生混淆（如自動切換為粵語口音），確保發音皆為標準的國語/普通話。同時排除帶有強烈方言口音的角色，保障溝通無礙。
 - **🤫 隱私與安全**：語音轉文字 (ASR) 結果僅暫存於記憶體 (RAM)，程式結束後自動釋放，不留任何磁碟紀錄。
-- **🧠 智慧停頓偵測 (VAD)**：內建 0.8 秒連續靜音判斷，精準識別一段話的結束點。
+- **🧠 智慧停頓偵測 (VAD)**：預設連續靜音 0.8 秒後結束語句，可用 `--silence-duration` 調整。
 - **🚦 狀態機協調**：當 TTS 播放時自動暫停 ASR 監聽，完美解決「自己聽到自己講話」的自我回饋問題。
 - **🛠️ JSON 驅動規則**：透過簡單的 JSON 設定檔定義關鍵字、優先序與多樣化的回覆模式。
 
@@ -50,8 +50,8 @@ flowchart TD
 
 ## 🛠️ 技術棧
 
-- **語言**: Python 3.10+
-- **ASR**: Qwen3-ASR (1.7B)
+- **語言**: Python 3.11.9+
+- **ASR**: Qwen3-ASR (程式預設本機路徑為 0.6B)
 - **TTS**: Qwen3-TTS
 - **VAD**: Silero VAD
 - **併發**: Threading + Python Queue
@@ -62,8 +62,9 @@ flowchart TD
 
 專案採階段性開發，目前已完成核心架構的設計與初步實作。詳細的任務追蹤請參閱：
 
-- [📝 專案待辦事項 (TODO.md)](TODO.md)：包含各階段 (Phase 1-8) 的詳細實作清單與驗收標準。
-- [📄 產品需求文件 (PRD.md)](PRD.md)：系統架構與演算法細節的權威定義。
+- [📝 專案待辦事項](docs/project_tasks.md)：包含各階段 (Phase 1-8) 的實作清單與驗收標準。
+- [⚡ 效能優化待辦](docs/TODO.md)：記錄注意力後端、量化與推論引擎評估。
+- [📄 產品需求文件](docs/PRD.md)：系統範圍與演算法規格。
 
 ## 🚀 快速開始
 
@@ -77,12 +78,14 @@ uv sync
 pip install -r requirements.txt
 ```
 
-### 2. 下載 ASR 模型（首次執行自動下載）
+目前 `pyproject.toml` 列出通用執行依賴；Qwen 模型套件列於 `requirements.txt`，需依使用環境另外安裝。
 
-模型會在首次執行時自動下載（需要網路連線）：
+### 2. 準備 ASR 模型
+
+程式預設從 `models/Qwen3-ASR-0.6B` 載入模型。請先將模型放在該路徑，或修改程式設定；`uv sync` 會安裝專案依賴。
 
 ```powershell
-# 執行後會自動下載 Qwen3-ASR 模型（約 3-4GB）
+# 預設讀取 models/Qwen3-ASR-0.6B
 python src/main.py --rules config/rules.json
 ```
 
@@ -139,13 +142,13 @@ python src/main.py --mock-mode --test "天氣"
 * **CTranslate2 (CT2)**：這是一個專為標準 Transformer 架構設計的高效 C++ 推理引擎，特色是就算使用 CPU 也能跑得飛快。
 * **無法使用的原因**：我們專案目前採用的是最新世代的 **Qwen3-ASR** 模型。這是一個「具備語音理解能力的大型語言模型變體 (Multimodal LLM)」，其架構不僅龐大，且包含許多特殊的結構 (需要 `trust_remote_code=True` 才能載入)。由於其**不是傳統的 Transformer 結構**，因此 **CTranslate2 目前尚未支援 Qwen3-ASR**。這就是為什麼我們無法像處理標準 Whisper 模型那樣，簡單把它轉成 `.bin` 格式。
 
-### 所以我們如何讓 Qwen3-ASR 變快？(為什麼選擇 vLLM？)
+### 推論後端狀態
 
-既然無法走 `.bin` / CT2 這條路，Qwen 官方對於 Qwen3 系列強烈建議使用的唯一終極加速方案就是：**vLLM**。
-1.  **🚀 推理速度提升 3~5 倍**：vLLM 是專為大型語言模型 (LLM) 推理設計的高效能 C++ 引擎。
+目前程式以 Transformers 相容的 Qwen 封裝執行，尚未整合 vLLM。vLLM 是否支援本專案所用 ASR/TTS pipeline，需依模型與當前版本另外驗證；以下不視為已可使用的專案功能。
+1.  vLLM 是大型語言模型推論引擎，但本專案尚未接入，效能收益需實測。
 2.  **🌌 PagedAttention 技術**：有效管理 KV Cache 記憶體，降低 OOM 風險。
-3.  **🚄 官方最佳支援**：Qwen 官方對於 Qwen3-ASR 系列強烈推薦使用 vLLM backend。
-4.  **🌊 真正的非同步串流**：vLLM 引擎原生支持極低延遲的串流生成，這是 `Qwen3-TTS` 等模型達到「即時反應」的關鍵。
+3.  是否適用 Qwen3-ASR/TTS 應以各模型官方支援範圍為準。
+4.  在本專案完成整合與基準測試前，不宣稱已有 vLLM 串流或加速能力。
 
 ### 安裝 vLLM
 

@@ -1,7 +1,7 @@
 [project]
 name = "voice-activated-assistant-py"
 version = "0.1.0"
-description = "Voice-activated assistant using Faster-Whisper and TTS"
+description = "本機語音助理，使用 Qwen3-ASR、Qwen3-TTS 與 JSON 規則回應"
 readme = "README.md"
 requires-python = ">=3.11.9"
 dependencies = [

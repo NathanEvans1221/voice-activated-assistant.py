@@ -10,10 +10,10 @@
 |------|------|------|
 | 音訊輸入 (audio_input.py) | ✅ | 使用 sounddevice |
 | VAD 語音偵測 (vad_segmenter.py) | ✅ | Silero VAD + 簡單能量偵測 |
-| 停頓偵測 (FR-3) | ✅ | 調整為 1.5 秒 |
-| ASR 轉寫 (asr_worker.py) | ✅ | 使用 Faster-Whisper base |
+| 停頓偵測 (FR-3) | ✅ | 程式預設 0.8 秒，可由 CLI 調整 |
+| ASR 轉寫 (asr_worker.py) | ✅ | 呼叫 Qwen3-ASR；需安裝 qwen-asr 套件並提供模型 |
 | 規則引擎 (rule_engine.py) | ✅ | contains/regex/exact, priority, cooldown |
-| TTS 播放 (tts_worker.py) | ✅ | pyttsx3 (Windows) / espeak-ng (Linux) |
+| TTS 播放 (tts_worker.py) | ✅ | 優先 Qwen3-TTS；模型載入失敗時使用系統備援 |
 | 狀態機 (orchestrator.py) | ✅ | LISTENING → ASR → SPEAKING |
 | ASR/TTS 互斥 | ✅ | speaking_event 同步 |
 | 記憶體管理 (FR-6) | ✅ | 不落盤，僅 RAM |
@@ -22,14 +22,14 @@
 ### 待完成 ⚠️
 | 功能 | 狀態 | 原因 |
 |------|------|------|
-| Qwen3-ASR 模型整合 | ⚠️ | 網路下載問題，改用 Faster-Whisper |
-| Qwen3-TTS 模型整合 | ⚠️ | 延後，先用 pyttsx3/espeak-ng |
-| 單元測試 | ⚠️ | 待補 |
+| 真實模型推論驗證 | ⚠️ | 需安裝 Qwen 套件、準備模型並在具備音訊/GPU 的環境驗證 |
+| CUDA Flash Attention / 量化效能 | ⚠️ | 本機 CPU-only，尚未量測 |
+| 端到端硬體音訊驗收 | ⚠️ | 需麥克風、喇叭與模型實機測試 |
 
 ### 技術變更
-- **ASR**：從 Qwen3-ASR 改為 Faster-Whisper base (140MB)
-- **TTS**：從 Qwen3-TTS 改為 pyttsx3 (Windows) / espeak-ng (Linux)
-- **VAD 停頓**：從 1.0 秒調整為 1.5 秒
+- **ASR**：目前程式載入 Qwen3-ASR，不再以 Faster-Whisper 為執行引擎
+- **TTS**：目前程式優先載入 Qwen3-TTS，失敗時退回系統 TTS
+- **VAD 停頓**：程式預設 0.8 秒，CLI 與 YAML 可調整
 
 ---
 
@@ -61,9 +61,9 @@
 
 #### **2.1 In Scope**
 - Windows 11 + Python（可選 GPU / CPU）本機執行
-- **Faster-Whisper** 做離線 ASR（替代 Qwen3-ASR，網路問題）
-- **pyttsx3/espeak-ng** 做本地 TTS（替代 Qwen3-TTS）
-- 以 VAD/停頓判斷切段（停頓 1.5 秒視為一句結束）
+- **Qwen3-ASR** 做離線 ASR；本機模型需事先準備
+- **Qwen3-TTS** 做本地語音合成，載入失敗時採用系統 TTS 備援
+- 以 VAD/停頓判斷切段（程式預設 0.8 秒，CLI 可調整）
 - JSON 規則檔驅動：關鍵字、優先序、冷卻時間、輸出內容、TTS voice 設定
 - 多執行緒：ASR 與 TTS 分工，主流程用狀態機協調
 
@@ -295,4 +295,3 @@
 29. [Voice AI Agent 知识库：打造你自己的语音智能体！ 原创](https://blog.csdn.net/agora_cloud/article/details/149612874)
 30. [解锁AI 语音交互的「灵魂秘籍」丨Voice Agent 学习笔记](https://blog.csdn.net/agora_cloud/article/details/148931365)
 31. [Qwen3-TTS语音设计世界入门指南：'跳跃精准'滑块对语音 ...](https://blog.csdn.net/weixin_30653091/article/details/158312135)
-
