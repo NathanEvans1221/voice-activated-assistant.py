@@ -23,13 +23,13 @@
 | 功能 | 狀態 | 原因 |
 |------|------|------|
 | 真實模型推論驗證 | ⚠️ | 需安裝 Qwen 套件、準備模型並在具備音訊/GPU 的環境驗證 |
-| CUDA Flash Attention / 量化效能 | ⚠️ | 本機 CPU-only，尚未量測 |
+| CUDA Flash Attention / 量化效能 | ⚠️ | 已確認 RTX 3070 Laptop GPU（8 GB）；目前 PyTorch 為 CPU 版本，尚未量測 |
 | 端到端硬體音訊驗收 | ⚠️ | 需麥克風、喇叭與模型實機測試 |
 
 ### 技術變更
 - **ASR**：目前程式載入 Qwen3-ASR，不再以 Faster-Whisper 為執行引擎
 - **TTS**：目前程式優先載入 Qwen3-TTS，失敗時退回系統 TTS
-- **VAD 停頓**：程式預設 0.8 秒，CLI 與 YAML 可調整
+- **VAD 停頓**：程式預設 0.8 秒，CLI 可調整；目前 --config 尚未接入 YAML 載入
 
 ---
 

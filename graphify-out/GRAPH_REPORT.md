@@ -1,166 +1,160 @@
-# Graph Report - .  (2026-04-10)
+# Graph Report - voice-activated-assistant.py  (2026-10-04)
 
 ## Corpus Check
-- 19 files · ~621,191 words
+- 32 files · ~11,830 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 162 nodes · 369 edges · 21 communities detected
-- Extraction: 49% EXTRACTED · 51% INFERRED · 0% AMBIGUOUS · INFERRED: 190 edges (avg confidence: 0.5)
+- 381 nodes · 640 edges · 39 communities (23 shown, 16 thin omitted)
+- Extraction: 70% EXTRACTED · 30% INFERRED · 0% AMBIGUOUS · INFERRED: 192 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `bbe030cb`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
+## Community Hubs (Navigation)
+- TTSWorker
+- TTSJob
+- .__init__
+- ._audio_callback
+- Orchestrator
+- .process_frame
+- TokenStreamer
+- ._recognize
+- 🎙️ 語音互動助理 (Voice-Activated Assistant)
+- AI Agent 指南：GitHub Projects v2 工作流 / AI Agent Guide: GitHub Projects v2 Workflow
+- .load_vad
+- __init__.py
+- TODO.md - Voice Activated Assistant
+- .frame_samples
+- bash
+- 🤖 Aider 安裝與操作指南 (Windows)
+- permission
+- Core Requirements (from PRD)
+- 🔍 grepai 安裝與操作指南 (Windows)
+- [Unreleased]
+- .__init__
+- .start
+- .stop
+- AGENTS.md
+- .is_running
+- .list_devices
+- .start
+- .stop
+- .get_history
+- .is_speaking
+- voice-activated-assistant-py
+
 ## God Nodes (most connected - your core abstractions)
-1. `TTSJob` - 32 edges
-2. `TTSWorker` - 30 edges
-3. `AudioInput` - 27 edges
-4. `VADSegmenter` - 27 edges
-5. `ASRWorker` - 26 edges
-6. `RuleEngine` - 26 edges
-7. `Orchestrator` - 24 edges
-8. `AudioConfig` - 22 edges
-9. `ASRResult` - 20 edges
-10. `VADConfig` - 20 edges
+1. `TTSJob` - 39 edges
+2. `TTSWorker` - 37 edges
+3. `ASRWorker` - 31 edges
+4. `AudioInput` - 31 edges
+5. `VADSegmenter` - 29 edges
+6. `Orchestrator` - 28 edges
+7. `RuleEngine` - 28 edges
+8. `bash` - 26 edges
+9. `AudioConfig` - 26 edges
+10. `ASRResult` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Orchestrator` --uses--> `ASRResult`  [INFERRED]
-  src\orchestrator.py → src\asr_worker.py
-- `語音助理的核心協調器      說明：         Orchestrator 是整個語音助理的心臟，負責：         1. 管理所有子模組的生` --uses--> `ASRResult`  [INFERRED]
-  src\orchestrator.py → src\asr_worker.py
-- `設定系統狀態 (執行緒安全)          說明：             使用 Lock 保護 _state 變數，確保在多執行緒環境下` --uses--> `ASRResult`  [INFERRED]
-  src\orchestrator.py → src\asr_worker.py
-- `TTS 完成回調 - 當 TTS 播放完畢時呼叫          說明：             此函式由 TTSWorker 在語音播放完成後呼叫。` --uses--> `ASRResult`  [INFERRED]
-  src\orchestrator.py → src\asr_worker.py
-- `模擬語句 - 用於測試規則匹配和 TTS          說明：             此函式用於 Mock 模式下模擬語音輸入。` --uses--> `ASRResult`  [INFERRED]
-  src\orchestrator.py → src\asr_worker.py
+- `AttentionBackendTests` --uses--> `ASRWorker`  [INFERRED]
+  tests/test_attention_backend.py → src/asr_worker.py
+- `AttentionBackendTests` --uses--> `TTSWorker`  [INFERRED]
+  tests/test_attention_backend.py → src/tts_worker.py
+- `main()` --calls--> `parse_args()`  [EXTRACTED]
+  main.py → src/main.py
+- `main()` --rationale_for--> `主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數`  [EXTRACTED]
+  main.py → src/main.py
+- `ASRResult` --uses--> `Orchestrator`  [INFERRED]
+  src/asr_worker.py → src/orchestrator.py
 
-## Communities
+## Import Cycles
+- None detected.
 
-### Community 0 - "Community 0"
-Cohesion: 0.14
-Nodes (29): ASRResult, ASRWorker, 建構函式 - 建立 ASRWorker 實例          說明：             初始化 ASR Worker，設定模型路徑和回調函式。, 啟動 ASR Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的音訊任務。, 停止 ASR Worker          說明：             優雅地停止 worker 執行緒：             1. 設定停止, 語音辨識結果資料類別      說明：         封裝語音辨識的結果，包含識別出的文字及其他相關資訊。      屬性：         tr, 語音辨識工作者      說明：         負責將音訊資料轉換為文字的 worker 模組。         使用執行緒和佇列實現非同步處理：, AudioConfig (+21 more)
+## Communities (39 total, 16 thin omitted)
 
-### Community 1 - "Community 1"
-Cohesion: 0.11
-Nodes (16): TTS 完成回調 - 當 TTS 播放完畢時呼叫          說明：             此函式由 TTSWorker 在語音播放完成後呼叫。, 模擬語句 - 用於測試規則匹配和 TTS          說明：             此函式用於 Mock 模式下模擬語音輸入。, TTS 任務資料類別          說明：         封裝要送給 TTS Worker 的任務資料。         由 RuleEngine, TTSJob, 建構函式 - 建立 TTSWorker 實例          說明：             初始化 TTS Worker，設定模型路徑和回調函式。, 檢查是否正在說話          回傳：             bool: True = 正在朗讀, 取得說話事件物件          說明：             此 Event 會在開始說話時設為 True，說完後設為 False。, 啟動 TTS Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。 (+8 more)
+### Community 0 - "TTSWorker"
+Cohesion: 0.17
+Nodes (38): Enum, ASRResult, ASRWorker, 語音辨識結果資料類別      說明：         封裝語音辨識的結果，包含識別出的文字及其他相關資訊。      屬性：         tr, 語音辨識工作者      說明：         負責將音訊資料轉換為文字的 worker 模組。         使用執行緒和佇列實現非同步處理：, AudioConfig, AudioInput, 音訊輸入的組態資料類別          說明：         定義音訊擷取的所有相關參數，包含取樣率、聲道數、資料類型等。         使用 d (+30 more)
 
-### Community 2 - "Community 2"
-Cohesion: 0.13
-Nodes (12): 語音助理的核心協調器      說明：         Orchestrator 是整個語音助理的心臟，負責：         1. 管理所有子模組的生, 規則引擎          說明：         負責管理所有規則的生命週期和匹配邏輯。         核心功能：         1. 從 JS, 建構函式 - 建立 RuleEngine 實例                  說明：             初始化規則引擎，設定規則檔路徑。, 載入規則檔                  說明：             從 JSON 檔案讀取規則定義，並轉換為 Rule 物件列表。, 檢查是否需要熱重載                  說明：             檢查規則檔是否被修改過，若是則自動重新載入。, 匹配規則                  說明：             根據輸入的文字匹配對應的規則。             匹配流程：, 規則資料類別          說明：         封裝單一規則的所有屬性，包含關鍵字、匹配模式、優先級、冷卻時間等。          屬性：, 檢查關鍵字是否匹配                  說明：             根據規則的 match_mode 欄位，選擇合適的匹配方式： (+4 more)
+### Community 1 - "TTSJob"
+Cohesion: 0.06
+Nodes (27): Event, TTS 任務資料類別          說明：         封裝要送給 TTS Worker 的任務資料。         由 RuleEngine, 載入規則檔                  說明：             從 JSON 檔案讀取規則定義，並轉換為 Rule 物件列表。, 檢查是否需要熱重載                  說明：             檢查規則檔是否被修改過，若是則自動重新載入。, 匹配規則                  說明：             根據輸入的文字匹配對應的規則。             匹配流程：, 規則資料類別          說明：         封裝單一規則的所有屬性，包含關鍵字、匹配模式、優先級、冷卻時間等。          屬性：, 檢查關鍵字是否匹配                  說明：             根據規則的 match_mode 欄位，選擇合適的匹配方式：, 生成回應文字                  說明：             根據規則的回應類型生成要朗讀的文字：             - "sp (+19 more)
 
-### Community 3 - "Community 3"
-Cohesion: 0.12
-Nodes (9): AudioInput, 建構函式 - 建立 AudioInput 實例                  說明：             初始化音訊輸入管理器，設定組態和回調函式, 列出所有可用的音訊裝置                  說明：             查詢並顯示系統中所有可用的音訊輸入和輸出裝置。, 啟動音訊串流，開始從麥克風擷取音訊                  說明：             建立 sounddevice InputStream, 停止音訊串流                  說明：             優雅地停止音訊串流並釋放資源。             此函式會：, 音訊資料回調 - sounddevice 每次收到新音訊時呼叫                  說明：             此函式由 soundde, 檢查音訊串流是否正在執行                  參數：             無                  回傳：, 音訊輸入管理器          說明：         負責與系統音訊驅動互動，從麥克風即時擷取音訊資料。         使用 sounddevic (+1 more)
-
-### Community 4 - "Community 4"
-Cohesion: 0.24
-Nodes (5): main(), parse_args(), 主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數, 解析命令列參數          說明：         此函式使用 argparse 模組解析命令列參數，讓使用者可以自訂程式行為，, Orchestrator
-
-### Community 5 - "Community 5"
-Cohesion: 0.18
-Nodes (6): 處理單個音訊框架          說明：             這是 VAD 模組的核心函式，每次收到新的音訊資料時呼叫。, 簡單能量閾值 VAD          說明：             使用簡單的能量計算來判斷是否為語音。             計算音訊的 RMS, Silero VAD 語音活動檢測          說明：             使用 Silero AI 的預訓練 VAD 模型進行語音偵測。, 完成語句處理          說明：             當偵測到語句結束時呼叫此函式。             職責：, 重設內部狀態          說明：             清空緩衝區並重設所有計時器和狀態變數。             用於語句完成後或需要重新, 公開的重設函式          說明：             提供給外部呼叫的重設接口。             會先取得鎖再重設，確保執行緒安全。
-
-### Community 6 - "Community 6"
+### Community 3 - "._audio_callback"
 Cohesion: 0.33
-Nodes (2): BaseStreamer, TokenStreamer
+Nodes (4): CallbackFlags, ndarray, 建構函式 - 建立 AudioInput 實例                  說明：             初始化音訊輸入管理器，設定組態和回調函式, 音訊資料回調 - sounddevice 每次收到新音訊時呼叫                  說明：             此函式由 soundde
 
-### Community 7 - "Community 7"
-Cohesion: 0.5
-Nodes (2): Worker 執行緒主迴圈          說明：             在獨立執行緒中運行的主要工作迴圈：             1. 從輸入佇, 執行實際的語音辨識          說明：             這是核心的辨識函式，目前為預留實作：             - 若模型未載入，回
+### Community 4 - "Orchestrator"
+Cohesion: 0.08
+Nodes (21): Logger, main(), get_logger(), Logging configuration module, setup_logging(), main(), parse_args(), 主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數 (+13 more)
 
-### Community 8 - "Community 8"
-Cohesion: 0.5
-Nodes (1): Logging configuration module
+### Community 5 - ".process_frame"
+Cohesion: 0.19
+Nodes (7): ndarray, 處理單個音訊框架          說明：             這是 VAD 模組的核心函式，每次收到新的音訊資料時呼叫。, 簡單能量閾值 VAD          說明：             使用簡單的能量計算來判斷是否為語音。             計算音訊的 RMS, Silero VAD 語音活動檢測          說明：             使用 Silero AI 的預訓練 VAD 模型進行語音偵測。, 完成語句處理          說明：             當偵測到語句結束時呼叫此函式。             職責：, 重設內部狀態          說明：             清空緩衝區並重設所有計時器和狀態變數。             用於語句完成後或需要重新, 公開的重設函式          說明：             提供給外部呼叫的重設接口。             會先取得鎖再重設，確保執行緒安全。
 
-### Community 9 - "Community 9"
-Cohesion: 1.0
-Nodes (1): 提交音訊進行辨識          說明：             將音訊資料加入任務佇列，等待 worker 執行緒處理。             這
+### Community 7 - "._recognize"
+Cohesion: 0.20
+Nodes (7): ndarray, 提交音訊進行辨識          說明：             將音訊資料加入任務佇列，等待 worker 執行緒處理。             這, 提交音訊進行辨識 說明： 將音訊資料加入任務佇列，等待 worker 執行緒處理。 這是非同步操作，函式會立即返回。 參數： audio:…, Worker 執行緒主迴圈          說明：             在獨立執行緒中運行的主要工作迴圈：             1. 從輸入佇, Worker 執行緒主迴圈 說明： 在獨立執行緒中運行的主要工作迴圈： 1. 從輸入佇列取出音訊任務 2. 若收到 None，則結束迴圈 3. 呼叫…, 執行實際的語音辨識          說明：             這是核心的辨識函式，目前為預留實作：             - 若模型未載入，回, 執行實際的語音辨識 說明： 這是核心的辨識函式，目前為預留實作： - 若模型未載入，回傳錯誤訊息 - 若已載入模型，應調用模型進行推論 參數： audio:…
 
-### Community 10 - "Community 10"
-Cohesion: 1.0
-Nodes (0): 
+### Community 8 - "🎙️ 語音互動助理 (Voice-Activated Assistant)"
+Cohesion: 0.06
+Nodes (30): 1. 演算法級加速：Flash Attention, 2. 模型尺寸優化：模型量化 (Quantization), 3. 硬體級加速：TensorRT / ONNX 轉換, 📅 未來發展方向, 🛠️ 核心優化任務清單, 🧠 為什麼不優先更換程式語言 (Python vs. Rust/Go)？, 🚀 語音助理效能優化藍圖 (Performance Optimization Roadmap), 🚀 進行中與已完成優化 (+22 more)
 
-### Community 11 - "Community 11"
-Cohesion: 1.0
-Nodes (0): 
+### Community 9 - "AI Agent 指南：GitHub Projects v2 工作流 / AI Agent Guide: GitHub Projects v2 Workflow"
+Cohesion: 0.07
+Nodes (27): 1. 適用情境 / When to Use, 2.1 確認 gh CLI 與授權, 2.2 確認 Token Scopes, 2.3 確認目標 owner 與 repo, 2. 必要前置 / Prerequisites, 3.1 解析來源文件, 3.2 建立 Issues（每大類 1 個 parent）, 3.3 建立 Projects v2 Board (+19 more)
 
-### Community 12 - "Community 12"
-Cohesion: 1.0
-Nodes (1): 載入 VAD 模型          說明：             嘗試載入 Silero VAD 模型。             若載入失敗 (缺少
+### Community 18 - "TODO.md - Voice Activated Assistant"
+Cohesion: 0.07
+Nodes (27): 1.1 初始化專案, 1.2 建立專案結構, 1.3 Logging 設定, 2.1 音訊輸入模組, 2.2 VAD 語音偵測, 3.1 ASR Worker, 3.2 Utterance 處理, 4.1 規則系統 (+19 more)
 
-### Community 13 - "Community 13"
-Cohesion: 1.0
-Nodes (1): Voice Activated Assistant - Main Package
+### Community 21 - "bash"
+Cohesion: 0.08
+Nodes (26): cat *, cp *, dd *, del *, echo *, format *, git add *, git branch * (+18 more)
 
-### Community 14 - "Community 14"
-Cohesion: 1.0
-Nodes (0): 
+### Community 22 - "🤖 Aider 安裝與操作指南 (Windows)"
+Cohesion: 0.12
+Nodes (16): 1. 📥 安裝 Aider, 2. 🔑 設定 API Key (以 OpenAI 或 Anthropic 為例), 3. 🚀 開始結對程式設計 (Pair Programming), 4. 💬 常用指令與操作邏輯, 5. 🤝 AI 代理人如何與 Aider 協作？, 6. 💡 Aider 為什麼對寫程式超級有幫助？, 🤖 Aider 安裝與操作指南 (Windows), 🗺️ Codebase 索引與專案地圖 (Repo Map) (+8 more)
 
-### Community 15 - "Community 15"
-Cohesion: 1.0
-Nodes (0): 
+### Community 23 - "permission"
+Cohesion: 0.12
+Nodes (16): permission, cargo, date, dir, echo, edit, glob, grep (+8 more)
 
-### Community 16 - "Community 16"
-Cohesion: 1.0
-Nodes (0): 
+### Community 24 - "Core Requirements (from PRD)"
+Cohesion: 0.15
+Nodes (12): 1. Audio Pipeline, 2. ASR (Automatic Speech Recognition), 3. Rule Engine, 4. TTS (Text-to-Speech), 5. State Machine, 6. Memory & Privacy, Core Requirements (from PRD), Draft: Voice Activated Assistant Plan (+4 more)
 
-### Community 17 - "Community 17"
-Cohesion: 1.0
-Nodes (0): 
+### Community 25 - "🔍 grepai 安裝與操作指南 (Windows)"
+Cohesion: 0.25
+Nodes (7): 1. 📥 安裝 grepai, 2. 🤖 準備本地模型 (Ollama), 3. ⚙️ 初始化你的專案, 4. 👁️ 啟動「索引監聽」 Daemon, 5. 🔍 執行自然語言語意搜尋, 🔍 grepai 安裝與操作指南 (Windows), 💡 核心工作流總結
 
-### Community 18 - "Community 18"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 19 - "Community 19"
-Cohesion: 1.0
-Nodes (1): 計算每個音訊區塊的樣本數                  說明：             根據取樣率和區塊持續時間計算每次 Callback 應該處理的
-
-### Community 20 - "Community 20"
-Cohesion: 1.0
-Nodes (0): 
+### Community 26 - "[Unreleased]"
+Cohesion: 0.40
+Nodes (4): Added, Changed, Changelog, [Unreleased]
 
 ## Knowledge Gaps
-- **42 isolated node(s):** `語音辨識結果資料類別      說明：         封裝語音辨識的結果，包含識別出的文字及其他相關資訊。      屬性：         tr`, `語音辨識工作者      說明：         負責將音訊資料轉換為文字的 worker 模組。         使用執行緒和佇列實現非同步處理：`, `建構函式 - 建立 ASRWorker 實例          說明：             初始化 ASR Worker，設定模型路徑和回調函式。`, `啟動 ASR Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的音訊任務。`, `停止 ASR Worker          說明：             優雅地停止 worker 執行緒：             1. 設定停止` (+37 more)
+- **134 isolated node(s):** `$schema`, `read`, `glob`, `grep`, `list` (+129 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 9`** (2 nodes): `.process()`, `提交音訊進行辨識          說明：             將音訊資料加入任務佇列，等待 worker 執行緒處理。             這`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (2 nodes): `bench_gpu.py`, `benchmark_gpu()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (2 nodes): `check_speakers.py`, `check_speakers()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 12`** (2 nodes): `載入 VAD 模型          說明：             嘗試載入 Silero VAD 模型。             若載入失敗 (缺少`, `.load_vad()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 13`** (2 nodes): `__init__.py`, `Voice Activated Assistant - Main Package`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (1 nodes): `inspect_tts.py`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (1 nodes): `inspect_tts_v2.py`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (1 nodes): `list_files.py`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (1 nodes): `setup_git_sync.ps1`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (1 nodes): `test_opencc.py`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (1 nodes): `計算每個音訊區塊的樣本數                  說明：             根據取樣率和區塊持續時間計算每次 Callback 應該處理的`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (1 nodes): `config.py`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `VADSegmenter` connect `Community 0` to `Community 1`, `Community 2`, `Community 3`, `Community 4`, `Community 5`, `Community 12`?**
-  _High betweenness centrality (0.152) - this node is a cross-community bridge._
-- **Why does `RuleEngine` connect `Community 2` to `Community 0`, `Community 1`, `Community 3`, `Community 4`?**
-  _High betweenness centrality (0.143) - this node is a cross-community bridge._
-- **Why does `ASRWorker` connect `Community 0` to `Community 1`, `Community 2`, `Community 3`, `Community 4`, `Community 7`, `Community 9`?**
-  _High betweenness centrality (0.137) - this node is a cross-community bridge._
-- **Are the 29 inferred relationships involving `TTSJob` (e.g. with `State` and `OrchestratorConfig`) actually correct?**
+- **Why does `ASRWorker` connect `TTSWorker` to `Orchestrator`, `._recognize`, `.__init__`, `.start`, `.stop`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `TTSWorker` connect `TTSWorker` to `TTSJob`, `Orchestrator`, `.is_speaking`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `Orchestrator` connect `Orchestrator` to `TTSWorker`, `TTSJob`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Are the 29 inferred relationships involving `TTSJob` (e.g. with `Orchestrator` and `OrchestratorConfig`) actually correct?**
   _`TTSJob` has 29 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 18 inferred relationships involving `TTSWorker` (e.g. with `State` and `OrchestratorConfig`) actually correct?**
-  _`TTSWorker` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 19 inferred relationships involving `AudioInput` (e.g. with `解析命令列參數          說明：         此函式使用 argparse 模組解析命令列參數，讓使用者可以自訂程式行為，` and `主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數`) actually correct?**
+- **Are the 19 inferred relationships involving `TTSWorker` (e.g. with `Orchestrator` and `OrchestratorConfig`) actually correct?**
+  _`TTSWorker` has 19 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 18 inferred relationships involving `ASRWorker` (e.g. with `Orchestrator` and `OrchestratorConfig`) actually correct?**
+  _`ASRWorker` has 18 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 19 inferred relationships involving `AudioInput` (e.g. with `主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數` and `解析命令列參數          說明：         此函式使用 argparse 模組解析命令列參數，讓使用者可以自訂程式行為，`) actually correct?**
   _`AudioInput` has 19 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 17 inferred relationships involving `VADSegmenter` (e.g. with `State` and `OrchestratorConfig`) actually correct?**
-  _`VADSegmenter` has 17 INFERRED edges - model-reasoned connections that need verification._
