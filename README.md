@@ -78,7 +78,13 @@ uv sync
 pip install -r requirements.txt
 ```
 
-目前 `pyproject.toml` 列出通用執行依賴；Qwen 模型套件列於 `requirements.txt`，需依使用環境另外安裝。
+核心依賴不包含模型套件。ASR 與 TTS 套件固定不同 Transformers 版本，請擇一安裝；uv 已設定兩個 extras 互斥。
+
+```powershell
+uv sync --extra asr  # Qwen3-ASR
+# 或
+uv sync --extra tts  # Qwen3-TTS
+```
 
 ### 2. 準備 ASR 模型
 

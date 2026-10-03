@@ -9,11 +9,10 @@ pyttsx3>=2.90
 huggingface-hub[cli]
 transformers>=4.40.0
 accelerate>=0.30.0
-faster-whisper>=0.0.0
 soundfile>=0.0.0
-qwen-tts
-qwen-asr
-qwen-omni-utils
 opencc-python-reimplemented
 
+# Qwen engines pin incompatible transformers versions; install only one:
+# qwen-asr
+# qwen-tts
 
