@@ -25,7 +25,7 @@ uv sync --extra asr --extra dev
 .\.venv\Scripts\python.exe src\main.py --rules config\rules.json --device 1
 ```
 
-說完一句後停頓約 1.5 秒，程式才會送出整句辨識。按 `Ctrl+C` 停止。
+說完一句後停頓約 0.8 秒，程式就會送出整句辨識。按 `Ctrl+C` 停止。
 
 ## 執行測試
 

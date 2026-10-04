@@ -25,7 +25,7 @@ uv sync --extra asr --extra dev
 1. 啟動時不要加 `--mock-mode` 或 `--test`。
 2. 執行 `.\.venv\Scripts\python.exe src\main.py --list-devices`，選擇輸入聲道大於 0 的裝置。
 3. 用 `--device <裝置編號>` 指定麥克風；省略此參數則使用系統預設輸入。
-4. 說完一句後停頓。預設需約 1.5 秒靜音，VAD 才會結束語句並送去辨識。
+4. 說完一句後停頓。預設需約 0.8 秒靜音，VAD 才會結束語句並送去辨識；可用 `--silence-duration` 調整。
 5. 啟動日誌應看到 `[ASR] 模型載入成功`。只看到「語音助理已就緒」不代表 ASR 模型已成功載入。
 
 ## 常見錯誤

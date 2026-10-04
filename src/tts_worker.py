@@ -146,6 +146,8 @@ class TTSWorker:
 
         # TTS 引擎
         self._engine = None
+        self._fallback_engine = None
+        self._fallback_engine_loaded = False
 
         # 任務佇列最大容量 (超過此數量會拒絕新任務)
         self._max_queue_size = 10
@@ -224,17 +226,9 @@ class TTSWorker:
             self._load_fallback_engine()
     
     def _load_fallback_engine(self):
-        """載入系統內建的 TTS 引擎作為備援"""
-        import platform
-        system = platform.system()
-        if system == "Windows":
-            try:
-                import pyttsx3
-                self._fallback_engine = pyttsx3.init()
-            except ImportError:
-                self._fallback_engine = None
-        else:
-            self._fallback_engine = None
+        """標記備援引擎待初始化，實際初始化延後到 TTS worker 執行緒。"""
+        self._fallback_engine = None
+        self._fallback_engine_loaded = False
 
     def start(self):
         """
@@ -442,13 +436,26 @@ class TTSWorker:
 
     def _speak_fallback(self, job: TTSJob):
         """備援的朗讀實作"""
-        if hasattr(self, '_fallback_engine') and self._fallback_engine:
-             self._fallback_engine.say(job.text)
-             self._fallback_engine.runAndWait()
-        else:
-            # 最後一線：使用系統指令
-            import subprocess
-            try:
-                subprocess.run(["espeak-ng", "-v", "zh", job.text], capture_output=True)
-            except:
-                print(f"[TTS] 無法播放語音: {job.text}")
+        if not self._fallback_engine_loaded:
+            self._fallback_engine_loaded = True
+            import platform
+            if platform.system() == "Windows":
+                try:
+                    import pyttsx3
+                    self._fallback_engine = pyttsx3.init()
+                    print("[TTS] Windows 備援語音引擎已於 Worker 執行緒初始化", flush=True)
+                except Exception as e:
+                    print(f"[TTS] Windows 備援語音引擎初始化失敗: {e}", flush=True)
+
+        if self._fallback_engine:
+            print(f"[TTS] Windows 備援朗讀開始: {job.text}", flush=True)
+            self._fallback_engine.say(job.text)
+            self._fallback_engine.runAndWait()
+            print("[TTS] Windows 備援朗讀完成", flush=True)
+            return
+
+        # 最後一線：使用系統指令
+        try:
+            subprocess.run(["espeak-ng", "-v", "zh", job.text], capture_output=True)
+        except Exception as e:
+            print(f"[TTS] 無法播放語音: {e}", flush=True)

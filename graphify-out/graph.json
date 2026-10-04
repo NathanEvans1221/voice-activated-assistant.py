@@ -673,8 +673,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_asr_worker_asrresult",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "asrresult"
     },
     {
@@ -783,8 +783,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_asr_worker_rationale_36",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "\u8a9e\u97f3\u8fa8\u8b58\u7d50\u679c\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u5c01\u88dd\u8a9e\u97f3\u8fa8\u8b58\u7684\u7d50\u679c,\u5305\u542b\u8b58\u5225\u51fa\u7684\u6587\u5b57\u53ca\u5176\u4ed6\u76f8\u95dc\u8cc7\u8a0a\u3002 \u5c6c\u6027: transcript: str,\u8b58\u5225\u51fa\u7684\u6587\u5b57\u5167\u5bb9 -..."
     },
     {
@@ -872,7 +872,7 @@
       "_origin": "ast",
       "id": "src_audio_input",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "audio_input.py"
     },
     {
@@ -883,7 +883,7 @@
       "_origin": "ast",
       "id": "src_audio_input_audioconfig",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "audioconfig"
     },
     {
@@ -893,8 +893,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_audio_input_audioconfig_frame_samples",
-      "community": 4,
-      "community_name": ".frame_samples",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".frame_samples()"
     },
     {
@@ -905,7 +905,7 @@
       "_origin": "ast",
       "id": "src_audio_input_audioinput",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "audioinput"
     },
     {
@@ -937,8 +937,8 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "src_audio_input_audioinput_list_devices",
-      "community": 19,
-      "community_name": ".list_devices",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".list_devices()"
     },
     {
@@ -948,8 +948,8 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "src_audio_input_audioinput_start",
-      "community": 27,
-      "community_name": ".start",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".start()"
     },
     {
@@ -959,8 +959,8 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "src_audio_input_audioinput_stop",
-      "community": 28,
-      "community_name": ".stop",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".stop()"
     },
     {
@@ -992,8 +992,8 @@
       "source_location": "L289",
       "_origin": "ast",
       "id": "src_audio_input_audioinput_is_running",
-      "community": 12,
-      "community_name": ".is_running",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".is_running()"
     },
     {
@@ -1004,7 +1004,7 @@
       "_origin": "ast",
       "id": "src_audio_input_rationale_27",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u97f3\u8a0a\u8f38\u5165\u7684\u7d44\u614b\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u5b9a\u7fa9\u97f3\u8a0a\u64f7\u53d6\u7684\u6240\u6709\u76f8\u95dc\u53c3\u6578,\u5305\u542b\u53d6\u6a23\u7387\u3001\u8072\u9053\u6578\u3001\u8cc7\u6599\u985e\u578b\u7b49\u3002 \u4f7f\u7528 dataclass \u63d0\u4f9b\u578b\u5225\u5b89\u5168\u4e14\u6613\u65bc\u64f4\u5c55\u7684\u7d44\u614b\u7ba1\u7406\u3002..."
     },
     {
@@ -1014,8 +1014,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_audio_input_rationale_69",
-      "community": 4,
-      "community_name": ".frame_samples",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u8a08\u7b97\u6bcf\u500b\u97f3\u8a0a\u5340\u584a\u7684\u6a23\u672c\u6578 \u8aaa\u660e: \u6839\u64da\u53d6\u6a23\u7387\u548c\u5340\u584a\u6301\u7e8c\u6642\u9593\u8a08\u7b97\u6bcf\u6b21 callback \u61c9\u8a72\u8655\u7406\u7684\u6a23\u672c\u6578\u3002 \u4f8b\u5982:16000 hz * 30 ms / 1000..."
     },
     {
@@ -1026,7 +1026,7 @@
       "_origin": "ast",
       "id": "src_audio_input_rationale_89",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u97f3\u8a0a\u8f38\u5165\u7ba1\u7406\u5668 \u8aaa\u660e: \u8ca0\u8cac\u8207\u7cfb\u7d71\u97f3\u8a0a\u9a45\u52d5\u4e92\u52d5,\u5f9e\u9ea5\u514b\u98a8\u5373\u6642\u64f7\u53d6\u97f3\u8a0a\u8cc7\u6599\u3002 \u4f7f\u7528 sounddevice \u7684\u4e32\u6d41 (stream) \u6a5f\u5236\u5be6\u73fe\u4f4e\u5ef6\u9072\u7684\u97f3\u8a0a\u8655\u7406\u3002..."
     },
     {
@@ -1047,8 +1047,8 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "src_audio_input_rationale_136",
-      "community": 19,
-      "community_name": ".list_devices",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u5217\u51fa\u6240\u6709\u53ef\u7528\u7684\u97f3\u8a0a\u88dd\u7f6e \u8aaa\u660e: \u67e5\u8a62\u4e26\u986f\u793a\u7cfb\u7d71\u4e2d\u6240\u6709\u53ef\u7528\u7684\u97f3\u8a0a\u8f38\u5165\u548c\u8f38\u51fa\u88dd\u7f6e\u3002 \u6b64\u51fd\u5f0f\u7528\u65bc\u5e2e\u52a9\u4f7f\u7528\u8005\u9078\u64c7\u6b63\u78ba\u7684\u97f3\u8a0a\u88dd\u7f6e\u7d22\u5f15\u3002 \u53c3\u6578: \u7121 \u56de\u50b3: \u7121..."
     },
     {
@@ -1058,8 +1058,8 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "src_audio_input_rationale_158",
-      "community": 27,
-      "community_name": ".start",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u555f\u52d5\u97f3\u8a0a\u4e32\u6d41,\u958b\u59cb\u5f9e\u9ea5\u514b\u98a8\u64f7\u53d6\u97f3\u8a0a \u8aaa\u660e: \u5efa\u7acb sounddevice inputstream \u4e26\u958b\u59cb\u9304\u97f3\u3002\u6b64\u51fd\u5f0f\u6703: 1. \u6aa2\u67e5\u662f\u5426\u6709\u53ef\u7528\u7684\u97f3\u8a0a\u8f38\u5165\u88dd\u7f6e..."
     },
     {
@@ -1069,8 +1069,8 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "src_audio_input_rationale_223",
-      "community": 28,
-      "community_name": ".stop",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u505c\u6b62\u97f3\u8a0a\u4e32\u6d41 \u8aaa\u660e: \u512a\u96c5\u5730\u505c\u6b62\u97f3\u8a0a\u4e32\u6d41\u4e26\u91cb\u653e\u8cc7\u6e90\u3002 \u6b64\u51fd\u5f0f\u6703: 1. \u6aa2\u67e5\u662f\u5426\u6b63\u5728\u57f7\u884c 2. \u505c\u6b62\u4e32\u6d41 3. \u95dc\u9589\u4e32\u6d41\u7269\u4ef6 4. \u91cd\u8a2d\u57f7\u884c\u72c0\u614b \u53c3\u6578: \u7121..."
     },
     {
@@ -1091,8 +1091,8 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "src_audio_input_rationale_290",
-      "community": 12,
-      "community_name": ".is_running",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u6aa2\u67e5\u97f3\u8a0a\u4e32\u6d41\u662f\u5426\u6b63\u5728\u57f7\u884c \u53c3\u6578: \u7121 \u56de\u50b3: bool: - true: \u6b63\u5728\u64f7\u53d6\u97f3\u8a0a - false: \u5df2\u505c\u6b62"
     },
     {
@@ -1301,7 +1301,7 @@
       "_origin": "ast",
       "id": "src_orchestrator",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "orchestrator.py"
     },
     {
@@ -1312,7 +1312,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_state",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "state"
     },
     {
@@ -1323,7 +1323,7 @@
       "_origin": "ast",
       "id": "enum",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "enum"
     },
     {
@@ -1334,7 +1334,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestratorconfig",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "orchestratorconfig"
     },
     {
@@ -1345,7 +1345,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "orchestrator"
     },
     {
@@ -1356,7 +1356,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_init",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": ".__init__()"
     },
     {
@@ -1367,7 +1367,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_state",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": ".state()"
     },
     {
@@ -1378,7 +1378,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_set_state",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": ".set_state()"
     },
     {
@@ -1388,8 +1388,8 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_start",
-      "community": 1,
-      "community_name": "TTSJob",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".start()"
     },
     {
@@ -1399,8 +1399,8 @@
       "source_location": "L328",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_warm_up",
-      "community": 1,
-      "community_name": "TTSJob",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "._warm_up()"
     },
     {
@@ -1411,7 +1411,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_stop",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": ".stop()"
     },
     {
@@ -1422,7 +1422,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_audio_frame",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "._on_audio_frame()"
     },
     {
@@ -1433,7 +1433,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_utterance",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "._on_utterance()"
     },
     {
@@ -1443,8 +1443,8 @@
       "source_location": "L452",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_asr_result",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "._on_asr_result()"
     },
     {
@@ -1455,7 +1455,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_tts_complete",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "._on_tts_complete()"
     },
     {
@@ -1465,8 +1465,8 @@
       "source_location": "L555",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_simulate_utterance",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": ".simulate_utterance()"
     },
     {
@@ -1477,7 +1477,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_35",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u97f3\u52a9\u7406\u72c0\u614b\u5217\u8209 \u6210\u54e1\u8aaa\u660e: - listening: \u7b49\u5f85\u8a9e\u97f3\u8f38\u5165\u72c0\u614b,\u7cfb\u7d71\u6b63\u5728\u76e3\u807d\u9ea5\u514b\u98a8 - asr_processing:..."
     },
     {
@@ -1488,7 +1488,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_58",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "orchestrator \u5354\u8abf\u5668\u7684\u7d44\u614b\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u4f7f\u7528 python \u7684 dataclass \u5b9a\u7fa9\u6240\u6709\u53ef\u8a2d\u5b9a\u7684\u53c3\u6578,..."
     },
     {
@@ -1499,7 +1499,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_109",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u97f3\u52a9\u7406\u7684\u6838\u5fc3\u5354\u8abf\u5668 \u8aaa\u660e: orchestrator \u662f\u6574\u500b\u8a9e\u97f3\u52a9\u7406\u7684\u5fc3\u81df,\u8ca0\u8cac: 1. \u7ba1\u7406\u6240\u6709\u5b50\u6a21\u7d44\u7684\u751f\u547d\u9031\u671f (\u521d\u59cb\u5316\u3001\u8d77\u52d5\u3001\u505c\u6b62) 2...."
     },
     {
@@ -1510,7 +1510,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_126",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u521d\u59cb\u5316 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44 \u8aaa\u660e: \u5efa\u7acb orchestrator \u5be6\u4f8b,\u521d\u59cb\u5316\u6240\u6709\u5b50\u6a21\u7d44\u4e26\u8a2d\u5b9a\u56de\u8abf\u51fd\u5f0f\u3002..."
     },
     {
@@ -1521,7 +1521,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_207",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u53d6\u5f97\u76ee\u524d\u7cfb\u7d71\u72c0\u614b (\u57f7\u884c\u7dd2\u5b89\u5168) \u8aaa\u660e: \u4f7f\u7528 lock \u4fdd\u8b77 _state \u8b8a\u6578,\u78ba\u4fdd\u5728\u591a\u57f7\u884c\u7dd2\u74b0\u5883\u4e0b \u8b80\u53d6\u72c0\u614b\u4e0d\u6703\u53d6\u5f97\u4e0d\u4e00\u81f4\u7684\u7d50\u679c\u3002 \u53c3\u6578: \u7121 \u56de\u50b3:..."
     },
     {
@@ -1532,7 +1532,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_224",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a2d\u5b9a\u7cfb\u7d71\u72c0\u614b (\u57f7\u884c\u7dd2\u5b89\u5168) \u8aaa\u660e: \u4f7f\u7528 lock \u4fdd\u8b77 _state \u8b8a\u6578,\u78ba\u4fdd\u5728\u591a\u57f7\u884c\u7dd2\u74b0\u5883\u4e0b \u8a2d\u5b9a\u72c0\u614b\u4e0d\u6703\u7522\u751f\u7af6\u722d\u689d\u4ef6\u3002 \u53c3\u6578: new_state:..."
     },
     {
@@ -1542,8 +1542,8 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_242",
-      "community": 1,
-      "community_name": "TTSJob",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u555f\u52d5 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44 \u8aaa\u660e: \u6b64\u51fd\u5f0f\u8ca0\u8cac\u8d77\u52d5\u6240\u6709\u5b50\u6a21\u7d44\u4e26\u5c07\u7cfb\u7d71\u72c0\u614b\u8a2d\u70ba listening\u3002 \u57f7\u884c\u9806\u5e8f: 1. \u8f09\u5165\u898f\u5247\u6a94..."
     },
     {
@@ -1553,8 +1553,8 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_329",
-      "community": 1,
-      "community_name": "TTSJob",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "ai \u6a21\u578b\u71b1\u8eab \u900f\u904e\u57f7\u884c\u4e00\u6b21\u96b1\u85cf\u63a8\u8ad6\u4f86\u521d\u59cb\u5316 cuda \u5feb\u53d6\u8207\u76f8\u95dc\u904b\u7b97\u8cc7\u6e90"
     },
     {
@@ -1565,7 +1565,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_356",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u505c\u6b62 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44 \u8aaa\u660e: \u6b64\u51fd\u5f0f\u8ca0\u8cac\u512a\u96c5\u5730\u505c\u6b62\u6240\u6709\u5b50\u6a21\u7d44: 1. \u505c\u6b62 audioinput (\u505c\u6b62\u64f7\u53d6\u97f3\u8a0a) 2. \u505c\u6b62 asr..."
     },
     {
@@ -1576,7 +1576,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_392",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u97f3\u8a0a\u6846\u67b6\u56de\u8abf - \u8655\u7406\u6bcf\u500b\u65b0\u7684\u97f3\u8a0a\u8cc7\u6599\u584a \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 audioinput \u5728\u6536\u5230\u65b0\u7684\u97f3\u8a0a\u6846\u67b6\u6642\u547c\u53eb\u3002 \u5b83\u6703: 1. \u6aa2\u67e5 tts \u662f\u5426\u6b63\u5728\u8aaa\u8a71..."
     },
     {
@@ -1587,7 +1587,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_424",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u53e5\u5b8c\u6210\u56de\u8abf - \u7576 vad \u6aa2\u6e2c\u5230\u5b8c\u6574\u8a9e\u53e5\u6642\u547c\u53eb \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 vadsegmenter \u5728\u6aa2\u6e2c\u5230\u5b8c\u6574\u8a9e\u53e5\u6642\u547c\u53eb\u3002 \u5b83\u6703: 1. \u986f\u793a\u5075\u6e2c\u5230\u7684\u8a9e\u53e5\u8cc7\u8a0a..."
     },
     {
@@ -1597,8 +1597,8 @@
       "source_location": "L453",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_453",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "\u8a9e\u97f3\u8fa8\u8b58\u7d50\u679c\u56de\u8abf - \u7576 asr \u5b8c\u6210\u6587\u5b57\u8fa8\u8b58\u6642\u547c\u53eb \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 asrworker \u5728\u5b8c\u6210\u8a9e\u97f3\u8fa8\u8b58\u5f8c\u547c\u53eb\u3002 \u8655\u7406\u6d41\u7a0b: 1. \u53d6\u5f97\u8fa8\u8b58\u51fa\u7684\u6587\u5b57..."
     },
     {
@@ -1609,7 +1609,7 @@
       "_origin": "ast",
       "id": "src_orchestrator_rationale_520",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "tts \u5b8c\u6210\u56de\u8abf - \u7576 tts \u64ad\u653e\u5b8c\u7562\u6642\u547c\u53eb \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 ttsworker \u5728\u8a9e\u97f3\u64ad\u653e\u5b8c\u6210\u5f8c\u547c\u53eb\u3002 \u5b83\u6703: 1. \u986f\u793a\u64ad\u653e\u5b8c\u6210\u7684\u8cc7\u8a0a 2...."
     },
     {
@@ -1619,8 +1619,8 @@
       "source_location": "L556",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_556",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "\u6a21\u64ec\u8a9e\u53e5 - \u7528\u65bc\u6e2c\u8a66\u898f\u5247\u5339\u914d\u548c tts \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7528\u65bc mock \u6a21\u5f0f\u4e0b\u6a21\u64ec\u8a9e\u97f3\u8f38\u5165\u3002 \u5b83\u6703\u76f4\u63a5\u5efa\u7acb\u4e00\u500b asrresult \u4e26\u547c\u53eb..."
     },
     {
@@ -1630,8 +1630,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_rule_engine",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "rule_engine.py"
     },
     {
@@ -1641,8 +1641,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_rule_engine_rule",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "rule"
     },
     {
@@ -1664,7 +1664,7 @@
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "ruleengine"
     },
     {
@@ -1674,8 +1674,8 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_init",
-      "community": 29,
-      "community_name": ".__init__",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".__init__()"
     },
     {
@@ -1685,8 +1685,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_load_rules",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": ".load_rules()"
     },
     {
@@ -1696,8 +1696,8 @@
       "source_location": "L247",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_check_hot_reload",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": ".check_hot_reload()"
     },
     {
@@ -1707,8 +1707,8 @@
       "source_location": "L280",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_match",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": ".match()"
     },
     {
@@ -1718,8 +1718,8 @@
       "source_location": "L351",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_check_keywords",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "._check_keywords()"
     },
     {
@@ -1729,8 +1729,8 @@
       "source_location": "L398",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_generate_response",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "._generate_response()"
     },
     {
@@ -1740,8 +1740,8 @@
       "source_location": "L427",
       "_origin": "ast",
       "id": "src_rule_engine_ruleengine_get_history",
-      "community": 31,
-      "community_name": ".get_history",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": ".get_history()"
     },
     {
@@ -1751,8 +1751,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_32",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u898f\u5247\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u5c01\u88dd\u55ae\u4e00\u898f\u5247\u7684\u6240\u6709\u5c6c\u6027,\u5305\u542b\u95dc\u9375\u5b57\u3001\u5339\u914d\u6a21\u5f0f\u3001\u512a\u5148\u7d1a\u3001\u51b7\u537b\u6642\u9593\u7b49\u3002 \u5c6c\u6027: id: str,\u898f\u5247\u7684\u552f\u4e00\u8b58\u5225\u78bc - \u7528\u65bc\u65e5\u8a8c\u548c\u8ffd\u8e64 -..."
     },
     {
@@ -1774,7 +1774,7 @@
       "_origin": "ast",
       "id": "src_rule_engine_rationale_136",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u898f\u5247\u5f15\u64ce \u8aaa\u660e: \u8ca0\u8cac\u7ba1\u7406\u6240\u6709\u898f\u5247\u7684\u751f\u547d\u9031\u671f\u548c\u5339\u914d\u908f\u8f2f\u3002 \u6838\u5fc3\u529f\u80fd: 1. \u5f9e json \u6a94\u6848\u8f09\u5165\u898f\u5247 2. \u6839\u64da\u8f38\u5165\u6587\u5b57\u5339\u914d\u5c0d\u61c9\u898f\u5247 3. \u652f\u63f4\u71b1\u91cd\u8f09..."
     },
     {
@@ -1784,8 +1784,8 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_160",
-      "community": 29,
-      "community_name": ".__init__",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u5efa\u7acb ruleengine \u5be6\u4f8b \u8aaa\u660e: \u521d\u59cb\u5316\u898f\u5247\u5f15\u64ce,\u8a2d\u5b9a\u898f\u5247\u6a94\u8def\u5f91\u3002 \u53c3\u6578: rules_path: optional[str],\u898f\u5247..."
     },
     {
@@ -1795,8 +1795,8 @@
       "source_location": "L186",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_186",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u8f09\u5165\u898f\u5247\u6a94 \u8aaa\u660e: \u5f9e json \u6a94\u6848\u8b80\u53d6\u898f\u5247\u5b9a\u7fa9,\u4e26\u8f49\u63db\u70ba rule \u7269\u4ef6\u5217\u8868\u3002 \u8f09\u5165\u5f8c\u6703\u6309\u7167 priority \u6b04\u4f4d\u6392\u5e8f\u3002 \u53c3\u6578: path:..."
     },
     {
@@ -1806,8 +1806,8 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_248",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u6aa2\u67e5\u662f\u5426\u9700\u8981\u71b1\u91cd\u8f09 \u8aaa\u660e: \u6aa2\u67e5\u898f\u5247\u6a94\u662f\u5426\u88ab\u4fee\u6539\u904e,\u82e5\u662f\u5247\u81ea\u52d5\u91cd\u65b0\u8f09\u5165\u3002 \u9019\u4f7f\u5f97\u4f7f\u7528\u8005\u53ef\u4ee5\u5728\u7a0b\u5f0f\u904b\u884c\u6642\u4fee\u6539\u898f\u5247\u800c\u7121\u9700\u91cd\u555f\u3002 \u53c3\u6578: \u7121 \u56de\u50b3: bool: -..."
     },
     {
@@ -1817,8 +1817,8 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_281",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u5339\u914d\u898f\u5247 \u8aaa\u660e: \u6839\u64da\u8f38\u5165\u7684\u6587\u5b57\u5339\u914d\u5c0d\u61c9\u7684\u898f\u5247\u3002 \u5339\u914d\u6d41\u7a0b: 1. \u5148\u6aa2\u67e5\u71b1\u91cd\u8f09 2. \u5c07\u6587\u5b57\u52a0\u5165\u6b77\u53f2\u8a18\u9304 3. \u904d\u6b77\u6240\u6709\u898f\u5247,\u6aa2\u67e5\u95dc\u9375\u5b57\u5339\u914d 4...."
     },
     {
@@ -1828,8 +1828,8 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_352",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u6aa2\u67e5\u95dc\u9375\u5b57\u662f\u5426\u5339\u914d \u8aaa\u660e: \u6839\u64da\u898f\u5247\u7684 match_mode \u6b04\u4f4d,\u9078\u64c7\u5408\u9069\u7684\u5339\u914d\u65b9\u5f0f: - \"contains\": \u6aa2\u67e5\u95dc\u9375\u5b57\u662f\u5426\u5305\u542b\u5728\u6587\u5b57\u4e2d -..."
     },
     {
@@ -1839,8 +1839,8 @@
       "source_location": "L399",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_399",
-      "community": 39,
-      "community_name": ".match",
+      "community": 2,
+      "community_name": "rule_engine.py",
       "norm_label": "\u751f\u6210\u56de\u61c9\u6587\u5b57 \u8aaa\u660e: \u6839\u64da\u898f\u5247\u7684\u56de\u61c9\u985e\u578b\u751f\u6210\u8981\u6717\u8b80\u7684\u6587\u5b57: - \"speak_text\": \u56de\u50b3 text_template - \"speak_kv\": \u5c07..."
     },
     {
@@ -1850,8 +1850,8 @@
       "source_location": "L428",
       "_origin": "ast",
       "id": "src_rule_engine_rationale_428",
-      "community": 31,
-      "community_name": ".get_history",
+      "community": 0,
+      "community_name": "AudioInput",
       "norm_label": "\u53d6\u5f97\u8fa8\u8b58\u6b77\u53f2 \u8aaa\u660e: \u56de\u50b3\u6700\u8fd1\u7684\u8fa8\u8b58\u8a18\u9304\u5217\u8868,\u7528\u65bc\u8abf\u8a66\u548c\u5206\u6790\u3002 \u53c3\u6578: \u7121 \u56de\u50b3: list[str]: \u6587\u5b57\u5217\u8868,\u6700\u65b0\u7684\u5728\u6700\u5f8c\u9762"
     },
     {
@@ -1883,8 +1883,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": "ttsworker"
     },
     {
@@ -1902,18 +1902,18 @@
       "label": ".is_speaking()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L163",
+      "source_location": "L165",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_is_speaking",
-      "community": 32,
-      "community_name": ".is_speaking",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": ".is_speaking()"
     },
     {
       "label": ".speaking_event()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L173",
+      "source_location": "L175",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_speaking_event",
       "community": 1,
@@ -1935,29 +1935,29 @@
       "label": ".load_model()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L188",
+      "source_location": "L190",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_load_model",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": ".load_model()"
     },
     {
       "label": "._load_fallback_engine()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L226",
+      "source_location": "L228",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_load_fallback_engine",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": "._load_fallback_engine()"
     },
     {
       "label": ".start()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L239",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_start",
       "community": 1,
@@ -1968,7 +1968,7 @@
       "label": ".stop()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L261",
+      "source_location": "L255",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_stop",
       "community": 1,
@@ -1979,7 +1979,7 @@
       "label": ".speak()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L280",
+      "source_location": "L274",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_speak",
       "community": 1,
@@ -1990,7 +1990,7 @@
       "label": "._worker_loop()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L308",
+      "source_location": "L302",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_worker_loop",
       "community": 1,
@@ -2001,7 +2001,7 @@
       "label": "._split_into_sentences()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L338",
+      "source_location": "L332",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_split_into_sentences",
       "community": 1,
@@ -2012,7 +2012,7 @@
       "label": "._speak_streaming()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L353",
+      "source_location": "L347",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_speak_streaming",
       "community": 1,
@@ -2023,7 +2023,7 @@
       "label": "._speak_fallback()",
       "file_type": "code",
       "source_file": "src/tts_worker.py",
-      "source_location": "L443",
+      "source_location": "L437",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_speak_fallback",
       "community": 1,
@@ -2067,31 +2067,42 @@
       "label": "\u6aa2\u67e5\u662f\u5426\u6b63\u5728\u8aaa\u8a71 \u56de\u50b3\uff1a bool: True = \u6b63\u5728\u6717\u8b80",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L164",
+      "source_location": "L166",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_164",
-      "community": 32,
-      "community_name": ".is_speaking",
+      "id": "src_tts_worker_rationale_166",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": "\u6aa2\u67e5\u662f\u5426\u6b63\u5728\u8aaa\u8a71 \u56de\u50b3: bool: true = \u6b63\u5728\u6717\u8b80"
     },
     {
       "label": "\u53d6\u5f97\u8aaa\u8a71\u4e8b\u4ef6\u7269\u4ef6 \u8aaa\u660e\uff1a \u6b64 Event \u6703\u5728\u958b\u59cb\u8aaa\u8a71\u6642\u8a2d\u70ba True\uff0c\u8aaa\u5b8c\u5f8c\u8a2d\u70ba False\u3002 \u5176\u4ed6\u6a21\u7d44 (\u5982 Orchestrator)\u2026",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L174",
+      "source_location": "L176",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_174",
+      "id": "src_tts_worker_rationale_176",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "\u53d6\u5f97\u8aaa\u8a71\u4e8b\u4ef6\u7269\u4ef6 \u8aaa\u660e: \u6b64 event \u6703\u5728\u958b\u59cb\u8aaa\u8a71\u6642\u8a2d\u70ba true,\u8aaa\u5b8c\u5f8c\u8a2d\u70ba false\u3002 \u5176\u4ed6\u6a21\u7d44 (\u5982 orchestrator)..."
     },
     {
+      "label": "\u6a19\u8a18\u5099\u63f4\u5f15\u64ce\u5f85\u521d\u59cb\u5316\uff0c\u5be6\u969b\u521d\u59cb\u5316\u5ef6\u5f8c\u5230 TTS worker \u57f7\u884c\u7dd2\u3002",
+      "file_type": "rationale",
+      "source_file": "src/tts_worker.py",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "src_tts_worker_rationale_229",
+      "community": 1,
+      "community_name": "TTSJob",
+      "norm_label": "\u6a19\u8a18\u5099\u63f4\u5f15\u64ce\u5f85\u521d\u59cb\u5316,\u5be6\u969b\u521d\u59cb\u5316\u5ef6\u5f8c\u5230 tts worker \u57f7\u884c\u7dd2\u3002"
+    },
+    {
       "label": "\u555f\u52d5 TTS Worker \u57f7\u884c\u7dd2 \u8aaa\u660e\uff1a \u5efa\u7acb\u4e26\u555f\u52d5 worker \u57f7\u884c\u7dd2\uff0c\u958b\u59cb\u8655\u7406\u4efb\u52d9\u4f47\u5217\u4e2d\u7684\u6717\u8b80\u4efb\u52d9\u3002 \u53c3\u6578\uff1a \u7121 \u56de\u50b3\uff1a \u7121",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L240",
+      "source_location": "L234",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_240",
+      "id": "src_tts_worker_rationale_234",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "\u555f\u52d5 tts worker \u57f7\u884c\u7dd2 \u8aaa\u660e: \u5efa\u7acb\u4e26\u555f\u52d5 worker \u57f7\u884c\u7dd2,\u958b\u59cb\u8655\u7406\u4efb\u52d9\u4f47\u5217\u4e2d\u7684\u6717\u8b80\u4efb\u52d9\u3002 \u53c3\u6578: \u7121 \u56de\u50b3: \u7121"
@@ -2100,9 +2111,9 @@
       "label": "\u505c\u6b62 TTS Worker \u8aaa\u660e\uff1a \u512a\u96c5\u5730\u505c\u6b62 worker \u57f7\u884c\u7dd2\u3002 \u53c3\u6578\uff1a \u7121",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L262",
+      "source_location": "L256",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_262",
+      "id": "src_tts_worker_rationale_256",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "\u505c\u6b62 tts worker \u8aaa\u660e: \u512a\u96c5\u5730\u505c\u6b62 worker \u57f7\u884c\u7dd2\u3002 \u53c3\u6578: \u7121"
@@ -2111,9 +2122,9 @@
       "label": "\u63d0\u4ea4\u6717\u8b80\u4efb\u52d9 \u8aaa\u660e\uff1a \u5c07 TTS \u4efb\u52d9\u52a0\u5165\u4f47\u5217\uff0c\u7b49\u5f85 worker \u57f7\u884c\u7dd2\u8655\u7406\u3002 \u53c3\u6578\uff1a job: TTSJob\uff0c\u8981\u6717\u8b80\u7684\u4efb\u52d9 \u56de\u50b3\uff1a bool: -\u2026",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L281",
+      "source_location": "L275",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_281",
+      "id": "src_tts_worker_rationale_275",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "\u63d0\u4ea4\u6717\u8b80\u4efb\u52d9 \u8aaa\u660e: \u5c07 tts \u4efb\u52d9\u52a0\u5165\u4f47\u5217,\u7b49\u5f85 worker \u57f7\u884c\u7dd2\u8655\u7406\u3002 \u53c3\u6578: job: ttsjob,\u8981\u6717\u8b80\u7684\u4efb\u52d9 \u56de\u50b3: bool: -..."
@@ -2122,9 +2133,9 @@
       "label": "Worker \u57f7\u884c\u7dd2\u4e3b\u8ff4\u5708 \u8aaa\u660e\uff1a 1. \u5f9e\u4efb\u52d9\u4f47\u5217\u53d6\u51fa\u6717\u8b80\u4efb\u52d9 2. \u5c07\u4efb\u52d9\u62c6\u5206\u70ba\u591a\u500b\u5b50\u53e5 (Streaming \u57fa\u790e) 3.\u2026",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L309",
+      "source_location": "L303",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_309",
+      "id": "src_tts_worker_rationale_303",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "worker \u57f7\u884c\u7dd2\u4e3b\u8ff4\u5708 \u8aaa\u660e: 1. \u5f9e\u4efb\u52d9\u4f47\u5217\u53d6\u51fa\u6717\u8b80\u4efb\u52d9 2. \u5c07\u4efb\u52d9\u62c6\u5206\u70ba\u591a\u500b\u5b50\u53e5 (streaming \u57fa\u790e) 3...."
@@ -2133,9 +2144,9 @@
       "label": "\u4e32\u6d41\u5316\u6717\u8b80\u5be6\u4f5c\uff1a\u62c6\u5206 -> \u751f\u4e00\u6bb5 -> \u64ad\u4e00\u6bb5",
       "file_type": "rationale",
       "source_file": "src/tts_worker.py",
-      "source_location": "L354",
+      "source_location": "L348",
       "_origin": "ast",
-      "id": "src_tts_worker_rationale_354",
+      "id": "src_tts_worker_rationale_348",
       "community": 1,
       "community_name": "TTSJob",
       "norm_label": "\u4e32\u6d41\u5316\u6717\u8b80\u5be6\u4f5c:\u62c6\u5206 -> \u751f\u4e00\u6bb5 -> \u64ad\u4e00\u6bb5"
@@ -2147,8 +2158,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_vad_segmenter",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "vad_segmenter.py"
     },
     {
@@ -2158,8 +2169,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_vad_segmenter_vadconfig",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "vadconfig"
     },
     {
@@ -2170,7 +2181,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_utterance",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "utterance"
     },
     {
@@ -2180,8 +2191,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "vadsegmenter"
     },
     {
@@ -2191,8 +2202,8 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_init",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": ".__init__()"
     },
     {
@@ -2202,8 +2213,8 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_load_vad",
-      "community": 33,
-      "community_name": ".load_vad",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": ".load_vad()"
     },
     {
@@ -2214,7 +2225,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_process_frame",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": ".process_frame()"
     },
     {
@@ -2225,7 +2236,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_py_ndarray",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "ndarray"
     },
     {
@@ -2236,7 +2247,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_simple_vad",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "._simple_vad()"
     },
     {
@@ -2247,7 +2258,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_silero_vad",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "._silero_vad()"
     },
     {
@@ -2258,7 +2269,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_finalize_utterance",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "._finalize_utterance()"
     },
     {
@@ -2269,7 +2280,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_reset_state",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "._reset_state()"
     },
     {
@@ -2280,7 +2291,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_vadsegmenter_reset",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": ".reset()"
     },
     {
@@ -2290,8 +2301,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_38",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "vad \u6a21\u7d44\u7684\u7d44\u614b\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u5b9a\u7fa9\u8a9e\u97f3\u6d3b\u52d5\u6aa2\u6e2c\u7684\u6240\u6709\u76f8\u95dc\u53c3\u6578\u3002 \u5c6c\u6027: silence_threshold: float,\u975c\u97f3\u95be\u503c - \u7528\u65bc..."
     },
     {
@@ -2302,7 +2313,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_74",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u53e5\u8cc7\u6599\u985e\u5225 \u8aaa\u660e: \u5c01\u88dd\u4e00\u500b\u5b8c\u6574\u8a9e\u53e5\u7684\u6240\u6709\u8cc7\u8a0a\u3002 \u5c6c\u6027: audio: numpy.ndarray,\u5b8c\u6574\u8a9e\u53e5\u7684\u97f3\u8a0a\u8cc7\u6599 - \u6d6e\u9ede\u6578\u9663\u5217,\u7bc4\u570d -1.0 \u5230..."
     },
     {
@@ -2312,8 +2323,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_100",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "\u8a9e\u97f3\u6d3b\u52d5\u6aa2\u6e2c\u8207\u8a9e\u53e5\u5206\u6bb5\u5668 \u8aaa\u660e: \u8ca0\u8cac\u5f9e\u9023\u7e8c\u7684\u97f3\u8a0a\u6d41\u4e2d\u5075\u6e2c\u8a9e\u97f3\u4e26\u7d44\u5408\u6210\u5b8c\u6574\u8a9e\u53e5\u3002 \u5de5\u4f5c\u6d41\u7a0b: 1. \u63a5\u6536\u6bcf\u500b\u97f3\u8a0a\u6846\u67b6 (frame) 2...."
     },
     {
@@ -2323,8 +2334,8 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_135",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u5efa\u7acb vadsegmenter \u5be6\u4f8b \u8aaa\u660e: \u521d\u59cb\u5316 vad \u6a21\u7d44,\u8a2d\u5b9a\u7d44\u614b\u548c\u56de\u8abf\u51fd\u5f0f\u3002 \u53c3\u6578: config:..."
     },
     {
@@ -2334,8 +2345,8 @@
       "source_location": "L177",
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_177",
-      "community": 33,
-      "community_name": ".load_vad",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "\u8f09\u5165 vad \u6a21\u578b \u8aaa\u660e: \u5617\u8a66\u8f09\u5165 silero vad \u6a21\u578b\u3002 \u82e5\u8f09\u5165\u5931\u6557 (\u7f3a\u5c11\u4f9d\u8cf4\u5957\u4ef6),\u6703\u81ea\u52d5\u5207\u63db\u5230 simple vad \u6a21\u5f0f\u3002 \u6d41\u7a0b: 1...."
     },
     {
@@ -2346,7 +2357,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_215",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "\u8655\u7406\u55ae\u500b\u97f3\u8a0a\u6846\u67b6 \u8aaa\u660e: \u9019\u662f vad \u6a21\u7d44\u7684\u6838\u5fc3\u51fd\u5f0f,\u6bcf\u6b21\u6536\u5230\u65b0\u7684\u97f3\u8a0a\u8cc7\u6599\u6642\u547c\u53eb\u3002 \u8077\u8cac: 1. \u5224\u65b7\u662f\u5426\u70ba\u8a9e\u97f3 2. \u66f4\u65b0\u7de9\u885d\u5340\u548c\u72c0\u614b 3...."
     },
     {
@@ -2357,7 +2368,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_282",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "\u7c21\u55ae\u80fd\u91cf\u95be\u503c vad \u8aaa\u660e: \u4f7f\u7528\u7c21\u55ae\u7684\u80fd\u91cf\u8a08\u7b97\u4f86\u5224\u65b7\u662f\u5426\u70ba\u8a9e\u97f3\u3002 \u8a08\u7b97\u97f3\u8a0a\u7684 rms (root mean square) \u80fd\u91cf, \u82e5\u8d85\u904e\u95be\u503c\u5247\u8996\u70ba\u8a9e\u97f3\u3002..."
     },
     {
@@ -2368,7 +2379,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_319",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "silero vad \u8a9e\u97f3\u6d3b\u52d5\u6aa2\u6e2c \u8aaa\u660e: \u4f7f\u7528 silero ai \u7684\u9810\u8a13\u7df4 vad \u6a21\u578b\u9032\u884c\u8a9e\u97f3\u5075\u6e2c\u3002 \u9019\u662f\u4e00\u500b\u6df1\u5ea6\u5b78\u7fd2\u6a21\u578b,\u6bd4\u7c21\u55ae\u80fd\u91cf\u6cd5\u66f4\u7cbe\u78ba\u3002 \u539f\u7406:..."
     },
     {
@@ -2379,7 +2390,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_371",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "\u5b8c\u6210\u8a9e\u53e5\u8655\u7406 \u8aaa\u660e: \u7576\u5075\u6e2c\u5230\u8a9e\u53e5\u7d50\u675f\u6642\u547c\u53eb\u6b64\u51fd\u5f0f\u3002 \u8077\u8cac: 1. \u6aa2\u67e5\u8a9e\u53e5\u9577\u5ea6\u662f\u5426\u7b26\u5408\u8981\u6c42 2. \u5408\u4f75\u7de9\u885d\u5340\u4e2d\u7684\u6240\u6709\u7247\u6bb5 3. \u5efa\u7acb utterance..."
     },
     {
@@ -2390,7 +2401,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_417",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "\u91cd\u8a2d\u5167\u90e8\u72c0\u614b \u8aaa\u660e: \u6e05\u7a7a\u7de9\u885d\u5340\u4e26\u91cd\u8a2d\u6240\u6709\u8a08\u6642\u5668\u548c\u72c0\u614b\u8b8a\u6578\u3002 \u7528\u65bc\u8a9e\u53e5\u5b8c\u6210\u5f8c\u6216\u9700\u8981\u91cd\u65b0\u958b\u59cb\u6642\u3002 \u53c3\u6578: \u7121"
     },
     {
@@ -2401,7 +2412,7 @@
       "_origin": "ast",
       "id": "src_vad_segmenter_rationale_434",
       "community": 5,
-      "community_name": ".process_frame",
+      "community_name": "VADSegmenter",
       "norm_label": "\u516c\u958b\u7684\u91cd\u8a2d\u51fd\u5f0f \u8aaa\u660e: \u63d0\u4f9b\u7d66\u5916\u90e8\u547c\u53eb\u7684\u91cd\u8a2d\u63a5\u53e3\u3002 \u6703\u5148\u53d6\u5f97\u9396\u518d\u91cd\u8a2d,\u78ba\u4fdd\u57f7\u884c\u7dd2\u5b89\u5168\u3002 \u53c3\u6578: \u7121"
     },
     {
@@ -2477,8 +2488,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_attention_backend_attentionbackendtests_test_tts_passes_selected_attention_backend",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 1,
+      "community_name": "TTSJob",
       "norm_label": ".test_tts_passes_selected_attention_backend()"
     },
     {
@@ -2526,14 +2537,36 @@
       "norm_label": "test_invalid_config_fails_before_model_start()"
     },
     {
+      "label": "test_tts_fallback.py",
+      "file_type": "code",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_tts_fallback",
+      "community": 1,
+      "community_name": "TTSJob",
+      "norm_label": "test_tts_fallback.py"
+    },
+    {
+      "label": "test_windows_fallback_engine_is_initialized_in_calling_worker_thread()",
+      "file_type": "code",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "tests_test_tts_fallback_test_windows_fallback_engine_is_initialized_in_calling_worker_thread",
+      "community": 1,
+      "community_name": "TTSJob",
+      "norm_label": "test_windows_fallback_engine_is_initialized_in_calling_worker_thread()"
+    },
+    {
       "label": "test_vad.py",
       "file_type": "code",
       "source_file": "tests/test_vad.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_vad",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_vad.py"
     },
     {
@@ -2543,8 +2576,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_vad_make_vad",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "make_vad()"
     },
     {
@@ -2554,8 +2587,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_vad_test_continuous_speech_is_emitted_without_waiting_for_silence",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_continuous_speech_is_emitted_without_waiting_for_silence()"
     },
     {
@@ -2565,8 +2598,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_vad_test_short_pause_is_preserved_in_audio",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_short_pause_is_preserved_in_audio()"
     },
     {
@@ -2576,8 +2609,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tests_test_vad_test_callback_can_reset_without_deadlock",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_callback_can_reset_without_deadlock()"
     },
     {
@@ -2587,8 +2620,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "tests_test_vad_test_oversized_frame_splits_without_losing_samples",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_oversized_frame_splits_without_losing_samples()"
     },
     {
@@ -2598,8 +2631,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "tests_test_vad_test_too_short_speech_is_discarded_and_next_sentence_starts_clean",
-      "community": 2,
-      "community_name": "test_vad.py",
+      "community": 5,
+      "community_name": "VADSegmenter",
       "norm_label": "test_too_short_speech_is_discarded_and_next_sentence_starts_clean()"
     },
     {
@@ -3145,7 +3178,7 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "changelog_changed",
       "community": 26,
@@ -3159,251 +3192,53 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "readme.md"
     },
     {
-      "label": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "label": "\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (voice-activated assistant)"
+      "id": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
+      "norm_label": "\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406"
     },
     {
-      "label": "\u2728 \u6838\u5fc3\u7279\u6027",
+      "label": "\u5feb\u901f\u958b\u59cb\uff08Windows PowerShell\uff09",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L13",
+      "source_location": "L7",
       "_origin": "ast",
-      "id": "readme_\u6838\u5fc3\u7279\u6027",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u2728 \u6838\u5fc3\u7279\u6027"
+      "id": "readme_\u5feb\u901f\u958b\u59cb_windows_powershell",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
+      "norm_label": "\u5feb\u901f\u958b\u59cb(windows powershell)"
     },
     {
-      "label": "\ud83c\udfd7\ufe0f \u6280\u8853\u67b6\u69cb",
+      "label": "\u57f7\u884c\u6e2c\u8a66",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L24",
+      "source_location": "L30",
       "_origin": "ast",
-      "id": "readme_\u6280\u8853\u67b6\u69cb",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83c\udfd7\ufe0f \u6280\u8853\u67b6\u69cb"
+      "id": "readme_\u57f7\u884c\u6e2c\u8a66",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
+      "norm_label": "\u57f7\u884c\u6e2c\u8a66"
     },
     {
-      "label": "\ud83d\udee0\ufe0f \u6280\u8853\u68e7",
+      "label": "\u6587\u4ef6",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L36",
       "_origin": "ast",
-      "id": "readme_\u6280\u8853\u68e7",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83d\udee0\ufe0f \u6280\u8853\u68e7"
-    },
-    {
-      "label": "\ufffd \u958b\u767c\u9032\u5ea6\u8207\u8a08\u756b",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "readme_\u958b\u767c\u9032\u5ea6\u8207\u8a08\u756b",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ufffd \u958b\u767c\u9032\u5ea6\u8207\u8a08\u756b"
-    },
-    {
-      "label": "\ud83d\ude80 \u5feb\u901f\u958b\u59cb",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "readme_\u5feb\u901f\u958b\u59cb",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83d\ude80 \u5feb\u901f\u958b\u59cb"
-    },
-    {
-      "label": "1. \u5b89\u88dd\u4f9d\u8cf4",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "_origin": "ast",
-      "id": "readme_1_\u5b89\u88dd\u4f9d\u8cf4",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "1. \u5b89\u88dd\u4f9d\u8cf4"
-    },
-    {
-      "label": "2. \u6e96\u5099 ASR \u6a21\u578b",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "id": "readme_2_\u6e96\u5099_asr_\u6a21\u578b",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "2. \u6e96\u5099 asr \u6a21\u578b"
-    },
-    {
-      "label": "2. \u5217\u51fa\u97f3\u8a0a\u8a2d\u5099",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L107",
-      "_origin": "ast",
-      "id": "readme_2_\u5217\u51fa\u97f3\u8a0a\u8a2d\u5099",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "2. \u5217\u51fa\u97f3\u8a0a\u8a2d\u5099"
-    },
-    {
-      "label": "3. \u57f7\u884c\u8a9e\u97f3\u52a9\u7406",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "_origin": "ast",
-      "id": "readme_3_\u57f7\u884c\u8a9e\u97f3\u52a9\u7406",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "3. \u57f7\u884c\u8a9e\u97f3\u52a9\u7406"
-    },
-    {
-      "label": "\u26a1 \u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357 (\u9032\u968e)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L140",
-      "_origin": "ast",
-      "id": "readme_\u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357_\u9032\u968e",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u26a1 \u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357 (\u9032\u968e)"
-    },
-    {
-      "label": "\u70ba\u4ec0\u9ebc\u4e0d\u4f7f\u7528 `.bin` \u683c\u5f0f (CTranslate2 / faster-whisper) \u52a0\u901f\uff1f",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L144",
-      "_origin": "ast",
-      "id": "readme_\u70ba\u4ec0\u9ebc\u4e0d\u4f7f\u7528_bin_\u683c\u5f0f_ctranslate2_faster_whisper_\u52a0\u901f",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u70ba\u4ec0\u9ebc\u4e0d\u4f7f\u7528 `.bin` \u683c\u5f0f (ctranslate2 / faster-whisper) \u52a0\u901f?"
-    },
-    {
-      "label": "\u63a8\u8ad6\u5f8c\u7aef\u72c0\u614b",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L150",
-      "_origin": "ast",
-      "id": "readme_\u63a8\u8ad6\u5f8c\u7aef\u72c0\u614b",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u63a8\u8ad6\u5f8c\u7aef\u72c0\u614b"
-    },
-    {
-      "label": "\u5b89\u88dd vLLM",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L158",
-      "_origin": "ast",
-      "id": "readme_\u5b89\u88dd_vllm",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u5b89\u88dd vllm"
-    },
-    {
-      "label": "\ud83d\udd27 \u5e38\u898b\u554f\u984c",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L172",
-      "_origin": "ast",
-      "id": "readme_\u5e38\u898b\u554f\u984c",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83d\udd27 \u5e38\u898b\u554f\u984c"
-    },
-    {
-      "label": "Q1: WSL \u74b0\u5883\u7121\u6cd5\u4f7f\u7528\u9ea5\u514b\u98a8",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L174",
-      "_origin": "ast",
-      "id": "readme_q1_wsl_\u74b0\u5883\u7121\u6cd5\u4f7f\u7528\u9ea5\u514b\u98a8",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "q1: wsl \u74b0\u5883\u7121\u6cd5\u4f7f\u7528\u9ea5\u514b\u98a8"
-    },
-    {
-      "label": "Q2: `ModuleNotFoundError: No module named 'numpy'`",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L194",
-      "_origin": "ast",
-      "id": "readme_q2_modulenotfounderror_no_module_named_numpy",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "q2: `modulenotfounderror: no module named 'numpy'`"
-    },
-    {
-      "label": "Q3: `uv sync` \u932f\u8aa4 - \u5b58\u53d6\u88ab\u62d2",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L204",
-      "_origin": "ast",
-      "id": "readme_q3_uv_sync_\u932f\u8aa4_\u5b58\u53d6\u88ab\u62d2",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "q3: `uv sync` \u932f\u8aa4 - \u5b58\u53d6\u88ab\u62d2"
-    },
-    {
-      "label": "Q4: TTS \u7121\u6cd5\u767c\u8072",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L217",
-      "_origin": "ast",
-      "id": "readme_q4_tts_\u7121\u6cd5\u767c\u8072",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "q4: tts \u7121\u6cd5\u767c\u8072"
-    },
-    {
-      "label": "\ud83d\udcd6 \u4f7f\u7528\u8aaa\u660e",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L226",
-      "_origin": "ast",
-      "id": "readme_\u4f7f\u7528\u8aaa\u660e",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\ud83d\udcd6 \u4f7f\u7528\u8aaa\u660e"
-    },
-    {
-      "label": "\u6307\u4ee4\u5217\u9078\u9805",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L228",
-      "_origin": "ast",
-      "id": "readme_\u6307\u4ee4\u5217\u9078\u9805",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u6307\u4ee4\u5217\u9078\u9805"
-    },
-    {
-      "label": "\u898f\u5247\u6a94\u683c\u5f0f",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L239",
-      "_origin": "ast",
-      "id": "readme_\u898f\u5247\u6a94\u683c\u5f0f",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
-      "norm_label": "\u898f\u5247\u6a94\u683c\u5f0f"
+      "id": "readme_\u6587\u4ef6",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
+      "norm_label": "\u6587\u4ef6"
     },
     {
       "label": "TODO.md",
@@ -3412,8 +3247,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_todo",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "todo.md"
     },
     {
@@ -3423,8 +3258,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\ud83d\ude80 \u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716 (performance optimization roadmap)"
     },
     {
@@ -3434,8 +3269,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "docs_todo_\u70ba\u4ec0\u9ebc\u4e0d\u512a\u5148\u66f4\u63db\u7a0b\u5f0f\u8a9e\u8a00_python_vs_rust_go",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\ud83e\udde0 \u70ba\u4ec0\u9ebc\u4e0d\u512a\u5148\u66f4\u63db\u7a0b\u5f0f\u8a9e\u8a00 (python vs. rust/go)?"
     },
     {
@@ -3445,8 +3280,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_todo_\u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\ud83d\udee0\ufe0f \u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae"
     },
     {
@@ -3456,8 +3291,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "docs_todo_1_\u6f14\u7b97\u6cd5\u7d1a\u52a0\u901f_flash_attention",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "1. \u6f14\u7b97\u6cd5\u7d1a\u52a0\u901f:flash attention"
     },
     {
@@ -3467,8 +3302,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "docs_todo_2_\u6a21\u578b\u5c3a\u5bf8\u512a\u5316_\u6a21\u578b\u91cf\u5316_quantization",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "2. \u6a21\u578b\u5c3a\u5bf8\u512a\u5316:\u6a21\u578b\u91cf\u5316 (quantization)"
     },
     {
@@ -3478,8 +3313,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "docs_todo_3_\u786c\u9ad4\u7d1a\u52a0\u901f_tensorrt_onnx_\u8f49\u63db",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "3. \u786c\u9ad4\u7d1a\u52a0\u901f:tensorrt / onnx \u8f49\u63db"
     },
     {
@@ -3489,8 +3324,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "docs_todo_\u9032\u884c\u4e2d\u8207\u5df2\u5b8c\u6210\u512a\u5316",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\ud83d\ude80 \u9032\u884c\u4e2d\u8207\u5df2\u5b8c\u6210\u512a\u5316"
     },
     {
@@ -3500,8 +3335,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "docs_todo_\u672a\u4f86\u767c\u5c55\u65b9\u5411",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\ud83d\udcc5 \u672a\u4f86\u767c\u5c55\u65b9\u5411"
     },
     {
@@ -3511,9 +3346,141 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "docs_todo_\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56"
+    },
+    {
+      "label": "TROUBLESHOOTING.md",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_troubleshooting",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
+      "norm_label": "troubleshooting.md"
+    },
+    {
+      "label": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3"
+    },
+    {
+      "label": "Python \u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_python_\u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "python \u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b"
+    },
+    {
+      "label": "\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c"
+    },
+    {
+      "label": "\u5e38\u898b\u932f\u8aa4",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "\u5e38\u898b\u932f\u8aa4"
+    },
+    {
+      "label": "`No module named 'qwen_asr'`",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_no_module_named_qwen_asr",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "`no module named 'qwen_asr'`"
+    },
+    {
+      "label": "ASR \u6a21\u578b\u8f09\u5165\u5931\u6557",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_asr_\u6a21\u578b\u8f09\u5165\u5931\u6557",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "asr \u6a21\u578b\u8f09\u5165\u5931\u6557"
+    },
+    {
+      "label": "`No module named 'qwen_tts'`",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_no_module_named_qwen_tts",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "`no module named 'qwen_tts'`"
+    },
+    {
+      "label": "`uv sync` \u986f\u793a\u8b66\u544a",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_uv_sync_\u986f\u793a\u8b66\u544a",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "`uv sync` \u986f\u793a\u8b66\u544a"
+    },
+    {
+      "label": "Mock \u6a21\u5f0f",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_mock_\u6a21\u5f0f",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "mock \u6a21\u5f0f"
+    },
+    {
+      "label": "\u4fee\u6539\u8a9e\u97f3\u898f\u5247",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_\u4fee\u6539\u8a9e\u97f3\u898f\u5247",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "\u4fee\u6539\u8a9e\u97f3\u898f\u5247"
+    },
+    {
+      "label": "\u66f4\u591a\u8a2d\u5b9a",
+      "file_type": "document",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_troubleshooting_\u66f4\u591a\u8a2d\u5b9a",
+      "community": 8,
+      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "norm_label": "\u66f4\u591a\u8a2d\u5b9a"
     },
     {
       "label": "aider_guide.md",
@@ -3797,8 +3764,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_project_tasks",
-      "community": 8,
-      "community_name": "\ud83c\udf99\ufe0f \u8a9e\u97f3\u4e92\u52d5\u52a9\u7406 (Voice-Activated Assistant)",
+      "community": 18,
+      "community_name": "TODO.md - Voice Activated Assistant",
       "norm_label": "project_tasks.md"
     },
     {
@@ -4164,7 +4131,7 @@
       "source_file": "src/audio_input.py",
       "source_location": "L68",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "frame_samples()",
       "id": "src_audio_input_frame_samples"
     },
@@ -4173,8 +4140,8 @@
       "file_type": "rationale",
       "source_file": "src/main.py",
       "source_location": "L136",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "\u4e3b\u7a0b\u5f0f\u9032\u5165\u9ede\r     \r     \u8aaa\u660e:\r         \u6b64\u51fd\u5f0f\u662f\u7a0b\u5f0f\u7684\u57f7\u884c\u8d77\u9ede,\u8ca0\u8cac\u4ee5\u4e0b\u4efb\u52d9:\r         1. \u89e3\u6790\u547d\u4ee4\u5217\u53c3\u6578",
       "id": "src_main_rationale_136"
     },
@@ -4184,7 +4151,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L108",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u97f3\u52a9\u7406\u7684\u6838\u5fc3\u5354\u8abf\u5668\r \r     \u8aaa\u660e:\r         orchestrator \u662f\u6574\u500b\u8a9e\u97f3\u52a9\u7406\u7684\u5fc3\u81df,\u8ca0\u8cac:\r         1. \u7ba1\u7406\u6240\u6709\u5b50\u6a21\u7d44\u7684\u751f",
       "id": "src_orchestrator_rationale_108"
     },
@@ -4194,7 +4161,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L125",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u521d\u59cb\u5316 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44\r \r         \u8aaa\u660e:\r             \u5efa\u7acb orchestrator \u5be6\u4f8b,\u521d\u59cb",
       "id": "src_orchestrator_rationale_125"
     },
@@ -4204,7 +4171,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L204",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u53d6\u5f97\u76ee\u524d\u7cfb\u7d71\u72c0\u614b (\u57f7\u884c\u7dd2\u5b89\u5168)\r \r         \u8aaa\u660e:\r             \u4f7f\u7528 lock \u4fdd\u8b77 _state \u8b8a\u6578,\u78ba\u4fdd\u5728\u591a\u57f7\u884c\u7dd2\u74b0\u5883\u4e0b",
       "id": "src_orchestrator_rationale_204"
     },
@@ -4214,7 +4181,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L221",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a2d\u5b9a\u7cfb\u7d71\u72c0\u614b (\u57f7\u884c\u7dd2\u5b89\u5168)\r \r         \u8aaa\u660e:\r             \u4f7f\u7528 lock \u4fdd\u8b77 _state \u8b8a\u6578,\u78ba\u4fdd\u5728\u591a\u57f7\u884c\u7dd2\u74b0\u5883\u4e0b",
       "id": "src_orchestrator_rationale_221"
     },
@@ -4224,7 +4191,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L239",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u555f\u52d5 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u8ca0\u8cac\u8d77\u52d5\u6240\u6709\u5b50\u6a21\u7d44\u4e26\u5c07\u7cfb\u7d71\u72c0\u614b\u8a2d\u70ba listenin",
       "id": "src_orchestrator_rationale_239"
     },
@@ -4234,7 +4201,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L326",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "ai \u6a21\u578b\u71b1\u8eab\r         \u900f\u904e\u57f7\u884c\u4e00\u6b21\u96b1\u85cf\u63a8\u8ad6\u4f86\u521d\u59cb\u5316 cuda \u5feb\u53d6\u8207\u76f8\u95dc\u904b\u7b97\u8cc7\u6e90",
       "id": "src_orchestrator_rationale_326"
     },
@@ -4244,7 +4211,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L353",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u505c\u6b62 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u8ca0\u8cac\u512a\u96c5\u5730\u505c\u6b62\u6240\u6709\u5b50\u6a21\u7d44:",
       "id": "src_orchestrator_rationale_353"
     },
@@ -4254,7 +4221,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L389",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u97f3\u8a0a\u6846\u67b6\u56de\u8abf - \u8655\u7406\u6bcf\u500b\u65b0\u7684\u97f3\u8a0a\u8cc7\u6599\u584a\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u7531 audioinput \u5728\u6536\u5230\u65b0\u7684\u97f3\u8a0a\u6846\u67b6\u6642\u547c\u53eb\u3002",
       "id": "src_orchestrator_rationale_389"
     },
@@ -4264,7 +4231,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L421",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "\u8a9e\u53e5\u5b8c\u6210\u56de\u8abf - \u7576 vad \u6aa2\u6e2c\u5230\u5b8c\u6574\u8a9e\u53e5\u6642\u547c\u53eb\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u7531 vadsegmenter \u5728\u6aa2\u6e2c\u5230\u5b8c\u6574\u8a9e\u53e5",
       "id": "src_orchestrator_rationale_421"
     },
@@ -4273,8 +4240,8 @@
       "file_type": "rationale",
       "source_file": "src/orchestrator.py",
       "source_location": "L450",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "\u8a9e\u97f3\u8fa8\u8b58\u7d50\u679c\u56de\u8abf - \u7576 asr \u5b8c\u6210\u6587\u5b57\u8fa8\u8b58\u6642\u547c\u53eb\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u7531 asrworker \u5728\u5b8c\u6210\u8a9e\u97f3\u8fa8\u8b58\u5f8c\u547c\u53eb",
       "id": "src_orchestrator_rationale_450"
     },
@@ -4284,7 +4251,7 @@
       "source_file": "src/orchestrator.py",
       "source_location": "L517",
       "community": 0,
-      "community_name": "TTSWorker",
+      "community_name": "AudioInput",
       "norm_label": "tts \u5b8c\u6210\u56de\u8abf - \u7576 tts \u64ad\u653e\u5b8c\u7562\u6642\u547c\u53eb\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u7531 ttsworker \u5728\u8a9e\u97f3\u64ad\u653e\u5b8c\u6210\u5f8c\u547c\u53eb\u3002",
       "id": "src_orchestrator_rationale_517"
     },
@@ -4293,8 +4260,8 @@
       "file_type": "rationale",
       "source_file": "src/orchestrator.py",
       "source_location": "L553",
-      "community": 0,
-      "community_name": "TTSWorker",
+      "community": 7,
+      "community_name": "ASRWorker",
       "norm_label": "\u6a21\u64ec\u8a9e\u53e5 - \u7528\u65bc\u6e2c\u8a66\u898f\u5247\u5339\u914d\u548c tts\r \r         \u8aaa\u660e:\r             \u6b64\u51fd\u5f0f\u7528\u65bc mock \u6a21\u5f0f\u4e0b\u6a21\u64ec\u8a9e\u97f3\u8f38\u5165\u3002",
       "id": "src_orchestrator_rationale_553"
     },
@@ -8017,6 +7984,18 @@
       "target": "src_tts_worker"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback",
+      "target": "src_rule_engine",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/rule_engine.py",
@@ -8282,16 +8261,6 @@
       "weight": 0.8,
       "confidence_score": 0.5,
       "source": "src_rule_engine_ttsjob",
-      "target": "src_tts_worker_rationale_354"
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "src/tts_worker.py",
-      "source_location": "L26",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "src_rule_engine_ttsjob",
       "target": "src_tts_worker_rationale_41"
     },
     {
@@ -8341,7 +8310,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L280",
+      "source_location": "L274",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak",
@@ -8353,7 +8322,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L443",
+      "source_location": "L437",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_fallback",
@@ -8365,10 +8334,34 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L353",
+      "source_location": "L347",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_streaming",
+      "target": "src_rule_engine_ttsjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback",
+      "target": "src_rule_engine_ttsjob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback_test_windows_fallback_engine_is_initialized_in_calling_worker_thread",
       "target": "src_rule_engine_ttsjob",
       "confidence_score": 1.0
     },
@@ -8758,6 +8751,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback",
+      "target": "src_tts_worker",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
@@ -8936,7 +8941,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L163",
+      "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -8947,7 +8952,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L226",
+      "source_location": "L228",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -8958,7 +8963,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L188",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -8969,7 +8974,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L280",
+      "source_location": "L274",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -8980,7 +8985,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L443",
+      "source_location": "L437",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -8991,7 +8996,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L353",
+      "source_location": "L347",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9002,7 +9007,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L173",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9013,7 +9018,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L338",
+      "source_location": "L332",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9024,7 +9029,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L239",
+      "source_location": "L233",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9035,7 +9040,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L261",
+      "source_location": "L255",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9046,7 +9051,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L308",
+      "source_location": "L302",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker",
@@ -9089,6 +9094,30 @@
       "target": "src_tts_worker_ttsworker"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback",
+      "target": "src_tts_worker_ttsworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback_test_windows_fallback_engine_is_initialized_in_calling_worker_thread",
+      "target": "src_tts_worker_ttsworker",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
@@ -9104,7 +9133,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L156",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_init",
@@ -9125,10 +9154,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L164",
+      "source_location": "L166",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_164",
+      "source": "src_tts_worker_rationale_166",
       "target": "src_tts_worker_ttsworker_is_speaking",
       "confidence_score": 1.0
     },
@@ -9136,10 +9165,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L174",
+      "source_location": "L176",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_174",
+      "source": "src_tts_worker_rationale_176",
       "target": "src_tts_worker_ttsworker_speaking_event",
       "confidence_score": 1.0
     },
@@ -9148,7 +9177,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L173",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speaking_event",
@@ -9160,7 +9189,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L371",
+      "source_location": "L365",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_streaming",
@@ -9172,7 +9201,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L224",
+      "source_location": "L226",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_load_model",
@@ -9183,10 +9212,21 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L240",
+      "source_location": "L229",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_240",
+      "source": "src_tts_worker_rationale_229",
+      "target": "src_tts_worker_ttsworker_load_fallback_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tts_worker.py",
+      "source_location": "L234",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_tts_worker_rationale_234",
       "target": "src_tts_worker_ttsworker_start",
       "confidence_score": 1.0
     },
@@ -9195,7 +9235,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L393",
+      "source_location": "L387",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_streaming",
@@ -9216,10 +9256,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L262",
+      "source_location": "L256",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_262",
+      "source": "src_tts_worker_rationale_256",
       "target": "src_tts_worker_ttsworker_stop",
       "confidence_score": 1.0
     },
@@ -9237,10 +9277,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L281",
+      "source_location": "L275",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_281",
+      "source": "src_tts_worker_rationale_275",
       "target": "src_tts_worker_ttsworker_speak",
       "confidence_score": 1.0
     },
@@ -9258,10 +9298,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L309",
+      "source_location": "L303",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_309",
+      "source": "src_tts_worker_rationale_303",
       "target": "src_tts_worker_ttsworker_worker_loop",
       "confidence_score": 1.0
     },
@@ -9280,7 +9320,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L328",
+      "source_location": "L322",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_worker_loop",
@@ -9292,7 +9332,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L366",
+      "source_location": "L360",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_streaming",
@@ -9303,10 +9343,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L354",
+      "source_location": "L348",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_tts_worker_rationale_354",
+      "source": "src_tts_worker_rationale_348",
       "target": "src_tts_worker_ttsworker_speak_streaming",
       "confidence_score": 1.0
     },
@@ -9315,7 +9355,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/tts_worker.py",
-      "source_location": "L425",
+      "source_location": "L419",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_tts_worker_ttsworker_speak_streaming",
@@ -10218,6 +10258,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_fallback.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_fallback",
+      "target": "tests_test_tts_fallback_test_windows_fallback_engine_is_initialized_in_calling_worker_thread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_vad.py",
       "source_location": "L8",
       "weight": 1.0,
@@ -10829,7 +10880,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "changelog_unreleased",
@@ -10840,7 +10891,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L65",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -10851,11 +10902,22 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L66",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
       "target": "docs_todo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_troubleshooting",
       "confidence_score": 1.0
     },
     {
@@ -10866,238 +10928,40 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
+      "target": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L226",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u4f7f\u7528\u8aaa\u660e",
+      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
+      "target": "readme_\u57f7\u884c\u6e2c\u8a66",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L172",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u5e38\u898b\u554f\u984c",
+      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
+      "target": "readme_\u5feb\u901f\u958b\u59cb_windows_powershell",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L69",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u5feb\u901f\u958b\u59cb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u6280\u8853\u67b6\u69cb",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u6280\u8853\u68e7",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357_\u9032\u968e",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u6838\u5fc3\u7279\u6027",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406_voice_activated_assistant",
-      "target": "readme_\u958b\u767c\u9032\u5ea6\u8207\u8a08\u756b",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5feb\u901f\u958b\u59cb",
-      "target": "readme_1_\u5b89\u88dd\u4f9d\u8cf4",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L107",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5feb\u901f\u958b\u59cb",
-      "target": "readme_2_\u5217\u51fa\u97f3\u8a0a\u8a2d\u5099",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5feb\u901f\u958b\u59cb",
-      "target": "readme_2_\u6e96\u5099_asr_\u6a21\u578b",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5feb\u901f\u958b\u59cb",
-      "target": "readme_3_\u57f7\u884c\u8a9e\u97f3\u52a9\u7406",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L158",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357_\u9032\u968e",
-      "target": "readme_\u5b89\u88dd_vllm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L150",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357_\u9032\u968e",
-      "target": "readme_\u63a8\u8ad6\u5f8c\u7aef\u72c0\u614b",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L144",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u63a8\u8ad6\u5f15\u64ce\u8207\u52a0\u901f\u6307\u5357_\u9032\u968e",
-      "target": "readme_\u70ba\u4ec0\u9ebc\u4e0d\u4f7f\u7528_bin_\u683c\u5f0f_ctranslate2_faster_whisper_\u52a0\u901f",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L174",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5e38\u898b\u554f\u984c",
-      "target": "readme_q1_wsl_\u74b0\u5883\u7121\u6cd5\u4f7f\u7528\u9ea5\u514b\u98a8",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L194",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5e38\u898b\u554f\u984c",
-      "target": "readme_q2_modulenotfounderror_no_module_named_numpy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L204",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5e38\u898b\u554f\u984c",
-      "target": "readme_q3_uv_sync_\u932f\u8aa4_\u5b58\u53d6\u88ab\u62d2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L217",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u5e38\u898b\u554f\u984c",
-      "target": "readme_q4_tts_\u7121\u6cd5\u767c\u8072",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L228",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u4f7f\u7528\u8aaa\u660e",
-      "target": "readme_\u6307\u4ee4\u5217\u9078\u9805",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L239",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_\u4f7f\u7528\u8aaa\u660e",
-      "target": "readme_\u898f\u5247\u6a94\u683c\u5f0f",
+      "source": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
+      "target": "readme_\u6587\u4ef6",
       "confidence_score": 1.0
     },
     {
@@ -11109,6 +10973,17 @@
       "_origin": "ast",
       "source": "docs_todo",
       "target": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting",
+      "target": "docs_todo",
       "confidence_score": 1.0
     },
     {
@@ -11197,6 +11072,127 @@
       "_origin": "ast",
       "source": "docs_todo_\u672a\u4f86\u767c\u5c55\u65b9\u5411",
       "target": "docs_todo_\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting",
+      "target": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_mock_\u6a21\u5f0f",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_python_\u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_\u4fee\u6539\u8a9e\u97f3\u898f\u5247",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_\u66f4\u591a\u8a2d\u5b9a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "target": "docs_troubleshooting_\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "target": "docs_troubleshooting_asr_\u6a21\u578b\u8f09\u5165\u5931\u6557",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "target": "docs_troubleshooting_no_module_named_qwen_asr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "target": "docs_troubleshooting_no_module_named_qwen_tts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TROUBLESHOOTING.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
+      "target": "docs_troubleshooting_uv_sync_\u986f\u793a\u8b66\u544a",
       "confidence_score": 1.0
     },
     {
@@ -11751,5 +11747,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "10a4d4064d942de7322fde4f7977ef07b1e25913"
+  "built_at_commit": "cb5c965aa96e6806222a07fa743d0f8054c189b6"
 }

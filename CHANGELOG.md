@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 建立 `PRD.md`：定義語音互動助理的核心規格，包含 ASR/TTS 多執行緒、VAD 停頓偵測及記憶體管理邏輯。
 
 ### Changed
+- 將 VAD 預設靜音等待由 1.5 秒縮短為 0.8 秒，停頓後更快送出語音辨識。
+- 修正 Windows `pyttsx3` 備援引擎的執行緒歸屬，改由 TTS Worker 執行緒初始化，避免朗讀卡住後持續丟棄麥克風音訊。
 - 精簡 README 快速開始，分清 ASR 套件安裝、本機模型路徑、真實麥克風啟動與測試指令。
 - 修正 ASR Worker 停止與重啟期間的執行緒生命週期競態；停止會等待執行中辨識、丟棄排隊音訊與停止後結果，並新增 2 項回歸測試。
 - 修正 VAD 長語句緩衝無上限與 callback 重入死鎖，保留短停頓並依樣本數強制切段；新增連續 30 次語句與超長框架回歸測試。
