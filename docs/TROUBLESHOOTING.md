@@ -40,7 +40,9 @@ uv sync --extra asr --extra dev
 
 ### `No module named 'qwen_tts'`
 
-這代表 Qwen TTS 套件未安裝。Windows 上程式會嘗試使用 `pyttsx3` 作為語音輸出備援；這不會造成 ASR 無法辨識。Qwen ASR 與 TTS extras 有相依版本衝突，請勿在同一環境同時安裝兩者。
+這代表 Qwen TTS 套件未安裝。Windows 上程式會嘗試使用 `pyttsx3`，並優先選擇已安裝的中文 SAPI 語音作為備援；這不會造成 ASR 無法辨識。若仍聽不到語音，請確認 Windows 已安裝中文語音，且系統預設播放裝置及音量正常。Qwen ASR 與 TTS extras 有相依版本衝突，請勿在同一環境同時安裝兩者。
+
+若只有第一次備援朗讀有聲，請在專案根目錄執行 `uv sync --extra asr --extra dev`，將環境同步至 lockfile 指定的 `pyttsx3` 相容版本。
 
 ### `uv sync` 顯示警告
 

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 建立 `PRD.md`：定義語音互動助理的核心規格，包含 ASR/TTS 多執行緒、VAD 停頓偵測及記憶體管理邏輯。
 
 ### Changed
+- 將 Windows `pyttsx3` 限制在 2.99 以下，避開 SAPI5 後續朗讀靜音問題；備援優先選擇已安裝的中文語音並保留繁體回覆。
 - 將 VAD 預設靜音等待由 1.5 秒縮短為 0.8 秒，停頓後更快送出語音辨識。
 - 修正 Windows `pyttsx3` 備援引擎的執行緒歸屬，改由 TTS Worker 執行緒初始化，避免朗讀卡住後持續丟棄麥克風音訊。
 - 精簡 README 快速開始，分清 ASR 套件安裝、本機模型路徑、真實麥克風啟動與測試指令。

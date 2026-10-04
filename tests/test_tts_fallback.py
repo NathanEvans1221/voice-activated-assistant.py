@@ -9,8 +9,23 @@ from src.tts_worker import TTSWorker
 
 def test_windows_fallback_engine_is_initialized_in_calling_worker_thread():
     init_thread_ids = []
+    selected_voices = []
 
     class FakeEngine:
+        def getProperty(self, name):
+            assert name == "voices"
+            return [
+                types.SimpleNamespace(id="zira", name="Microsoft Zira", languages=["en-US"]),
+                types.SimpleNamespace(
+                    id="hanhan",
+                    name="Microsoft Hanhan Desktop - Chinese (Taiwan)",
+                    languages=["zh-TW"],
+                ),
+            ]
+
+        def setProperty(self, name, value):
+            selected_voices.append((name, value))
+
         def say(self, text):
             pass
 
@@ -39,3 +54,4 @@ def test_windows_fallback_engine_is_initialized_in_calling_worker_thread():
     assert not thread.is_alive()
     assert init_thread_ids
     assert init_thread_ids[0] != main_thread_id
+    assert selected_voices == [("voice", "hanhan")]

@@ -353,7 +353,7 @@ class TTSWorker:
 
         # 為了避免 Qwen3-TTS 唸繁體中文時產生粵語/港澳口音，在此將文字偷偷轉換為簡體給模型
         text_to_speak = job.text
-        if cc_tts:
+        if cc_tts and hasattr(self._engine, 'generate_custom_voice'):
             text_to_speak = cc_tts.convert(text_to_speak)
 
         # 1. 拆分句子
@@ -443,7 +443,7 @@ class TTSWorker:
                 try:
                     import pyttsx3
                     self._fallback_engine = pyttsx3.init()
-                    print("[TTS] Windows 備援語音引擎已於 Worker 執行緒初始化", flush=True)
+                    self._select_chinese_fallback_voice()
                 except Exception as e:
                     print(f"[TTS] Windows 備援語音引擎初始化失敗: {e}", flush=True)
 
@@ -459,3 +459,24 @@ class TTSWorker:
             subprocess.run(["espeak-ng", "-v", "zh", job.text], capture_output=True)
         except Exception as e:
             print(f"[TTS] 無法播放語音: {e}", flush=True)
+
+    def _select_chinese_fallback_voice(self):
+        """Prefer an installed Chinese SAPI voice for Traditional Chinese replies."""
+        voices = self._fallback_engine.getProperty("voices")
+        for voice in voices:
+            languages = getattr(voice, "languages", ()) or ()
+            language_tags = [
+                language.decode("utf-8", errors="ignore")
+                if isinstance(language, bytes)
+                else str(language)
+                for language in languages
+            ]
+            voice_name = str(getattr(voice, "name", ""))
+            if any(tag.casefold().startswith("zh") for tag in language_tags) or any(
+                marker in voice_name.casefold() for marker in ("chinese", "中文", "hanhan")
+            ):
+                self._fallback_engine.setProperty("voice", voice.id)
+                print(f"[TTS] Windows 備援語音已選擇: {voice_name or voice.id}", flush=True)
+                return
+
+        print("[TTS] 找不到已安裝的中文語音，沿用 Windows 預設語音", flush=True)
