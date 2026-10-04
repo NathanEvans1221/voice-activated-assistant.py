@@ -26,7 +26,7 @@
 
 ### 1. 演算法級加速：Flash Attention
 - [x] 提供 `--attention-backend`，可選擇 SDPA 或 Flash Attention 2，並傳入 Qwen ASR/TTS loader；預設使用 SDPA。
-- [ ] 安裝相容的 `flash-attn` 並在 CUDA GPU 上量測速度、顯存與輸出品質；目前 CPU-only 環境未驗證。
+- [ ] 比較 CUDA SDPA 與 Flash Attention 2 的速度、顯存與輸出品質。目前兩套 CUDA 測試環境均無 `flash_attn`；Windows 主機缺少 `nvcc`／MSVC `cl`，且官方將 Windows 編譯列為仍需更多測試。先取得可信且版本匹配的 wheel，或改用 Linux/WSL CUDA 環境；詳見 `docs/PERFORMANCE_BASELINE.md`。
 
 ### 2. 模型尺寸優化：模型量化 (Quantization)
 - [ ] 評估 Qwen ASR/TTS loader 支援的 INT8/INT4 量化方式，量測顯存、速度與輸出品質後再決定整合方案。此環境缺少 Qwen/bitsandbytes ；已確認 RTX 3070 Laptop GPU（8 GB），但目前 PyTorch 為 CPU 版本，尚無可驗證的量化路徑。

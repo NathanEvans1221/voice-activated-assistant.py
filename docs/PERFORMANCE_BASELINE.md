@@ -71,6 +71,12 @@ Qwen TTS 使用獨立 TEMP 環境，避免官方 `qwen-tts` 固定 Transformers 
 
 Qwen TTS 載入與推論均走 CUDA/SDPA，但環境沒有 `flash-attn`，套件提示使用 PyTorch attention 路徑；SoX 命令列程式也未安裝。模型仍成功在記憶體中生成 WAV。約 62.7 秒產生 5.92 秒音訊，代表目前 TTS 是明顯延遲瓶頸；暖機沒有降低完整生成平均時間。
 
+## Flash Attention 2 可行性檢查（2026-10-05）
+
+ASR 與 TTS 的隔離 CUDA 環境均為 PyTorch 2.10.0+cu126，確認 CUDA 可用且裝置為 RTX 3070 Laptop GPU（compute capability 8.6）；兩個環境都沒有 `flash_attn` 套件。Windows 主機上也未找到 `nvcc` 或 MSVC `cl`，因此目前無法從原始碼建置，也沒有可載入的 Flash Attention 2 後端可供同機比較。專案目前的 CUDA 數據只代表 SDPA。
+
+FlashAttention 官方 README 將 Linux 列為安裝需求，並說明 Windows 可能可用但編譯仍需更多測試（[官方安裝說明](https://github.com/Dao-AILab/flash-attention/blob/main/README.md)）。本次沒有安裝未驗證來源的 Windows wheel，也沒有宣稱已比較兩種後端。可重現比較需先取得與 Python、PyTorch、CUDA 完全匹配且可信的 Windows wheel，或在 Linux/WSL CUDA 環境建置；之後必須以相同模型、音訊／文字量測延遲、顯存與輸出品質。現階段維持 SDPA 預設。
+
 重跑 TTS 基準時，使用裝有 CUDA PyTorch、Qwen TTS 0.1.1、Transformers 4.57.3 與 OpenCC 的隔離環境：
 
 ```powershell
