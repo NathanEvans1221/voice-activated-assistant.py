@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 擴充語音規則，新增感謝、道別、晚安、自我介紹與能力詢問情境，並移除 greeting 的寬泛關鍵字「好」。
 - 新增 `docs/LESSONS_LEARNED.md`，保存已實測問題的根因、修正與防回歸步驟，供後續維護者查閱。
 - 新增安裝與疑難排解指南，說明 Python 套件、本機模型權重、麥克風與 Mock 模式。
 - 接通 `--config` YAML 載入，CLI 明確參數優先；新增設定檔結構與數值驗證及回歸測試。
