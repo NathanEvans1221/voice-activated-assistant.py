@@ -1,0 +1,52 @@
+{
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "torch": "2.10.0+cu126",
+  "torch_cuda": "12.6",
+  "qwen_asr": "0.0.6",
+  "transformers": "4.57.6",
+  "opencc": "0.1.7",
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "attention_backend": "sdpa",
+  "model_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\models\\Qwen3-ASR-0.6B",
+  "audio_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\docs\\performance-results\\tts_cuda_sdpa_vivian.wav",
+  "audio_sha256": "5feedade05e5da2b67ede1eb587c7584e774562ef9301dcfc5be4db0a93065fb",
+  "sample_rate": 16000,
+  "source_sample_rate": 24000,
+  "audio_seconds": 5.92,
+  "language": "Chinese",
+  "reference": "系統已啟動，你好！我有什麼可以幫你的嗎？",
+  "load_seconds": 1.924044999992475,
+  "load_peak_allocated_mib": 1789.16357421875,
+  "load_peak_reserved_mib": 1798.0,
+  "cold_inference_seconds": 1.2935505000059493,
+  "cold_transcript": "系統已啓動。你好，我有什麼可以幫你的嗎？",
+  "warmup_seconds": [
+    0.7261821999563836
+  ],
+  "iterations": [
+    {
+      "iteration": 1,
+      "seconds": 0.7332479999749921,
+      "transcript": "系統已啓動。你好，我有什麼可以幫你的嗎？"
+    },
+    {
+      "iteration": 2,
+      "seconds": 0.7434974999632686,
+      "transcript": "系統已啓動。你好，我有什麼可以幫你的嗎？"
+    },
+    {
+      "iteration": 3,
+      "seconds": 0.7240813000244088,
+      "transcript": "系統已啓動。你好，我有什麼可以幫你的嗎？"
+    }
+  ],
+  "warm_mean_seconds": 0.7336089333208898,
+  "warm_mean_rtf": 0.12392042792582598,
+  "character_error_rate": 0.15,
+  "inference_peak_allocated_mib": 1555.927734375,
+  "inference_peak_reserved_mib": 1818.0,
+  "post_inference_reserved_mib": 1818.0
+}

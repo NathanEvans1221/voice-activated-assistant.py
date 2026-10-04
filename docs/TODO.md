@@ -9,7 +9,8 @@
 - Issue #1 與本文件同步追蹤效能基準、Attention、量化、ONNX／TensorRT、ASR／TTS 部署、WebSocket、LLM 與儀表板工作。
 - Issue 保持開啟，直到下方未完成項目實際完成或記錄不採用的理由；完成後再關閉 issue，避免 GitHub 與 TODO 狀態不一致。
 - [x] 環境盤點記錄於 [docs/PERFORMANCE_BASELINE.md](PERFORMANCE_BASELINE.md)；本機 RTX 3070 存在，但目前 `.venv` 使用 CPU-only PyTorch。
-- [ ] 建立可重複的 ASR／TTS 測試輸入與品質參考，並在 CUDA/Qwen 引擎可用後量測 ASR／TTS 延遲、TTS 首音時間與顯存峰值；詳細驗收條件見 Issue #1。
+- [x] 保存固定 ASR 音訊／參考句及 TTS 招呼語；完成 CUDA/SDPA ASR、TTS 單模型載入與推論基準，包含 CER、首音、完整生成、顯存及 TTS 輸出 WAV；詳見 `docs/PERFORMANCE_BASELINE.md` 與 `docs/performance-results/`。
+- [ ] 比較 ASR/TTS 個別與同時載入的顯存／延遲，並評估相同環境與獨立環境部署方案；TTS 聽感自然度仍待人工評分。
 
 ---
 

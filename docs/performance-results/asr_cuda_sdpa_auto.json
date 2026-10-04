@@ -1,0 +1,51 @@
+{
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "torch": "2.10.0+cu126",
+  "torch_cuda": "12.6",
+  "qwen_asr": "0.0.6",
+  "transformers": "4.57.6",
+  "opencc": "0.1.7",
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "attention_backend": "sdpa",
+  "model_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\models\\Qwen3-ASR-0.6B",
+  "audio_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\benchmarks\\fixtures\\asr_zh.wav",
+  "audio_sha256": "46dbc998c9d1d48111267c40741dd3200f2e5bcf4075f8c4c97f4451160dce50",
+  "sample_rate": 16000,
+  "audio_seconds": 4.2039375,
+  "language": "auto",
+  "reference": "甚至出現交易幾乎停滯的情況。",
+  "load_seconds": 2.176712199987378,
+  "load_peak_allocated_mib": 1789.16357421875,
+  "load_peak_reserved_mib": 1798.0,
+  "cold_inference_seconds": 1.1242612000205554,
+  "cold_transcript": "甚至出現交易幾乎停滯的情況。",
+  "warmup_seconds": [
+    0.605004699958954
+  ],
+  "iterations": [
+    {
+      "iteration": 1,
+      "seconds": 0.5991428000270389,
+      "transcript": "甚至出現交易幾乎停滯的情況。"
+    },
+    {
+      "iteration": 2,
+      "seconds": 0.6074022999964654,
+      "transcript": "甚至出現交易幾乎停滯的情況。"
+    },
+    {
+      "iteration": 3,
+      "seconds": 0.5901321000419557,
+      "transcript": "甚至出現交易幾乎停滯的情況。"
+    }
+  ],
+  "warm_mean_seconds": 0.59889240002182,
+  "warm_mean_rtf": 0.14245987244620548,
+  "character_error_rate": 0.0,
+  "inference_peak_allocated_mib": 1548.48779296875,
+  "inference_peak_reserved_mib": 1812.0,
+  "post_inference_reserved_mib": 1812.0
+}

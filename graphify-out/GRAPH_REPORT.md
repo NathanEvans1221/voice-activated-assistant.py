@@ -1,16 +1,16 @@
-# Graph Report - voice-activated-assistant.py  (2026-10-04)
+# Graph Report - voice-activated-assistant.py  (2026-10-05)
 
 ## Corpus Check
-- 40 files · ~13,161 words
+- 51 files · ~15,615 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 412 nodes · 699 edges · 38 communities (24 shown, 14 thin omitted)
-- Extraction: 73% EXTRACTED · 27% INFERRED · 0% AMBIGUOUS · INFERRED: 187 edges (avg confidence: 0.5)
+- 464 nodes · 777 edges · 45 communities (26 shown, 19 thin omitted)
+- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 191 edges (avg confidence: 0.51)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `315fae62`
+- Built from commit: `cf82e3d1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,16 +19,17 @@
 - ._speak_streaming
 - RuleEngine
 - ._audio_callback
+- asr_benchmark.py
 - .process_frame
 - TokenStreamer
-- ASRWorker
-- 安裝與疑難排解
+- ._recognize
+- 推論效能基準
 - AI Agent 指南：GitHub Projects v2 工作流 / AI Agent Guide: GitHub Projects v2 Workflow
 - test_vad.py
-- __init__.py
+- src/__init__.py
 - TODO.md - Voice Activated Assistant
 - ._load_fallback_engine
-- parse_args
+- src/main.py
 - bash
 - 🤖 Aider 安裝與操作指南 (Windows)
 - permission
@@ -42,10 +43,16 @@
 - .list_devices
 - .start
 - .stop
+- tts_benchmark.py
+- fixtures/README.md
 - .is_speaking
 - voice-activated-assistant-py
 - .load_vad
+- benchmarks/__init__.py
 - .agent_task_state.md
+- .__init__
+- .start
+- .stop
 
 ## God Nodes (most connected - your core abstractions)
 1. `TTSJob` - 40 edges
@@ -60,29 +67,29 @@
 10. `AudioConfig` - 25 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `AttentionBackendTests` --uses--> `TTSWorker`  [INFERRED]
-  tests/test_attention_backend.py → src/tts_worker.py
 - `main()` --rationale_for--> `主程式進入點          說明：         此函式是程式的執行起點，負責以下任務：         1. 解析命令列參數`  [EXTRACTED]
   main.py → src/main.py
-- `test_stop_waits_for_inflight_recognition_and_suppresses_late_result()` --calls--> `ASRResult`  [EXTRACTED]
-  tests/test_asr_worker_lifecycle.py → src/asr_worker.py
-- `test_worker_restarts_after_stop_and_discards_queued_audio()` --calls--> `ASRResult`  [EXTRACTED]
-  tests/test_asr_worker_lifecycle.py → src/asr_worker.py
 - `AttentionBackendTests` --uses--> `ASRWorker`  [INFERRED]
   tests/test_attention_backend.py → src/asr_worker.py
+- `test_yaml_defaults_and_explicit_cli_override()` --calls--> `parse_args()`  [EXTRACTED]
+  tests/test_config.py → src/main.py
+- `TTSJob` --uses--> `建構函式 - 建立 TTSWorker 實例          說明：             初始化 TTS Worker，設定模型路徑和回調函式。`  [INFERRED]
+  src/rule_engine.py → src/tts_worker.py
+- `TTSJob` --uses--> `啟動 TTS Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。`  [INFERRED]
+  src/rule_engine.py → src/tts_worker.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (38 total, 14 thin omitted)
+## Communities (45 total, 19 thin omitted)
 
 ### Community 0 - "TTSJob"
-Cohesion: 0.11
-Nodes (53): Enum, Logger, ASRResult, 語音辨識結果資料類別 說明： 封裝語音辨識的結果，包含識別出的文字及其他相關資訊。 屬性： transcript: str，識別出的文字內容 -…, AudioConfig, AudioInput, 音訊輸入的組態資料類別 說明： 定義音訊擷取的所有相關參數，包含取樣率、聲道數、資料類型等。 使用 dataclass 提供型別安全且易於擴展的組態管理。…, 音訊輸入管理器 說明： 負責與系統音訊驅動互動，從麥克風即時擷取音訊資料。 使用 sounddevice 的串流 (Stream) 機制實現低延遲的音訊處理。… (+45 more)
+Cohesion: 0.08
+Nodes (58): Enum, ASRResult, ASRWorker, 語音辨識結果資料類別 說明： 封裝語音辨識的結果，包含識別出的文字及其他相關資訊。 屬性： transcript: str，識別出的文字內容 -…, 語音辨識工作者 說明： 負責將音訊資料轉換為文字的 worker 模組。 使用執行緒和佇列實現非同步處理： - 主執行緒透過 process()…, AudioConfig, AudioInput, 音訊輸入的組態資料類別 說明： 定義音訊擷取的所有相關參數，包含取樣率、聲道數、資料類型等。 使用 dataclass 提供型別安全且易於擴展的組態管理。… (+50 more)
 
 ### Community 1 - "._speak_streaming"
-Cohesion: 0.11
-Nodes (12): Event, 建構函式 - 建立 TTSWorker 實例          說明：             初始化 TTS Worker，設定模型路徑和回調函式。, 建構函式 - 建立 TTSWorker 實例 說明： 初始化 TTS Worker，設定模型路徑和回調函式。 參數： model_path:…, 取得說話事件物件 說明： 此 Event 會在開始說話時設為 True，說完後設為 False。 其他模組 (如 Orchestrator)…, 啟動 TTS Worker 執行緒 說明： 建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。 參數： 無 回傳： 無, 啟動 TTS Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。, Worker 執行緒主迴圈 說明： 1. 從任務佇列取出朗讀任務 2. 將任務拆分為多個子句 (Streaming 基礎) 3.…, Worker 執行緒主迴圈          說明：             1. 從任務佇列取出朗讀任務             2. 將任務拆分為多 (+4 more)
+Cohesion: 0.12
+Nodes (11): Event, 建構函式 - 建立 TTSWorker 實例          說明：             初始化 TTS Worker，設定模型路徑和回調函式。, 建構函式 - 建立 TTSWorker 實例 說明： 初始化 TTS Worker，設定模型路徑和回調函式。 參數： model_path:…, 取得說話事件物件 說明： 此 Event 會在開始說話時設為 True，說完後設為 False。 其他模組 (如 Orchestrator)…, 啟動 TTS Worker 執行緒 說明： 建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。 參數： 無 回傳： 無, 啟動 TTS Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的朗讀任務。, Worker 執行緒主迴圈 說明： 1. 從任務佇列取出朗讀任務 2. 將任務拆分為多個子句 (Streaming 基礎) 3.…, Worker 執行緒主迴圈          說明：             1. 從任務佇列取出朗讀任務             2. 將任務拆分為多 (+3 more)
 
 ### Community 2 - "RuleEngine"
 Cohesion: 0.10
@@ -92,17 +99,21 @@ Nodes (16): 規則引擎 說明： 負責管理所有規則的生命週期和匹
 Cohesion: 0.33
 Nodes (4): CallbackFlags, ndarray, 建構函式 - 建立 AudioInput 實例 說明： 初始化音訊輸入管理器，設定組態和回調函式。 注意：此時尚未啟動音訊串流，必須呼叫 start()…, 音訊資料回調 - sounddevice 每次收到新音訊時呼叫 說明： 此函式由 sounddevice 內部執行緒呼叫，每次有新的音訊區塊時觸發。…
 
+### Community 4 - "asr_benchmark.py"
+Cohesion: 0.18
+Nodes (11): character_error_rate(), main(), parse_args(), Any, Namespace, Repeatable local Qwen3-ASR latency and character-error benchmark., Return character error rate using Levenshtein distance., Resample mono audio for the assistant's fixed 16 kHz ASR input contract. (+3 more)
+
 ### Community 5 - ".process_frame"
 Cohesion: 0.19
 Nodes (7): ndarray, 處理單個音訊框架 說明： 這是 VAD 模組的核心函式，每次收到新的音訊資料時呼叫。 職責： 1. 判斷是否為語音 2. 更新緩衝區和狀態 3.…, 簡單能量閾值 VAD 說明： 使用簡單的能量計算來判斷是否為語音。 計算音訊的 RMS (Root Mean Square) 能量， 若超過閾值則視為語音。…, Silero VAD 語音活動檢測 說明： 使用 Silero AI 的預訓練 VAD 模型進行語音偵測。 這是一個深度學習模型，比簡單能量法更精確。 原理：…, 完成語句處理 說明： 當偵測到語句結束時呼叫此函式。 職責： 1. 檢查語句長度是否符合要求 2. 合併緩衝區中的所有片段 3. 建立 Utterance…, 重設內部狀態 說明： 清空緩衝區並重設所有計時器和狀態變數。 用於語句完成後或需要重新開始時。 參數： 無, 公開的重設函式 說明： 提供給外部呼叫的重設接口。 會先取得鎖再重設，確保執行緒安全。 參數： 無
 
-### Community 7 - "ASRWorker"
-Cohesion: 0.06
-Nodes (23): ASRWorker, ndarray, 建構函式 - 建立 ASRWorker 實例          說明：             初始化 ASR Worker，設定模型路徑和回調函式。, 建構函式 - 建立 ASRWorker 實例 說明： 初始化 ASR Worker，設定模型路徑和回調函式。 參數： model_path:…, 啟動 ASR Worker 執行緒          說明：             建立並啟動 worker 執行緒，開始處理任務佇列中的音訊任務。, 啟動 ASR Worker 執行緒 說明： 建立並啟動 worker 執行緒，開始處理任務佇列中的音訊任務。 參數： 無 回傳： 無 設計考量： -…, 停止 ASR Worker          說明：             優雅地停止 worker 執行緒：             1. 設定停止, 停止 ASR Worker 說明： 優雅地停止 worker 執行緒： 1. 設定停止標記 2. 傳送 None 到佇列，觸發 worker 結束 3.… (+15 more)
+### Community 7 - "._recognize"
+Cohesion: 0.20
+Nodes (7): ndarray, 提交音訊進行辨識          說明：             將音訊資料加入任務佇列，等待 worker 執行緒處理。             這, 提交音訊進行辨識 說明： 將音訊資料加入任務佇列，等待 worker 執行緒處理。 這是非同步操作，函式會立即返回。 參數： audio:…, Worker 執行緒主迴圈          說明：             在獨立執行緒中運行的主要工作迴圈：             1. 從輸入佇, Worker 執行緒主迴圈 說明： 在獨立執行緒中運行的主要工作迴圈： 1. 從輸入佇列取出音訊任務 2. 若收到 None，則結束迴圈 3. 呼叫…, 執行實際的語音辨識          說明：             這是核心的辨識函式，目前為預留實作：             - 若模型未載入，回, 執行實際的語音辨識 說明： 這是核心的辨識函式，目前為預留實作： - 若模型未載入，回傳錯誤訊息 - 若已載入模型，應調用模型進行推論 參數： audio:…
 
-### Community 8 - "安裝與疑難排解"
-Cohesion: 0.06
-Nodes (30): Windows 麥克風有辨識結果，但後續 TTS 沒有聲音, 修正與驗證, 症狀, 維護經驗, 避免回歸, 除錯證據與根因, 1. 演算法級加速：Flash Attention, 2. 模型尺寸優化：模型量化 (Quantization) (+22 more)
+### Community 8 - "推論效能基準"
+Cohesion: 0.05
+Nodes (39): Windows 麥克風有辨識結果，但後續 TTS 沒有聲音, 修正與驗證, 症狀, 維護經驗, 避免回歸, 除錯證據與根因, ASR CUDA／SDPA 實測（2026-10-04）, TTS CUDA／SDPA 實測（2026-10-05） (+31 more)
 
 ### Community 9 - "AI Agent 指南：GitHub Projects v2 工作流 / AI Agent Guide: GitHub Projects v2 Workflow"
 Cohesion: 0.07
@@ -116,9 +127,9 @@ Nodes (6): make_vad(), test_callback_can_reset_without_deadlock(), test_continuo
 Cohesion: 0.07
 Nodes (27): 1.1 初始化專案, 1.2 建立專案結構, 1.3 Logging 設定, 2.1 音訊輸入模組, 2.2 VAD 語音偵測, 3.1 ASR Worker, 3.2 Utterance 處理, 4.1 規則系統 (+19 more)
 
-### Community 20 - "parse_args"
-Cohesion: 0.23
-Nodes (9): main(), load_defaults(), Load validated YAML defaults for the command-line entry point., validate_options(), parse_args(), 解析命令列參數 說明： 此函式使用 argparse 模組解析命令列參數，讓使用者可以自訂程式行為， 包括設定配置檔路徑、除錯模式、音訊裝置選擇等。 參數：…, parametrize, test_invalid_config_fails_before_model_start() (+1 more)
+### Community 20 - "src/main.py"
+Cohesion: 0.16
+Nodes (15): Logger, main(), load_defaults(), Load validated YAML defaults for the command-line entry point., validate_options(), get_logger(), Logging configuration module, setup_logging() (+7 more)
 
 ### Community 21 - "bash"
 Cohesion: 0.08
@@ -144,20 +155,24 @@ Nodes (7): 1. 📥 安裝 grepai, 2. 🤖 準備本地模型 (Ollama), 3. ⚙️
 Cohesion: 0.40
 Nodes (4): Added, Changed, Changelog, [Unreleased]
 
+### Community 34 - "tts_benchmark.py"
+Cohesion: 0.18
+Nodes (13): main(), _model_transformers_version(), parse_args(), Any, Namespace, ndarray, Repeatable local Qwen3-TTS latency and output-signal benchmark., Summarize basic signal health for a generated audio waveform. (+5 more)
+
 ## Knowledge Gaps
-- **134 isolated node(s):** `$schema`, `read`, `glob`, `grep`, `list` (+129 more)
+- **143 isolated node(s):** `$schema`, `read`, `glob`, `grep`, `list` (+138 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TTSWorker` connect `TTSJob` to `._speak_streaming`, `RuleEngine`, `.is_speaking`, `ASRWorker`, `._load_fallback_engine`, `.stop`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `ASRWorker` connect `ASRWorker` to `TTSJob`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
-- **Why does `VADSegmenter` connect `TTSJob` to `test_vad.py`, `.process_frame`, `.load_vad`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+- **Why does `RuleEngine` connect `RuleEngine` to `TTSJob`?**
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+- **Why does `TTSWorker` connect `TTSJob` to `._speak_streaming`, `RuleEngine`, `.is_speaking`, `._load_fallback_engine`, `.stop`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Why does `ASRWorker` connect `TTSJob` to `.__init__`, `.start`, `.stop`, `._recognize`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
 - **Are the 28 inferred relationships involving `TTSJob` (e.g. with `Orchestrator` and `OrchestratorConfig`) actually correct?**
   _`TTSJob` has 28 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 19 inferred relationships involving `TTSWorker` (e.g. with `Orchestrator` and `OrchestratorConfig`) actually correct?**

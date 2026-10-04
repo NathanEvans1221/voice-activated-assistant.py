@@ -4,6 +4,292 @@
   "graph": {},
   "nodes": [
     {
+      "label": "benchmarks/__init__.py",
+      "file_type": "code",
+      "source_file": "benchmarks/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_init",
+      "community": 40,
+      "community_name": "benchmarks/__init__.py",
+      "norm_label": "benchmarks/__init__.py"
+    },
+    {
+      "label": "Repeatable performance benchmark tools for the voice assistant.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_init_rationale_1",
+      "community": 40,
+      "community_name": "benchmarks/__init__.py",
+      "norm_label": "repeatable performance benchmark tools for the voice assistant."
+    },
+    {
+      "label": "asr_benchmark.py",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "asr_benchmark.py"
+    },
+    {
+      "label": "character_error_rate()",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_character_error_rate",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "character_error_rate()"
+    },
+    {
+      "label": "resample_audio_to_16khz()",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "resample_audio_to_16khz()"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_py_any",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "any"
+    },
+    {
+      "label": "run_benchmark()",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_run_benchmark",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "run_benchmark()"
+    },
+    {
+      "label": "Namespace",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_py_namespace",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "namespace"
+    },
+    {
+      "label": "parse_args()",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_parse_args",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "parse_args()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_main",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "main()"
+    },
+    {
+      "label": "Repeatable local Qwen3-ASR latency and character-error benchmark.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_rationale_1",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "repeatable local qwen3-asr latency and character-error benchmark."
+    },
+    {
+      "label": "Return character error rate using Levenshtein distance.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_rationale_17",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "return character error rate using levenshtein distance."
+    },
+    {
+      "label": "Resample mono audio for the assistant's fixed 16 kHz ASR input contract.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "benchmarks_asr_benchmark_rationale_37",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "resample mono audio for the assistant's fixed 16 khz asr input contract."
+    },
+    {
+      "label": "tts_benchmark.py",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "tts_benchmark.py"
+    },
+    {
+      "label": "summarize_audio()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_summarize_audio",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "summarize_audio()"
+    },
+    {
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_py_ndarray",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "ndarray"
+    },
+    {
+      "label": "_sentences()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_sentences",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "_sentences()"
+    },
+    {
+      "label": "run_benchmark()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_run_benchmark",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "run_benchmark()"
+    },
+    {
+      "label": "Namespace",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_py_namespace",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "namespace"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_py_any",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "any"
+    },
+    {
+      "label": "_model_transformers_version()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_model_transformers_version",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "_model_transformers_version()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "path",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "path"
+    },
+    {
+      "label": "parse_args()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_parse_args",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "parse_args()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L197",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_main",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "main()"
+    },
+    {
+      "label": "Repeatable local Qwen3-TTS latency and output-signal benchmark.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_rationale_1",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "repeatable local qwen3-tts latency and output-signal benchmark."
+    },
+    {
+      "label": "Summarize basic signal health for a generated audio waveform.",
+      "file_type": "rationale",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "benchmarks_tts_benchmark_rationale_19",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "summarize basic signal health for a generated audio waveform."
+    },
+    {
       "label": "inspect_opencc.py",
       "file_type": "code",
       "source_file": "inspect_opencc.py",
@@ -121,7 +407,7 @@
       "_origin": "ast",
       "id": "main",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "main.py"
     },
     {
@@ -132,7 +418,7 @@
       "_origin": "ast",
       "id": "main_main",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "main()"
     },
     {
@@ -634,15 +920,15 @@
       "norm_label": "setup_git_sync.ps1"
     },
     {
-      "label": "__init__.py",
+      "label": "src/__init__.py",
       "file_type": "code",
       "source_file": "src/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_init",
       "community": 13,
-      "community_name": "__init__.py",
-      "norm_label": "__init__.py"
+      "community_name": "src/__init__.py",
+      "norm_label": "src/__init__.py"
     },
     {
       "label": "Voice Activated Assistant - Main Package",
@@ -652,7 +938,7 @@
       "_origin": "ast",
       "id": "src_init_rationale_1",
       "community": 13,
-      "community_name": "__init__.py",
+      "community_name": "src/__init__.py",
       "norm_label": "voice activated assistant - main package"
     },
     {
@@ -662,8 +948,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_asr_worker",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "asr_worker.py"
     },
     {
@@ -684,8 +970,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "src_asr_worker_asrworker",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "asrworker"
     },
     {
@@ -695,8 +981,8 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_init",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 42,
+      "community_name": ".__init__",
       "norm_label": ".__init__()"
     },
     {
@@ -706,8 +992,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_load_model",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".load_model()"
     },
     {
@@ -717,8 +1003,8 @@
       "source_location": "L182",
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_start",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 43,
+      "community_name": ".start",
       "norm_label": ".start()"
     },
     {
@@ -728,8 +1014,8 @@
       "source_location": "L218",
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_stop",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 44,
+      "community_name": ".stop",
       "norm_label": ".stop()"
     },
     {
@@ -740,7 +1026,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_process",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": ".process()"
     },
     {
@@ -751,7 +1037,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_py_ndarray",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "ndarray"
     },
     {
@@ -762,7 +1048,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_worker_loop",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "._worker_loop()"
     },
     {
@@ -773,7 +1059,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_asrworker_recognize",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "._recognize()"
     },
     {
@@ -794,8 +1080,8 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "src_asr_worker_rationale_74",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "\u8a9e\u97f3\u8fa8\u8b58\u5de5\u4f5c\u8005 \u8aaa\u660e: \u8ca0\u8cac\u5c07\u97f3\u8a0a\u8cc7\u6599\u8f49\u63db\u70ba\u6587\u5b57\u7684 worker \u6a21\u7d44\u3002 \u4f7f\u7528\u57f7\u884c\u7dd2\u548c\u4f47\u5217\u5be6\u73fe\u975e\u540c\u6b65\u8655\u7406: - \u4e3b\u57f7\u884c\u7dd2\u900f\u904e process()..."
     },
     {
@@ -805,8 +1091,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "src_asr_worker_rationale_109",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 42,
+      "community_name": ".__init__",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u5efa\u7acb asrworker \u5be6\u4f8b \u8aaa\u660e: \u521d\u59cb\u5316 asr worker,\u8a2d\u5b9a\u6a21\u578b\u8def\u5f91\u548c\u56de\u8abf\u51fd\u5f0f\u3002 \u53c3\u6578: model_path:..."
     },
     {
@@ -816,8 +1102,8 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "src_asr_worker_rationale_183",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 43,
+      "community_name": ".start",
       "norm_label": "\u555f\u52d5 asr worker \u57f7\u884c\u7dd2 \u8aaa\u660e: \u5efa\u7acb\u4e26\u555f\u52d5 worker \u57f7\u884c\u7dd2,\u958b\u59cb\u8655\u7406\u4efb\u52d9\u4f47\u5217\u4e2d\u7684\u97f3\u8a0a\u4efb\u52d9\u3002 \u53c3\u6578: \u7121 \u56de\u50b3: \u7121 \u8a2d\u8a08\u8003\u91cf: -..."
     },
     {
@@ -827,8 +1113,8 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "src_asr_worker_rationale_219",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 44,
+      "community_name": ".stop",
       "norm_label": "\u505c\u6b62 asr worker \u8aaa\u660e: \u512a\u96c5\u5730\u505c\u6b62 worker \u57f7\u884c\u7dd2: 1. \u8a2d\u5b9a\u505c\u6b62\u6a19\u8a18 2. \u50b3\u9001 none \u5230\u4f47\u5217,\u89f8\u767c worker \u7d50\u675f 3...."
     },
     {
@@ -839,7 +1125,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_rationale_248",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "\u63d0\u4ea4\u97f3\u8a0a\u9032\u884c\u8fa8\u8b58 \u8aaa\u660e: \u5c07\u97f3\u8a0a\u8cc7\u6599\u52a0\u5165\u4efb\u52d9\u4f47\u5217,\u7b49\u5f85 worker \u57f7\u884c\u7dd2\u8655\u7406\u3002 \u9019\u662f\u975e\u540c\u6b65\u64cd\u4f5c,\u51fd\u5f0f\u6703\u7acb\u5373\u8fd4\u56de\u3002 \u53c3\u6578: audio:..."
     },
     {
@@ -850,7 +1136,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_rationale_278",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "worker \u57f7\u884c\u7dd2\u4e3b\u8ff4\u5708 \u8aaa\u660e: \u5728\u7368\u7acb\u57f7\u884c\u7dd2\u4e2d\u904b\u884c\u7684\u4e3b\u8981\u5de5\u4f5c\u8ff4\u5708: 1. \u5f9e\u8f38\u5165\u4f47\u5217\u53d6\u51fa\u97f3\u8a0a\u4efb\u52d9 2. \u82e5\u6536\u5230 none,\u5247\u7d50\u675f\u8ff4\u5708 3. \u547c\u53eb..."
     },
     {
@@ -861,7 +1147,7 @@
       "_origin": "ast",
       "id": "src_asr_worker_rationale_328",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "\u57f7\u884c\u5be6\u969b\u7684\u8a9e\u97f3\u8fa8\u8b58 \u8aaa\u660e: \u9019\u662f\u6838\u5fc3\u7684\u8fa8\u8b58\u51fd\u5f0f,\u76ee\u524d\u70ba\u9810\u7559\u5be6\u4f5c: - \u82e5\u6a21\u578b\u672a\u8f09\u5165,\u56de\u50b3\u932f\u8aa4\u8a0a\u606f - \u82e5\u5df2\u8f09\u5165\u6a21\u578b,\u61c9\u8abf\u7528\u6a21\u578b\u9032\u884c\u63a8\u8ad6 \u53c3\u6578: audio:..."
     },
     {
@@ -1147,7 +1433,7 @@
       "_origin": "ast",
       "id": "src_config",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "config.py"
     },
     {
@@ -1158,7 +1444,7 @@
       "_origin": "ast",
       "id": "src_config_load_defaults",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "load_defaults()"
     },
     {
@@ -1169,7 +1455,7 @@
       "_origin": "ast",
       "id": "src_config_validate_options",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "validate_options()"
     },
     {
@@ -1180,7 +1466,7 @@
       "_origin": "ast",
       "id": "src_config_rationale_1",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "load validated yaml defaults for the command-line entry point."
     },
     {
@@ -1190,8 +1476,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_logging_config",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "logging_config.py"
     },
     {
@@ -1201,8 +1487,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_logging_config_setup_logging",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "setup_logging()"
     },
     {
@@ -1212,8 +1498,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "logger",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "logger"
     },
     {
@@ -1223,8 +1509,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_logging_config_get_logger",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "get_logger()"
     },
     {
@@ -1234,8 +1520,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_logging_config_rationale_1",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "logging configuration module"
     },
     {
@@ -1245,8 +1531,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "src/main.py"
     },
     {
@@ -1257,7 +1543,7 @@
       "_origin": "ast",
       "id": "src_main_parse_args",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "parse_args()"
     },
     {
@@ -1267,8 +1553,8 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "src_main_main",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "main()"
     },
     {
@@ -1279,7 +1565,7 @@
       "_origin": "ast",
       "id": "src_main_rationale_26",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "\u89e3\u6790\u547d\u4ee4\u5217\u53c3\u6578 \u8aaa\u660e: \u6b64\u51fd\u5f0f\u4f7f\u7528 argparse \u6a21\u7d44\u89e3\u6790\u547d\u4ee4\u5217\u53c3\u6578,\u8b93\u4f7f\u7528\u8005\u53ef\u4ee5\u81ea\u8a02\u7a0b\u5f0f\u884c\u70ba, \u5305\u62ec\u8a2d\u5b9a\u914d\u7f6e\u6a94\u8def\u5f91\u3001\u9664\u932f\u6a21\u5f0f\u3001\u97f3\u8a0a\u88dd\u7f6e\u9078\u64c7\u7b49\u3002 \u53c3\u6578:..."
     },
     {
@@ -1289,8 +1575,8 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "src_main_rationale_161",
-      "community": 0,
-      "community_name": "TTSJob",
+      "community": 20,
+      "community_name": "src/main.py",
       "norm_label": "\u4e3b\u7a0b\u5f0f\u9032\u5165\u9ede \u8aaa\u660e: \u6b64\u51fd\u5f0f\u662f\u7a0b\u5f0f\u7684\u57f7\u884c\u8d77\u9ede,\u8ca0\u8cac\u4ee5\u4e0b\u4efb\u52d9: 1. \u89e3\u6790\u547d\u4ee4\u5217\u53c3\u6578 2. \u82e5\u6709 --list-devices \u53c3\u6578,\u5217\u51fa\u53ef\u7528\u97f3\u8a0a\u88dd\u7f6e\u5f8c\u7d50\u675f..."
     },
     {
@@ -1377,8 +1663,8 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_set_state",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".set_state()"
     },
     {
@@ -1410,8 +1696,8 @@
       "source_location": "L355",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_stop",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".stop()"
     },
     {
@@ -1443,8 +1729,8 @@
       "source_location": "L452",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_asr_result",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "._on_asr_result()"
     },
     {
@@ -1454,8 +1740,8 @@
       "source_location": "L519",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_on_tts_complete",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "._on_tts_complete()"
     },
     {
@@ -1465,8 +1751,8 @@
       "source_location": "L555",
       "_origin": "ast",
       "id": "src_orchestrator_orchestrator_simulate_utterance",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".simulate_utterance()"
     },
     {
@@ -1531,8 +1817,8 @@
       "source_location": "L224",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_224",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "\u8a2d\u5b9a\u7cfb\u7d71\u72c0\u614b (\u57f7\u884c\u7dd2\u5b89\u5168) \u8aaa\u660e: \u4f7f\u7528 lock \u4fdd\u8b77 _state \u8b8a\u6578,\u78ba\u4fdd\u5728\u591a\u57f7\u884c\u7dd2\u74b0\u5883\u4e0b \u8a2d\u5b9a\u72c0\u614b\u4e0d\u6703\u7522\u751f\u7af6\u722d\u689d\u4ef6\u3002 \u53c3\u6578: new_state:..."
     },
     {
@@ -1564,8 +1850,8 @@
       "source_location": "L356",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_356",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "\u505c\u6b62 orchestrator \u548c\u6240\u6709\u5b50\u6a21\u7d44 \u8aaa\u660e: \u6b64\u51fd\u5f0f\u8ca0\u8cac\u512a\u96c5\u5730\u505c\u6b62\u6240\u6709\u5b50\u6a21\u7d44: 1. \u505c\u6b62 audioinput (\u505c\u6b62\u64f7\u53d6\u97f3\u8a0a) 2. \u505c\u6b62 asr..."
     },
     {
@@ -1597,8 +1883,8 @@
       "source_location": "L453",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_453",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "\u8a9e\u97f3\u8fa8\u8b58\u7d50\u679c\u56de\u8abf - \u7576 asr \u5b8c\u6210\u6587\u5b57\u8fa8\u8b58\u6642\u547c\u53eb \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 asrworker \u5728\u5b8c\u6210\u8a9e\u97f3\u8fa8\u8b58\u5f8c\u547c\u53eb\u3002 \u8655\u7406\u6d41\u7a0b: 1. \u53d6\u5f97\u8fa8\u8b58\u51fa\u7684\u6587\u5b57..."
     },
     {
@@ -1608,8 +1894,8 @@
       "source_location": "L520",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_520",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "tts \u5b8c\u6210\u56de\u8abf - \u7576 tts \u64ad\u653e\u5b8c\u7562\u6642\u547c\u53eb \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7531 ttsworker \u5728\u8a9e\u97f3\u64ad\u653e\u5b8c\u6210\u5f8c\u547c\u53eb\u3002 \u5b83\u6703: 1. \u986f\u793a\u64ad\u653e\u5b8c\u6210\u7684\u8cc7\u8a0a 2...."
     },
     {
@@ -1619,8 +1905,8 @@
       "source_location": "L556",
       "_origin": "ast",
       "id": "src_orchestrator_rationale_556",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "\u6a21\u64ec\u8a9e\u53e5 - \u7528\u65bc\u6e2c\u8a66\u898f\u5247\u5339\u914d\u548c tts \u8aaa\u660e: \u6b64\u51fd\u5f0f\u7528\u65bc mock \u6a21\u5f0f\u4e0b\u6a21\u64ec\u8a9e\u97f3\u8f38\u5165\u3002 \u5b83\u6703\u76f4\u63a5\u5efa\u7acb\u4e00\u500b asrresult \u4e26\u547c\u53eb..."
     },
     {
@@ -2026,8 +2312,8 @@
       "source_location": "L437",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_speak_fallback",
-      "community": 1,
-      "community_name": "._speak_streaming",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "._speak_fallback()"
     },
     {
@@ -2037,8 +2323,8 @@
       "source_location": "L463",
       "_origin": "ast",
       "id": "src_tts_worker_ttsworker_select_chinese_fallback_voice",
-      "community": 1,
-      "community_name": "._speak_streaming",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "._select_chinese_fallback_voice()"
     },
     {
@@ -2169,8 +2455,8 @@
       "source_location": "L464",
       "_origin": "ast",
       "id": "src_tts_worker_rationale_464",
-      "community": 1,
-      "community_name": "._speak_streaming",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "prefer an installed chinese sapi voice for traditional chinese replies."
     },
     {
@@ -2444,8 +2730,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_asr_worker_lifecycle",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "test_asr_worker_lifecycle.py"
     },
     {
@@ -2455,8 +2741,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "tests_test_asr_worker_lifecycle_test_stop_waits_for_inflight_recognition_and_suppresses_late_result",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "test_stop_waits_for_inflight_recognition_and_suppresses_late_result()"
     },
     {
@@ -2466,8 +2752,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_asr_worker_lifecycle_test_worker_restarts_after_stop_and_discards_queued_audio",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "test_worker_restarts_after_stop_and_discards_queued_audio()"
     },
     {
@@ -2477,8 +2763,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_attention_backend",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "test_attention_backend.py"
     },
     {
@@ -2488,8 +2774,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_attention_backend_attentionbackendtests",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": "attentionbackendtests"
     },
     {
@@ -2499,8 +2785,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_attention_backend_attentionbackendtests_test_asr_passes_selected_attention_backend",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".test_asr_passes_selected_attention_backend()"
     },
     {
@@ -2510,9 +2796,97 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_attention_backend_attentionbackendtests_test_tts_passes_selected_attention_backend",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 0,
+      "community_name": "TTSJob",
       "norm_label": ".test_tts_passes_selected_attention_backend()"
+    },
+    {
+      "label": "test_benchmark_metrics.py",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "test_benchmark_metrics.py"
+    },
+    {
+      "label": "CharacterErrorRateTests",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": "charactererrorratetests"
+    },
+    {
+      "label": ".test_exact_chinese_transcript_has_zero_error()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_exact_chinese_transcript_has_zero_error",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_exact_chinese_transcript_has_zero_error()"
+    },
+    {
+      "label": ".test_counts_insertions_deletions_and_substitutions()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_counts_insertions_deletions_and_substitutions",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_counts_insertions_deletions_and_substitutions()"
+    },
+    {
+      "label": ".test_empty_reference_is_rejected()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_empty_reference_is_rejected",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_empty_reference_is_rejected()"
+    },
+    {
+      "label": ".test_resamples_24khz_tts_audio_to_16khz()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_resamples_24khz_tts_audio_to_16khz",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_resamples_24khz_tts_audio_to_16khz()"
+    },
+    {
+      "label": ".test_keeps_16khz_audio_and_rejects_invalid_rate()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_keeps_16khz_audio_and_rejects_invalid_rate",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_keeps_16khz_audio_and_rejects_invalid_rate()"
+    },
+    {
+      "label": ".test_reference_audio_fixture_is_fixed_and_16khz_mono()",
+      "file_type": "code",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "tests_test_benchmark_metrics_charactererrorratetests_test_reference_audio_fixture_is_fixed_and_16khz_mono",
+      "community": 4,
+      "community_name": "asr_benchmark.py",
+      "norm_label": ".test_reference_audio_fixture_is_fixed_and_16khz_mono()"
     },
     {
       "label": "test_config.py",
@@ -2522,7 +2896,7 @@
       "_origin": "ast",
       "id": "tests_test_config",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "test_config.py"
     },
     {
@@ -2533,7 +2907,7 @@
       "_origin": "ast",
       "id": "tests_test_config_test_yaml_defaults_and_explicit_cli_override",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "test_yaml_defaults_and_explicit_cli_override()"
     },
     {
@@ -2544,7 +2918,7 @@
       "_origin": "ast",
       "id": "tests_test_config_py_parametrize",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "parametrize"
     },
     {
@@ -2555,7 +2929,7 @@
       "_origin": "ast",
       "id": "tests_test_config_test_invalid_config_fails_before_model_start",
       "community": 20,
-      "community_name": "parse_args",
+      "community_name": "src/main.py",
       "norm_label": "test_invalid_config_fails_before_model_start()"
     },
     {
@@ -2612,6 +2986,72 @@
       "community": 2,
       "community_name": "RuleEngine",
       "norm_label": "test_lower_priority_number_wins_when_multiple_rules_match()"
+    },
+    {
+      "label": "test_tts_benchmark.py",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "test_tts_benchmark.py"
+    },
+    {
+      "label": "TtsAudioSummaryTests",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": "ttsaudiosummarytests"
+    },
+    {
+      "label": ".test_reports_duration_peak_and_rms_for_audio()",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_duration_peak_and_rms_for_audio",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": ".test_reports_duration_peak_and_rms_for_audio()"
+    },
+    {
+      "label": ".test_reports_silence_as_empty_audio()",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_silence_as_empty_audio",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": ".test_reports_silence_as_empty_audio()"
+    },
+    {
+      "label": ".test_rejects_empty_audio_and_invalid_sample_rate()",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark_ttsaudiosummarytests_test_rejects_empty_audio_and_invalid_sample_rate",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": ".test_rejects_empty_audio_and_invalid_sample_rate()"
+    },
+    {
+      "label": ".test_splits_greeting_like_the_assistant_worker()",
+      "file_type": "code",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "tests_test_tts_benchmark_ttsaudiosummarytests_test_splits_greeting_like_the_assistant_worker",
+      "community": 34,
+      "community_name": "tts_benchmark.py",
+      "norm_label": ".test_splits_greeting_like_the_assistant_worker()"
     },
     {
       "label": "test_tts_fallback.py",
@@ -3255,7 +3695,7 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "changelog_changed",
       "community": 26,
@@ -3270,7 +3710,7 @@
       "_origin": "ast",
       "id": "readme",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "readme.md"
     },
     {
@@ -3281,7 +3721,7 @@
       "_origin": "ast",
       "id": "readme_\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u8a9e\u97f3\u4e92\u52d5\u52a9\u7406"
     },
     {
@@ -3292,7 +3732,7 @@
       "_origin": "ast",
       "id": "readme_\u5feb\u901f\u958b\u59cb_windows_powershell",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u5feb\u901f\u958b\u59cb(windows powershell)"
     },
     {
@@ -3303,7 +3743,7 @@
       "_origin": "ast",
       "id": "readme_\u57f7\u884c\u6e2c\u8a66",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u57f7\u884c\u6e2c\u8a66"
     },
     {
@@ -3314,8 +3754,30 @@
       "_origin": "ast",
       "id": "readme_\u6587\u4ef6",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u6587\u4ef6"
+    },
+    {
+      "label": "fixtures/README.md",
+      "file_type": "document",
+      "source_file": "benchmarks/fixtures/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_fixtures_readme",
+      "community": 35,
+      "community_name": "fixtures/README.md",
+      "norm_label": "fixtures/readme.md"
+    },
+    {
+      "label": "ASR \u56fa\u5b9a\u6e2c\u8a66\u8f38\u5165",
+      "file_type": "document",
+      "source_file": "benchmarks/fixtures/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "benchmarks_fixtures_readme_asr_\u56fa\u5b9a\u6e2c\u8a66\u8f38\u5165",
+      "community": 35,
+      "community_name": "fixtures/README.md",
+      "norm_label": "asr \u56fa\u5b9a\u6e2c\u8a66\u8f38\u5165"
     },
     {
       "label": "LESSONS_LEARNED.md",
@@ -3325,7 +3787,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "lessons_learned.md"
     },
     {
@@ -3336,7 +3798,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_\u7dad\u8b77\u7d93\u9a57",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u7dad\u8b77\u7d93\u9a57"
     },
     {
@@ -3347,7 +3809,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_windows_\u9ea5\u514b\u98a8\u6709\u8fa8\u8b58\u7d50\u679c_\u4f46\u5f8c\u7e8c_tts_\u6c92\u6709\u8072\u97f3",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "windows \u9ea5\u514b\u98a8\u6709\u8fa8\u8b58\u7d50\u679c,\u4f46\u5f8c\u7e8c tts \u6c92\u6709\u8072\u97f3"
     },
     {
@@ -3358,7 +3820,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_\u75c7\u72c0",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u75c7\u72c0"
     },
     {
@@ -3369,7 +3831,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_\u9664\u932f\u8b49\u64da\u8207\u6839\u56e0",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u9664\u932f\u8b49\u64da\u8207\u6839\u56e0"
     },
     {
@@ -3380,7 +3842,7 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_\u4fee\u6b63\u8207\u9a57\u8b49",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u4fee\u6b63\u8207\u9a57\u8b49"
     },
     {
@@ -3391,8 +3853,107 @@
       "_origin": "ast",
       "id": "docs_lessons_learned_\u907f\u514d\u56de\u6b78",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u907f\u514d\u56de\u6b78"
+    },
+    {
+      "label": "PERFORMANCE_BASELINE.md",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_performance_baseline",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "performance_baseline.md"
+    },
+    {
+      "label": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96"
+    },
+    {
+      "label": "\u74b0\u5883\u76e4\u9ede",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u74b0\u5883\u76e4\u9ede",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u74b0\u5883\u76e4\u9ede"
+    },
+    {
+      "label": "\u56fa\u5b9a ASR \u8f38\u5165",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u56fa\u5b9a_asr_\u8f38\u5165",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u56fa\u5b9a asr \u8f38\u5165"
+    },
+    {
+      "label": "ASR CUDA\uff0fSDPA \u5be6\u6e2c\uff082026-10-04\uff09",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_asr_cuda_sdpa_\u5be6\u6e2c_2026_10_04",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "asr cuda/sdpa \u5be6\u6e2c(2026-10-04)"
+    },
+    {
+      "label": "TTS CUDA\uff0fSDPA \u5be6\u6e2c\uff082026-10-05\uff09",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_tts_cuda_sdpa_\u5be6\u6e2c_2026_10_05",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "tts cuda/sdpa \u5be6\u6e2c(2026-10-05)"
+    },
+    {
+      "label": "\u76ee\u524d\u53ef\u4e0b\u7684\u7d50\u8ad6",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u76ee\u524d\u53ef\u4e0b\u7684\u7d50\u8ad6",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u76ee\u524d\u53ef\u4e0b\u7684\u7d50\u8ad6"
+    },
+    {
+      "label": "\u5f85\u88dc\u7684\u53ef\u91cd\u8907\u91cf\u6e2c",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u5f85\u88dc\u7684\u53ef\u91cd\u8907\u91cf\u6e2c",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u5f85\u88dc\u7684\u53ef\u91cd\u8907\u91cf\u6e2c"
+    },
+    {
+      "label": "\u91cd\u73fe\u74b0\u5883\u8cc7\u8a0a",
+      "file_type": "document",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_\u91cd\u73fe\u74b0\u5883\u8cc7\u8a0a",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "\u91cd\u73fe\u74b0\u5883\u8cc7\u8a0a"
     },
     {
       "label": "TODO.md",
@@ -3402,7 +3963,7 @@
       "_origin": "ast",
       "id": "docs_todo",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "todo.md"
     },
     {
@@ -3413,95 +3974,106 @@
       "_origin": "ast",
       "id": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\ud83d\ude80 \u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716 (performance optimization roadmap)"
+    },
+    {
+      "label": "GitHub Issue \u8ffd\u8e64",
+      "file_type": "document",
+      "source_file": "docs/TODO.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_todo_github_issue_\u8ffd\u8e64",
+      "community": 8,
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "norm_label": "github issue \u8ffd\u8e64"
     },
     {
       "label": "\ud83e\udde0 \u70ba\u4ec0\u9ebc\u4e0d\u512a\u5148\u66f4\u63db\u7a0b\u5f0f\u8a9e\u8a00 (Python vs. Rust/Go)\uff1f",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L8",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "docs_todo_\u70ba\u4ec0\u9ebc\u4e0d\u512a\u5148\u66f4\u63db\u7a0b\u5f0f\u8a9e\u8a00_python_vs_rust_go",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\ud83e\udde0 \u70ba\u4ec0\u9ebc\u4e0d\u512a\u5148\u66f4\u63db\u7a0b\u5f0f\u8a9e\u8a00 (python vs. rust/go)?"
     },
     {
       "label": "\ud83d\udee0\ufe0f \u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L16",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "docs_todo_\u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\ud83d\udee0\ufe0f \u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae"
     },
     {
       "label": "1. \u6f14\u7b97\u6cd5\u7d1a\u52a0\u901f\uff1aFlash Attention",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L18",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "docs_todo_1_\u6f14\u7b97\u6cd5\u7d1a\u52a0\u901f_flash_attention",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "1. \u6f14\u7b97\u6cd5\u7d1a\u52a0\u901f:flash attention"
     },
     {
       "label": "2. \u6a21\u578b\u5c3a\u5bf8\u512a\u5316\uff1a\u6a21\u578b\u91cf\u5316 (Quantization)",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L22",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "docs_todo_2_\u6a21\u578b\u5c3a\u5bf8\u512a\u5316_\u6a21\u578b\u91cf\u5316_quantization",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "2. \u6a21\u578b\u5c3a\u5bf8\u512a\u5316:\u6a21\u578b\u91cf\u5316 (quantization)"
     },
     {
       "label": "3. \u786c\u9ad4\u7d1a\u52a0\u901f\uff1aTensorRT / ONNX \u8f49\u63db",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L25",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "docs_todo_3_\u786c\u9ad4\u7d1a\u52a0\u901f_tensorrt_onnx_\u8f49\u63db",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "3. \u786c\u9ad4\u7d1a\u52a0\u901f:tensorrt / onnx \u8f49\u63db"
     },
     {
       "label": "\ud83d\ude80 \u9032\u884c\u4e2d\u8207\u5df2\u5b8c\u6210\u512a\u5316",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L32",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "docs_todo_\u9032\u884c\u4e2d\u8207\u5df2\u5b8c\u6210\u512a\u5316",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\ud83d\ude80 \u9032\u884c\u4e2d\u8207\u5df2\u5b8c\u6210\u512a\u5316"
     },
     {
       "label": "\ud83d\udcc5 \u672a\u4f86\u767c\u5c55\u65b9\u5411",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L41",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "docs_todo_\u672a\u4f86\u767c\u5c55\u65b9\u5411",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\ud83d\udcc5 \u672a\u4f86\u767c\u5c55\u65b9\u5411"
     },
     {
       "label": "\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56",
       "file_type": "document",
       "source_file": "docs/TODO.md",
-      "source_location": "L46",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "docs_todo_\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u96d9\u5f15\u64ce\u90e8\u7f72\u5f85\u6c7a\u7b56"
     },
     {
@@ -3512,7 +4084,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "troubleshooting.md"
     },
     {
@@ -3523,7 +4095,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3"
     },
     {
@@ -3534,7 +4106,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_python_\u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "python \u5957\u4ef6\u548c\u6a21\u578b\u6b0a\u91cd\u662f\u5169\u56de\u4e8b"
     },
     {
@@ -3545,7 +4117,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u9ea5\u514b\u98a8\u6c92\u6709\u8fa8\u8b58\u7d50\u679c"
     },
     {
@@ -3556,7 +4128,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_\u5e38\u898b\u932f\u8aa4",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u5e38\u898b\u932f\u8aa4"
     },
     {
@@ -3567,7 +4139,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_no_module_named_qwen_asr",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "`no module named 'qwen_asr'`"
     },
     {
@@ -3578,7 +4150,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_asr_\u6a21\u578b\u8f09\u5165\u5931\u6557",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "asr \u6a21\u578b\u8f09\u5165\u5931\u6557"
     },
     {
@@ -3589,7 +4161,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_no_module_named_qwen_tts",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "`no module named 'qwen_tts'`"
     },
     {
@@ -3600,7 +4172,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_uv_sync_\u986f\u793a\u8b66\u544a",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "`uv sync` \u986f\u793a\u8b66\u544a"
     },
     {
@@ -3611,7 +4183,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_mock_\u6a21\u5f0f",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "mock \u6a21\u5f0f"
     },
     {
@@ -3622,7 +4194,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_\u4fee\u6539\u8a9e\u97f3\u898f\u5247",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u4fee\u6539\u8a9e\u97f3\u898f\u5247"
     },
     {
@@ -3633,7 +4205,7 @@
       "_origin": "ast",
       "id": "docs_troubleshooting_\u66f4\u591a\u8a2d\u5b9a",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "\u66f4\u591a\u8a2d\u5b9a"
     },
     {
@@ -3919,7 +4491,7 @@
       "_origin": "ast",
       "id": "docs_project_tasks",
       "community": 8,
-      "community_name": "\u5b89\u88dd\u8207\u7591\u96e3\u6392\u89e3",
+      "community_name": "\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
       "norm_label": "project_tasks.md"
     },
     {
@@ -4224,8 +4796,8 @@
       "file_type": "rationale",
       "source_file": "src/asr_worker.py",
       "source_location": "L108",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 42,
+      "community_name": ".__init__",
       "norm_label": "\u5efa\u69cb\u51fd\u5f0f - \u5efa\u7acb asrworker \u5be6\u4f8b\r \r         \u8aaa\u660e:\r             \u521d\u59cb\u5316 asr worker,\u8a2d\u5b9a\u6a21\u578b\u8def\u5f91\u548c\u56de\u8abf\u51fd\u5f0f\u3002",
       "id": "src_asr_worker_rationale_108"
     },
@@ -4234,8 +4806,8 @@
       "file_type": "rationale",
       "source_file": "src/asr_worker.py",
       "source_location": "L180",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 43,
+      "community_name": ".start",
       "norm_label": "\u555f\u52d5 asr worker \u57f7\u884c\u7dd2\r \r         \u8aaa\u660e:\r             \u5efa\u7acb\u4e26\u555f\u52d5 worker \u57f7\u884c\u7dd2,\u958b\u59cb\u8655\u7406\u4efb\u52d9\u4f47\u5217\u4e2d\u7684\u97f3\u8a0a\u4efb\u52d9\u3002",
       "id": "src_asr_worker_rationale_180"
     },
@@ -4244,8 +4816,8 @@
       "file_type": "rationale",
       "source_file": "src/asr_worker.py",
       "source_location": "L208",
-      "community": 7,
-      "community_name": "ASRWorker",
+      "community": 44,
+      "community_name": ".stop",
       "norm_label": "\u505c\u6b62 asr worker\r \r         \u8aaa\u660e:\r             \u512a\u96c5\u5730\u505c\u6b62 worker \u57f7\u884c\u7dd2:\r             1. \u8a2d\u5b9a\u505c\u6b62",
       "id": "src_asr_worker_rationale_208"
     },
@@ -4255,7 +4827,7 @@
       "source_file": "src/asr_worker.py",
       "source_location": "L230",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "\u63d0\u4ea4\u97f3\u8a0a\u9032\u884c\u8fa8\u8b58\r \r         \u8aaa\u660e:\r             \u5c07\u97f3\u8a0a\u8cc7\u6599\u52a0\u5165\u4efb\u52d9\u4f47\u5217,\u7b49\u5f85 worker \u57f7\u884c\u7dd2\u8655\u7406\u3002\r             \u9019",
       "id": "src_asr_worker_rationale_230"
     },
@@ -4265,7 +4837,7 @@
       "source_file": "src/asr_worker.py",
       "source_location": "L259",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "worker \u57f7\u884c\u7dd2\u4e3b\u8ff4\u5708\r \r         \u8aaa\u660e:\r             \u5728\u7368\u7acb\u57f7\u884c\u7dd2\u4e2d\u904b\u884c\u7684\u4e3b\u8981\u5de5\u4f5c\u8ff4\u5708:\r             1. \u5f9e\u8f38\u5165\u4f47",
       "id": "src_asr_worker_rationale_259"
     },
@@ -4275,7 +4847,7 @@
       "source_file": "src/asr_worker.py",
       "source_location": "L304",
       "community": 7,
-      "community_name": "ASRWorker",
+      "community_name": "._recognize",
       "norm_label": "\u57f7\u884c\u5be6\u969b\u7684\u8a9e\u97f3\u8fa8\u8b58\r \r         \u8aaa\u660e:\r             \u9019\u662f\u6838\u5fc3\u7684\u8fa8\u8b58\u51fd\u5f0f,\u76ee\u524d\u70ba\u9810\u7559\u5be6\u4f5c:\r             - \u82e5\u6a21\u578b\u672a\u8f09\u5165,\u56de",
       "id": "src_asr_worker_rationale_304"
     },
@@ -4511,6 +5083,649 @@
     }
   ],
   "links": [
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_init_rationale_1",
+      "target": "benchmarks_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark",
+      "target": "benchmarks_asr_benchmark_character_error_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark",
+      "target": "benchmarks_asr_benchmark_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark",
+      "target": "benchmarks_asr_benchmark_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark",
+      "target": "benchmarks_asr_benchmark_run_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_rationale_1",
+      "target": "benchmarks_asr_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics",
+      "target": "benchmarks_asr_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_rationale_17",
+      "target": "benchmarks_asr_benchmark_character_error_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_run_benchmark",
+      "target": "benchmarks_asr_benchmark_character_error_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics",
+      "target": "benchmarks_asr_benchmark_character_error_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests_test_counts_insertions_deletions_and_substitutions",
+      "target": "benchmarks_asr_benchmark_character_error_rate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests_test_empty_reference_is_rejected",
+      "target": "benchmarks_asr_benchmark_character_error_rate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests_test_exact_chinese_transcript_has_zero_error",
+      "target": "benchmarks_asr_benchmark_character_error_rate"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_rationale_37",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "target": "benchmarks_asr_benchmark_py_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_run_benchmark",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests_test_keeps_16khz_audio_and_rejects_invalid_rate",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests_test_resamples_24khz_tts_audio_to_16khz",
+      "target": "benchmarks_asr_benchmark_resample_audio_to_16khz"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_run_benchmark",
+      "target": "benchmarks_asr_benchmark_py_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_main",
+      "target": "benchmarks_asr_benchmark_run_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_run_benchmark",
+      "target": "benchmarks_asr_benchmark_py_namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_run_benchmark",
+      "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_parse_args",
+      "target": "benchmarks_asr_benchmark_py_namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/asr_benchmark.py",
+      "source_location": "L189",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_asr_benchmark_main",
+      "target": "benchmarks_asr_benchmark_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L197",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_model_transformers_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_run_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_sentences",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_summarize_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_rationale_1",
+      "target": "benchmarks_tts_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark",
+      "target": "benchmarks_tts_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_rationale_19",
+      "target": "benchmarks_tts_benchmark_summarize_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "benchmarks_tts_benchmark_summarize_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_summarize_audio",
+      "target": "benchmarks_tts_benchmark_py_ndarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_summarize_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests_test_rejects_empty_audio_and_invalid_sample_rate",
+      "target": "benchmarks_tts_benchmark_summarize_audio"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_duration_peak_and_rms_for_audio",
+      "target": "benchmarks_tts_benchmark_summarize_audio"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_silence_as_empty_audio",
+      "target": "benchmarks_tts_benchmark_summarize_audio"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "benchmarks_tts_benchmark_sentences",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark",
+      "target": "benchmarks_tts_benchmark_sentences",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests_test_splits_greeting_like_the_assistant_worker",
+      "target": "benchmarks_tts_benchmark_sentences"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L199",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_main",
+      "target": "benchmarks_tts_benchmark_run_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "benchmarks_tts_benchmark_model_transformers_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "benchmarks_tts_benchmark_py_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "benchmarks_tts_benchmark_py_namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_run_benchmark",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_parse_args",
+      "target": "benchmarks_tts_benchmark_py_namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_model_transformers_version",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/config.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_config_load_defaults",
+      "target": "path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/rule_engine.py",
+      "source_location": "L266",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_rule_engine_ruleengine_check_hot_reload",
+      "target": "path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/rule_engine.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_rule_engine_ruleengine_load_rules",
+      "target": "path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmarks/tts_benchmark.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_tts_benchmark_main",
+      "target": "benchmarks_tts_benchmark_parse_args",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -10472,6 +11687,83 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_counts_insertions_deletions_and_substitutions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_empty_reference_is_rejected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_exact_chinese_transcript_has_zero_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_keeps_16khz_audio_and_rejects_invalid_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_reference_audio_fixture_is_fixed_and_16khz_mono",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_benchmark_metrics.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_benchmark_metrics_charactererrorratetests",
+      "target": "tests_test_benchmark_metrics_charactererrorratetests_test_resamples_24khz_tts_audio_to_16khz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_config.py",
       "source_location": "L22",
       "weight": 1.0,
@@ -10546,6 +11838,61 @@
       "_origin": "ast",
       "source": "tests_test_rule_engine_test_added_conversation_scenarios_return_configured_responses",
       "target": "tests_test_rule_engine_py_parametrize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark",
+      "target": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "target": "tests_test_tts_benchmark_ttsaudiosummarytests_test_rejects_empty_audio_and_invalid_sample_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "target": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_duration_peak_and_rms_for_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "target": "tests_test_tts_benchmark_ttsaudiosummarytests_test_reports_silence_as_empty_audio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_tts_benchmark.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_tts_benchmark_ttsaudiosummarytests",
+      "target": "tests_test_tts_benchmark_ttsaudiosummarytests_test_splits_greeting_like_the_assistant_worker",
       "confidence_score": 1.0
     },
     {
@@ -11173,7 +12520,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
       "source": "changelog_unreleased",
@@ -11260,6 +12607,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "benchmarks/fixtures/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "benchmarks_fixtures_readme",
+      "target": "benchmarks_fixtures_readme_asr_\u56fa\u5b9a\u6e2c\u8a66\u8f38\u5165",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/LESSONS_LEARNED.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -11337,6 +12695,105 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline",
+      "target": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TODO.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_todo",
+      "target": "docs_performance_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_asr_cuda_sdpa_\u5be6\u6e2c_2026_10_04",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_tts_cuda_sdpa_\u5be6\u6e2c_2026_10_05",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_\u56fa\u5b9a_asr_\u8f38\u5165",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_\u5f85\u88dc\u7684\u53ef\u91cd\u8907\u91cf\u6e2c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_\u74b0\u5883\u76e4\u9ede",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_\u76ee\u524d\u53ef\u4e0b\u7684\u7d50\u8ad6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PERFORMANCE_BASELINE.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_performance_baseline_\u63a8\u8ad6\u6548\u80fd\u57fa\u6e96",
+      "target": "docs_performance_baseline_\u91cd\u73fe\u74b0\u5883\u8cc7\u8a0a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -11360,7 +12817,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L41",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
+      "target": "docs_todo_github_issue_\u8ffd\u8e64",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TODO.md",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
@@ -11371,7 +12839,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L16",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
@@ -11382,7 +12850,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L8",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
@@ -11393,7 +12861,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L32",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u8a9e\u97f3\u52a9\u7406\u6548\u80fd\u512a\u5316\u85cd\u5716_performance_optimization_roadmap",
@@ -11404,7 +12872,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L18",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
@@ -11415,7 +12883,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L22",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
@@ -11426,7 +12894,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L25",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u6838\u5fc3\u512a\u5316\u4efb\u52d9\u6e05\u55ae",
@@ -11437,7 +12905,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/TODO.md",
-      "source_location": "L46",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_todo_\u672a\u4f86\u767c\u5c55\u65b9\u5411",
@@ -12117,5 +13585,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "315fae6205929f1b8ad8da57075fedea0f921629"
+  "built_at_commit": "cf82e3d1ac74997f004c9885cb753e3f683dba1c"
 }

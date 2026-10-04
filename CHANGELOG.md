@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 新增固定 ASR/TTS 輸入、CUDA/SDPA 基準工具與原始量測（CER、延遲、顯存）；保存 Qwen TTS 輸出 WAV 並以 ASR 交叉檢查可懂度。
 - 新增推論效能環境盤點文件，記錄 CUDA／Qwen 套件現況與待量測基準。
 - 新增規則引擎回歸測試，涵蓋五種新增對話情境、問候誤觸防止與規則優先順序。
 - 擴充語音規則，新增感謝、道別、晚安、自我介紹與能力詢問情境，並移除 greeting 的寬泛關鍵字「好」。

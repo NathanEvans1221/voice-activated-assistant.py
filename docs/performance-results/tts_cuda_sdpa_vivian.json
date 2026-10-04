@@ -1,0 +1,56 @@
+{
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "torch": "2.10.0+cu126",
+  "torch_cuda": "12.6",
+  "qwen_tts": "0.1.1",
+  "transformers": "4.57.3",
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "attention_backend": "sdpa",
+  "model_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice",
+  "model_config_transformers_version": "4.57.3",
+  "text": "系統已啟動，你好！我有什麼可以幫你的嗎？",
+  "model_input_text": "系统已启动，你好！我有什么可以帮你的吗？",
+  "sentences": [
+    "系统已启动，",
+    "你好！",
+    "我有什么可以帮你的吗？"
+  ],
+  "speaker": "vivian",
+  "language": "Chinese",
+  "load_seconds": 6.828655000019353,
+  "load_peak_allocated_mib": 2058.6103515625,
+  "load_peak_reserved_mib": 2184.0,
+  "cold_first_audio_seconds": 21.20766569999978,
+  "cold_total_generation_seconds": 61.017503200040665,
+  "warmup_seconds": [
+    62.88781139999628
+  ],
+  "iterations": [
+    {
+      "iteration": 1,
+      "first_audio_seconds": 24.673719099955633,
+      "total_generation_seconds": 64.74766049999744
+    },
+    {
+      "iteration": 2,
+      "first_audio_seconds": 18.26664320001146,
+      "total_generation_seconds": 60.606919199984986
+    }
+  ],
+  "warm_mean_first_audio_seconds": 21.470181149983546,
+  "warm_mean_total_generation_seconds": 62.67728984999121,
+  "output_wav": "D:\\github\\chiisen\\voice-activated-assistant.py\\docs\\performance-results\\tts_cuda_sdpa_vivian.wav",
+  "output_sample_rate": 24000,
+  "output_audio_sha256": "5feedade05e5da2b67ede1eb587c7584e774562ef9301dcfc5be4db0a93065fb",
+  "output_audio": {
+    "duration_seconds": 5.92,
+    "peak_amplitude": 0.72265625,
+    "rms_amplitude": 0.0908532280293898,
+    "has_audio": true
+  },
+  "inference_peak_allocated_mib": 2139.13427734375,
+  "inference_peak_reserved_mib": 2198.0
+}
