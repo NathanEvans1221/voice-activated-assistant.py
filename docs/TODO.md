@@ -8,7 +8,8 @@
 - 本優化工作由 GitHub CLI（`gh`）建立：[Issue #1：規劃並驗證語音助理效能與服務化優化](https://github.com/chiisen/voice-activated-assistant.py/issues/1)。
 - Issue #1 與本文件同步追蹤效能基準、Attention、量化、ONNX／TensorRT、ASR／TTS 部署、WebSocket、LLM 與儀表板工作。
 - Issue 保持開啟，直到下方未完成項目實際完成或記錄不採用的理由；完成後再關閉 issue，避免 GitHub 與 TODO 狀態不一致。
-- 開始 GPU 優化前，先記錄執行環境並建立 ASR／TTS 延遲、TTS 首音時間、顯存峰值與輸出品質基準；詳細驗收條件見 Issue #1。
+- [x] 環境盤點記錄於 [docs/PERFORMANCE_BASELINE.md](PERFORMANCE_BASELINE.md)；本機 RTX 3070 存在，但目前 `.venv` 使用 CPU-only PyTorch。
+- [ ] 建立可重複的 ASR／TTS 測試輸入與品質參考，並在 CUDA/Qwen 引擎可用後量測 ASR／TTS 延遲、TTS 首音時間與顯存峰值；詳細驗收條件見 Issue #1。
 
 ---
 

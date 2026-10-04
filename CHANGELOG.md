@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 新增推論效能環境盤點文件，記錄 CUDA／Qwen 套件現況與待量測基準。
 - 新增規則引擎回歸測試，涵蓋五種新增對話情境、問候誤觸防止與規則優先順序。
 - 擴充語音規則，新增感謝、道別、晚安、自我介紹與能力詢問情境，並移除 greeting 的寬泛關鍵字「好」。
 - 新增 `docs/LESSONS_LEARNED.md`，保存已實測問題的根因、修正與防回歸步驟，供後續維護者查閱。
