@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 建立 `PRD.md`：定義語音互動助理的核心規格，包含 ASR/TTS 多執行緒、VAD 停頓偵測及記憶體管理邏輯。
 
 ### Changed
+- 修正 ASR Worker 停止與重啟期間的執行緒生命週期競態；停止會等待執行中辨識、丟棄排隊音訊與停止後結果，並新增 2 項回歸測試。
 - 修正 VAD 長語句緩衝無上限與 callback 重入死鎖，保留短停頓並依樣本數強制切段；新增連續 30 次語句與超長框架回歸測試。
 - 直接查證 RTX 3070 Laptop GPU，修正將 CPU 版 PyTorch 誤認為無 GPU 的環境紀錄；補做 Graphify 程式圖譜重建。
 - 優化 `PRD.md` 標題與前言描述，使其符合專業文件規範。

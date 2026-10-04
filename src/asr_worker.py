@@ -141,6 +141,7 @@ class ASRWorker:
 
         # 執行狀態標記
         self._is_running = False
+        self._lifecycle_lock = threading.RLock()
 
         # 模型相關變數
         self._model = None
@@ -195,16 +196,24 @@ class ASRWorker:
             - 可安全地多次呼叫 (idempotent)
             - 若已運行則不做任何事
         """
-        if self._is_running:
-            return
+        while True:
+            with self._lifecycle_lock:
+                if self._is_running:
+                    return
 
-        self._is_running = True
+                previous_thread = self._worker_thread
+                if previous_thread is None or not previous_thread.is_alive():
+                    self._is_running = True
+                    self._worker_thread = threading.Thread(
+                        target=self._worker_loop, daemon=True
+                    )
+                    self._worker_thread.start()
+                    return
 
-        # 建立守護執行緒 (daemon=True)
-        # 說明：守護執行緒會在主程式結束時自動終止，
-        #       不會阻擋程式結束
-        self._worker_thread = threading.Thread(target=self._worker_loop, daemon=True)
-        self._worker_thread.start()
+                if previous_thread is threading.current_thread():
+                    return
+
+            previous_thread.join()
 
     def stop(self):
         """
@@ -214,19 +223,26 @@ class ASRWorker:
             優雅地停止 worker 執行緒：
             1. 設定停止標記
             2. 傳送 None 到佇列，觸發 worker 結束
-            3. 等待執行緒結束 (最多 2 秒)
+            3. 等待目前執行中的辨識完成並結束執行緒
 
         參數：
             無
         """
-        self._is_running = False
+        with self._lifecycle_lock:
+            worker_thread = self._worker_thread
+            self._is_running = False
+            while True:
+                try:
+                    self._input_queue.get_nowait()
+                    self._input_queue.task_done()
+                except queue.Empty:
+                    break
 
-        if self._worker_thread:
-            # 傳送 None 作為結束訊號
-            self._input_queue.put(None)
-            # 等待執行緒結束
-            self._worker_thread.join(timeout=2.0)
-            self._worker_thread = None
+        if worker_thread and worker_thread is not threading.current_thread():
+            worker_thread.join()
+            with self._lifecycle_lock:
+                if self._worker_thread is worker_thread:
+                    self._worker_thread = None
 
     def process(self, audio: np.ndarray) -> bool:
         """
@@ -250,12 +266,13 @@ class ASRWorker:
             # 當 VAD 檢測到完整語句時
             asr_worker.process(utterance.audio)
         """
-        if not self._is_running:
-            return False
+        with self._lifecycle_lock:
+            if not self._is_running:
+                return False
 
-        # 加入任務佇列
-        self._input_queue.put(audio)
-        return True
+            # 加入任務佇列
+            self._input_queue.put(audio)
+            return True
 
     def _worker_loop(self):
         """
@@ -276,7 +293,11 @@ class ASRWorker:
             - 使用 try-except 包裹主要邏輯，確保穩定性
             - 使用 queue.Empty 例外處理逾時
         """
-        while self._is_running:
+        while True:
+            with self._lifecycle_lock:
+                if not self._is_running:
+                    break
+
             try:
                 # 從佇列取出任務 (最多等待 0.1 秒)
                 audio = self._input_queue.get(timeout=0.1)
@@ -289,8 +310,9 @@ class ASRWorker:
                 result = self._recognize(audio)
 
                 # 若有結果，回調上層
-                if result and self.on_result:
-                    self.on_result(result)
+                with self._lifecycle_lock:
+                    if result and self.on_result and self._is_running:
+                        self.on_result(result)
 
                 # 標記任務完成
                 self._input_queue.task_done()
