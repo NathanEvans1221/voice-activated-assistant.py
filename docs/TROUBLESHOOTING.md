@@ -1,5 +1,7 @@
 # 安裝與疑難排解
 
+已驗證問題的根因與防回歸筆記請見 [維護經驗](LESSONS_LEARNED.md)。
+
 ## Python 套件和模型權重是兩回事
 
 - `uv sync --extra asr` 安裝 Qwen ASR 的 Python 執行套件及其依賴；不會重新下載本機模型權重。
@@ -43,6 +45,15 @@ uv sync --extra asr --extra dev
 這代表 Qwen TTS 套件未安裝。Windows 上程式會嘗試使用 `pyttsx3`，並優先選擇已安裝的中文 SAPI 語音作為備援；這不會造成 ASR 無法辨識。若仍聽不到語音，請確認 Windows 已安裝中文語音，且系統預設播放裝置及音量正常。Qwen ASR 與 TTS extras 有相依版本衝突，請勿在同一環境同時安裝兩者。
 
 若只有第一次備援朗讀有聲，請在專案根目錄執行 `uv sync --extra asr --extra dev`，將環境同步至 lockfile 指定的 `pyttsx3` 相容版本。
+
+此症狀若發生於 `pyttsx3 2.99`，可能是 Windows SAPI5 的已知問題：第一次 `say()`／`runAndWait()` 有聲，後續呼叫正常返回但沒有聲音（[上游問題 #419](https://github.com/nateshmbhat/pyttsx3/issues/419)）。本專案已將版本限制在 2.99 以下並於 `uv.lock` 鎖定 2.98。同步後可檢查版本：
+
+```powershell
+uv sync --extra asr
+.\.venv\Scripts\python.exe -c "from importlib.metadata import version; print(version('pyttsx3'))"
+```
+
+應顯示 `2.98`。若 TTS 日誌顯示朗讀完成但仍聽不到聲音，確認它選到中文 SAPI 語音，並檢查 Windows 預設播放裝置；程式端的完成日誌不等於實際喇叭輸出。
 
 ### `uv sync` 顯示警告
 
