@@ -77,6 +77,21 @@ ASR 與 TTS 的隔離 CUDA 環境均為 PyTorch 2.10.0+cu126，確認 CUDA 可�
 
 FlashAttention 官方 README 將 Linux 列為安裝需求，並說明 Windows 可能可用但編譯仍需更多測試（[官方安裝說明](https://github.com/Dao-AILab/flash-attention/blob/main/README.md)）。本次沒有安裝未驗證來源的 Windows wheel，也沒有宣稱已比較兩種後端。可重現比較需先取得與 Python、PyTorch、CUDA 完全匹配且可信的 Windows wheel，或在 Linux/WSL CUDA 環境建置；之後必須以相同模型、音訊／文字量測延遲、顯存與輸出品質。現階段維持 SDPA 預設。
 
+## ASR INT8 初步量測（2026-10-05）
+
+在 ASR TEMP CUDA 環境安裝 `bitsandbytes` 0.50.2，以 `BitsAndBytesConfig(load_in_8bit=True)` 載入 Qwen3-ASR-0.6B；PyTorch 2.10.0+cu126、Transformers 4.57.6、RTX 3070 Laptop GPU。使用相同 4.204 秒固定音訊、自動語言偵測、SDPA、1 次暖機與 3 次量測。原始結果見 [`asr_cuda_bnb_int8_auto.json`](performance-results/asr_cuda_bnb_int8_auto.json)。
+
+| 指標 | BF16 SDPA 基準 | INT8 | INT8 相對結果 |
+| --- | ---: | ---: | ---: |
+| 模型載入 | 2.177 秒 | 6.236 秒 | 較慢 |
+| 首次推論 | 1.124 秒 | 10.087 秒 | 較慢 |
+| 暖機平均 | 0.599 秒 | 8.635 秒 | 約慢 14.4 倍 |
+| CER | 0.000 | 0.000 | 此單一樣本相同 |
+| 載入峰值 allocated / reserved | 1789 / 1798 MiB | 1237 / 1266 MiB | 約少 31% / 30% |
+| 推論峰值 allocated / reserved | 1548 / 1812 MiB | 988 / 1272 MiB | 約少 36% / 30% |
+
+INT8 雖降低顯存，但延遲明顯惡化，不適用目前的即時辨識需求，因此不整合為正式預設。執行時 bitsandbytes 反覆提示將 BF16 輸入轉為 FP16；這是觀察到的行為，尚未單獨驗證它是否為全部延遲差異的原因。結果只涵蓋一段樣本，不能代表整體準確率。ASR INT4 與 TTS INT8/INT4 尚未測量；本次量測使用臨時 runner，正式 benchmark 尚無量化 CLI 選項。
+
 重跑 TTS 基準時，使用裝有 CUDA PyTorch、Qwen TTS 0.1.1、Transformers 4.57.3 與 OpenCC 的隔離環境：
 
 ```powershell

@@ -29,7 +29,8 @@
 - [ ] 比較 CUDA SDPA 與 Flash Attention 2 的速度、顯存與輸出品質。目前兩套 CUDA 測試環境均無 `flash_attn`；Windows 主機缺少 `nvcc`／MSVC `cl`，且官方將 Windows 編譯列為仍需更多測試。先取得可信且版本匹配的 wheel，或改用 Linux/WSL CUDA 環境；詳見 `docs/PERFORMANCE_BASELINE.md`。
 
 ### 2. 模型尺寸優化：模型量化 (Quantization)
-- [ ] 評估 Qwen ASR/TTS loader 支援的 INT8/INT4 量化方式，量測顯存、速度與輸出品質後再決定整合方案。此環境缺少 Qwen/bitsandbytes ；已確認 RTX 3070 Laptop GPU（8 GB），但目前 PyTorch 為 CPU 版本，尚無可驗證的量化路徑。
+- [x] 在隔離 CUDA 環境完成 ASR INT8 單樣本探測：CER 0.000、暖機平均 8.635 秒，較 BF16 基準 0.599 秒慢約 14.4 倍；峰值顯存降低。結果與限制見 `docs/PERFORMANCE_BASELINE.md` 及 `docs/performance-results/asr_cuda_bnb_int8_auto.json`。
+- [ ] 評估 ASR INT4、TTS INT8/INT4 與更多固定樣本；目前 ASR INT8 的速度回退，不整合為正式預設。專案 `.venv` 仍是 CPU-only，bitsandbytes 只安裝在 TEMP CUDA 環境。
 
 ### 3. 硬體級加速：TensorRT / ONNX 轉換
 - [ ] Qwen3-ASR 可評估社群 ONNX 匯出工具，但需另建推論 adapter 並比較準確度與效能；目前官方 pipeline 沒有直接匯出整合。

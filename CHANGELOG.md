@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 記錄 ASR INT8 單樣本量測：顯存下降但暖機推論約慢 14.4 倍，因此不納入正式預設；保存原始 JSON。
 - 新增固定 ASR/TTS 輸入、CUDA/SDPA 基準工具與原始量測（CER、延遲、顯存）；保存 Qwen TTS 輸出 WAV 並以 ASR 交叉檢查可懂度。
 - 記錄 Flash Attention 2 在目前 Windows CUDA 環境的建置限制與後續公平比較條件，維持 SDPA 預設。
 - 新增推論效能環境盤點文件，記錄 CUDA／Qwen 套件現況與待量測基準。
