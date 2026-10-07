@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- 記錄 TTS NF4 初次試跑的環境匯入錯誤與重測條件；此試跑未載入模型，不代表量化結果。
 - 記錄 ASR INT8/NF4 單樣本量測：顯存下降，但暖機推論分別慢約 14.4 倍與 4.7 倍，因此不納入正式預設；保存原始 JSON。
 - 新增固定 ASR/TTS 輸入、CUDA/SDPA 基準工具與原始量測（CER、延遲、顯存）；保存 Qwen TTS 輸出 WAV 並以 ASR 交叉檢查可懂度。
 - 記錄 Flash Attention 2 在目前 Windows CUDA 環境的建置限制與後續公平比較條件，維持 SDPA 預設。
