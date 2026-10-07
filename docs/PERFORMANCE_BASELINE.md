@@ -90,7 +90,20 @@ FlashAttention 官方 README 將 Linux 列為安裝需求，並說明 Windows �
 | 載入峰值 allocated / reserved | 1789 / 1798 MiB | 1237 / 1266 MiB | 945 / 1048 MiB |
 | 推論峰值 allocated / reserved | 1548 / 1812 MiB | 988 / 1272 MiB | 696 / 1062 MiB |
 
-INT8 與 NF4 4-bit 都降低顯存，但此單一樣本上的暖機延遲分別慢 14.4 倍及 4.7 倍，不適用目前的即時辨識需求，因此不整合為正式預設。INT8 執行時 bitsandbytes 反覆提示將 BF16 輸入轉為 FP16；這是觀察到的行為，尚未單獨驗證它是否為全部延遲差異的原因。結果只涵蓋一段樣本，不能代表整體準確率。TTS INT8/INT4 尚未測量；兩次 ASR 量測均使用臨時 runner，正式 benchmark 尚無量化 CLI 選項。NF4 原始數據見 [`asr_cuda_bnb_int4_auto.json`](performance-results/asr_cuda_bnb_int4_auto.json)。
+INT8 與 NF4 4-bit 都降低顯存，但此單一樣本上的暖機延遲分別慢 14.4 倍及 4.7 倍，不適用目前的即時辨識需求，因此不整合為正式預設。INT8 執行時 bitsandbytes 反覆提示將 BF16 輸入轉為 FP16；這是觀察到的行為，尚未單獨驗證它是否為全部延遲差異的原因。結果只涵蓋一段樣本，不能代表整體準確率。兩次 ASR 量測均使用臨時 runner，正式 benchmark 尚無量化 CLI 選項。NF4 原始數據見 [`asr_cuda_bnb_int4_auto.json`](performance-results/asr_cuda_bnb_int4_auto.json)。
+
+## TTS NF4 初步量測（2026-10-08）
+
+以新建的 TEMP CUDA 環境執行 Qwen TTS 0.1.1、Transformers 4.57.3、bitsandbytes 0.50.2、PyTorch 2.10.0+cu126 與 RTX 3070 Laptop GPU。輸入為與 BF16 基準相同的啟動招呼語，SDPA、BF16 計算、NF4 4-bit double quantization，並明確保留 `talker.codec_head` 為 BF16。原始資料與音檔見 [`tts_cuda_bnb_int4_nf4_vivian.json`](performance-results/tts_cuda_bnb_int4_nf4_vivian.json) 及 [`tts_cuda_bnb_int4_nf4_vivian.wav`](performance-results/tts_cuda_bnb_int4_nf4_vivian.wav)。
+
+| 指標 | BF16 SDPA 基準 | NF4 4-bit（單次） |
+| --- | ---: | ---: |
+| 模型載入 | 6.829 秒 | 16.729 秒 |
+| 首段音訊 | 21.208 秒（冷）／21.470 秒（暖機平均） | 28.034 秒 |
+| 完整生成 | 61.018 秒（冷）／62.677 秒（暖機平均） | 79.718 秒 |
+| 推論峰值 allocated / reserved | 2139 / 2198 MiB | 1266 / 1352 MiB |
+
+此 NF4 單次測量相較 BF16 暖機平均約慢 27%，推論峰值 allocated 約低 41%；輸出音訊為 6.4 秒且有非零音訊。這只是一次冷生成，輸出尚未完成 ASR CER 交叉檢查或人工聽感評分，不足以判定品質或支援範圍。直接啟用 BNB NF4 時，Transformers 嘗試 deepcopy 自動尋找 tied weights，遭遇 `TypeError: cannot pickle 'dict_keys' object`；設定保留 `talker.codec_head` 後才成功。量測使用臨時 runner，正式 benchmark 尚無量化 CLI 選項；TTS INT8 與多樣本評估仍未完成。
 
 重跑 TTS 基準時，使用裝有 CUDA PyTorch、Qwen TTS 0.1.1、Transformers 4.57.3 與 OpenCC 的隔離環境：
 
@@ -108,8 +121,9 @@ python -m benchmarks.tts_benchmark `
 
 - GPU 硬體存在，但目前專案虛擬環境的 PyTorch 不含 CUDA；只安裝 Flash Attention 或量化套件不會啟用 GPU 推論。
 - 本次 `nvidia-smi` 顯示的顯存用量是單一時間點的整機觀察值，不能當成 ASR/TTS 模型的峰值用量。
-- ASR/TTS 模型設定記錄了不同的 Transformers 版本；TTS 套件目前未安裝，雙引擎相容性及同時載入需求尚未驗證。
-- 不應以目前資料宣稱 Flash Attention、量化、ONNX 或 TensorRT 有速度或顯存改善。
+- ASR/TTS 套件固定不同 Transformers 版本，因此分別在隔離環境測量；專案 `.venv` 尚未安裝 TTS extra，雙引擎相容性及同時載入需求尚未驗證。
+- 目前只觀察到單樣本 ASR/TTS 量化降低顯存但降低速度；樣本和量測次數不足，不應外推為整體品質、速度或部署改善。
+- Flash Attention 尚未比較；ONNX/TensorRT 尚未做端到端匯出和量測。
 
 ## 待補的可重複量測
 

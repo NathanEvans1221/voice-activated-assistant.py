@@ -30,8 +30,8 @@
 
 ### 2. 模型尺寸優化：模型量化 (Quantization)
 - [x] 在隔離 CUDA 環境完成 ASR INT8/NF4 單樣本探測：CER 均 0.000；暖機平均分別 8.635 秒與 2.804 秒，較 BF16 基準 0.599 秒慢約 14.4 倍與 4.7 倍；兩種量化都降低峰值顯存。
-- [ ] 評估 TTS INT8/INT4 與更多固定樣本，再決定量化支援範圍；ASR 兩種量化皆有速度回退，不整合為正式預設。結果見 `docs/PERFORMANCE_BASELINE.md` 與 `docs/performance-results/asr_cuda_bnb_int*_auto.json`。專案 `.venv` 仍是 CPU-only，bitsandbytes 只安裝在 TEMP CUDA 環境。
-- [ ] TTS NF4 試跑尚未產生結果檔：2026-10-07 在 TEMP CUDA 套件路徑執行時，系統 Python 載入全域 Transformers 過程因 `torch.__version__` 為 `None` 而失敗；尚未載入模型或完成推論。需修正隔離環境的匯入路徑後再量測，不得將此試跑視為量化結果。
+- [ ] 評估 TTS INT8/INT4 與更多固定樣本，再決定量化支援範圍；ASR 與目前 TTS 單樣本量化都降低顯存但推論較慢，尚不整合為正式預設。TTS NF4 單次結果見 `docs/PERFORMANCE_BASELINE.md` 與 `docs/performance-results/tts_cuda_bnb_int4_nf4_vivian.json`；ASR 結果見 `docs/performance-results/asr_cuda_bnb_int*_auto.json`。專案 `.venv` 仍是 CPU-only，bitsandbytes 只安裝在 TEMP CUDA 環境。
+  TTS NF4 首次探測在損壞的舊 TEMP 套件目錄失敗（缺少 `torch/__init__.py`）；新隔離環境自檢成功。直接 BNB 量化觸發 Transformers deepcopy `dict_keys` 錯誤，指定保留 `talker.codec_head` 後完成單次生成。輸出尚未做 ASR CER 交叉檢查與人工聽感評分；TTS INT8、多樣本及正式 benchmark 量化 CLI 尚未執行。
 
 ### 3. 硬體級加速：TensorRT / ONNX 轉換
 - [ ] Qwen3-ASR 可評估社群 ONNX 匯出工具，但需另建推論 adapter 並比較準確度與效能；目前官方 pipeline 沒有直接匯出整合。

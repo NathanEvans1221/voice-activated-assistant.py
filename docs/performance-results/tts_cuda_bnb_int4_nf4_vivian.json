@@ -1,0 +1,43 @@
+{
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "torch": "2.10.0+cu126",
+  "torch_cuda": "12.6",
+  "qwen_tts": "0.1.1",
+  "transformers": "4.57.3",
+  "bitsandbytes": "0.50.2",
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "quantization": "NF4 4-bit; double quantization enabled; talker.codec_head skipped",
+  "attention_backend": "sdpa",
+  "model_path": "D:\\github\\chiisen\\voice-activated-assistant.py\\models\\Qwen3-TTS-12Hz-0.6B-CustomVoice",
+  "text": "系統已啟動，你好！我有什麼可以幫你的嗎？",
+  "model_input_text": "系统已启动，你好！我有什么可以帮你的吗？",
+  "sentences": [
+    "系统已启动，",
+    "你好！",
+    "我有什么可以帮你的吗？"
+  ],
+  "speaker": "vivian",
+  "language": "Chinese",
+  "load_seconds": 16.72909800009802,
+  "load_peak_allocated_mib": 1168.5361328125,
+  "load_peak_reserved_mib": 1212.0,
+  "single_pass_segment_seconds": [
+    28.034163400065154,
+    14.8017225000076,
+    36.881396600045264
+  ],
+  "first_audio_seconds": 28.034163400065154,
+  "total_generation_seconds": 79.71813970000949,
+  "output_wav": "D:\\github\\chiisen\\voice-activated-assistant.py\\docs\\performance-results\\tts_cuda_bnb_int4_nf4_vivian.wav",
+  "output_sample_rate": 24000,
+  "output_audio_sha256": "19fe56d7257487964cb6b57e65b0d44128bb98bbf21791cf100f4d07d1212988",
+  "output_duration_seconds": 6.4,
+  "output_peak_amplitude": 0.6484375,
+  "output_rms_amplitude": 0.08556686582339147,
+  "inference_peak_allocated_mib": 1265.533203125,
+  "inference_peak_reserved_mib": 1352.0,
+  "measurement_note": "Single cold generation pass; no warm repeated measurement."
+}
